@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
+import { MobileNav } from './MobileNav';
 import './MainLayout.css';
 
 export const MainLayout: React.FC = () => {
@@ -20,6 +21,7 @@ export const MainLayout: React.FC = () => {
           <Footer />
         </main>
       </div>
+      <MobileNav />
     </div>
   );
 };

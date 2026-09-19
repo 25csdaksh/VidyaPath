@@ -6,11 +6,6 @@ import {
   Cpu,
   Database,
   Globe2,
-  Lock,
-  Layers,
-  Sparkles,
-  BookOpen,
-  Briefcase,
   CheckCircle2,
   Terminal
 } from 'lucide-react';

@@ -17,8 +17,7 @@ import {
   HelpCircle,
   Bookmark,
   TrendingUp,
-  ShieldAlert,
-  ChevronRight
+  ShieldAlert
 } from 'lucide-react';
 import './Sidebar.css';
 
@@ -56,19 +55,19 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { title: 'Coursera Directory', path: '/resources/coursera', icon: <Award size={18} /> },
         { title: 'Project Blueprints', path: '/resources/projects', icon: <FolderGit2 size={18} /> },
         { title: 'Notes & Platforms', path: '/resources/notes', icon: <FileCode2 size={18} /> },
-        { title: 'Coding Roadmaps', path: '/roadmaps', icon: <Milestone size={18} />, badge: 'Popular' },
+        { title: 'Coding Roadmaps', path: '/roadmap', icon: <Milestone size={18} />, badge: 'Popular' },
         { title: 'Skill Assessments', path: '/assessments', icon: <HelpCircle size={18} /> },
       ],
     },
     {
       heading: 'Career & Opportunities',
       items: [
-        { title: 'Placement Hub', path: '/placement-hub', icon: <Briefcase size={18} /> },
+        { title: 'Placement Hub', path: '/placement', icon: <Briefcase size={18} /> },
         { title: 'Interview Preparation', path: '/interview-prep', icon: <Layers size={18} /> },
         { title: 'Hackathon Hub', path: '/hackathons', icon: <Trophy size={18} />, badge: 'Live' },
         { title: 'Announcements', path: '/announcements', icon: <Megaphone size={18} /> },
-        { title: 'Resume Builder', path: '/resume-builder', icon: <FileText size={18} /> },
-        { title: 'AI Career Chatbot', path: '/chatbot', icon: <BotMessageSquare size={18} />, badge: 'AI' },
+        { title: 'Resume Builder', path: '/resume', icon: <FileText size={18} /> },
+        { title: 'AI Career Chatbot', path: '/ai-assistant', icon: <BotMessageSquare size={18} />, badge: 'AI' },
       ],
     },
     {

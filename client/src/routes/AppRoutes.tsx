@@ -12,19 +12,22 @@ import { ModulePlaceholder } from '../pages/common/ModulePlaceholder';
 export const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      {/* Public Pages wrapped in MainLayout */}
+      {/* Primary Routes wrapped in MainLayout */}
       <Route element={<MainLayout />}>
+        {/* 1. HOME */}
         <Route path="/" element={<Home />} />
+
+        {/* 2. ABOUT CSE */}
         <Route path="/about-cse" element={<AboutCSE />} />
 
-        {/* Phase 2: Learning & Discovery */}
+        {/* 3. LEARN */}
         <Route
-          path="/resources/youtube"
+          path="/learn"
           element={
             <ModulePlaceholder
-              moduleName="YouTube Learning Resources Hub"
+              moduleName="Learn Hub: Video & Course Directory"
               category="Learning Directory"
-              targetPhase="Phase 2"
+              targetPhase="Phase 7"
               description="Curated high-yield video channels, topic-wise playlists for DSA, Web Dev, AI/ML, and Core CS with direct chapter navigation."
               upcomingFeatures={[
                 'Channel categorization by subject (Striver, Abdul Bari, Traversy, 3Blue1Brown, etc.)',
@@ -35,272 +38,231 @@ export const AppRoutes: React.FC = () => {
             />
           }
         />
+
+        {/* 4. PROJECT HUB */}
         <Route
-          path="/resources/coursera"
+          path="/projects"
           element={
             <ModulePlaceholder
-              moduleName="Coursera & MOOCs Certification Directory"
-              category="Accredited Learning"
-              targetPhase="Phase 2"
-              description="Handpicked certifications from Stanford, DeepLearning.AI, IBM, and Google with direct links and financial aid guides."
-              upcomingFeatures={[
-                'Specialization and Professional Certificate indexing',
-                'Estimated completion time and weekly workload calculator',
-                'Financial aid application step-by-step guidance',
-                'Skill tag search (Cloud, Deep Learning, Fullstack)',
-              ]}
-            />
-          }
-        />
-        <Route
-          path="/resources/projects"
-          element={
-            <ModulePlaceholder
-              moduleName="Project Blueprints & Ideas Repository"
+              moduleName="Project Hub & Architectural Blueprint Library"
               category="Hands-on Practice"
-              targetPhase="Phase 2"
-              description="Tiered engineering project ideas featuring full system architecture diagrams, recommended tech stacks, and GitHub starters."
+              targetPhase="Phase 6"
+              description="Searchable repository of real-world CSE engineering projects (Low, Medium, High) with complete system architecture, database design, API specs, and resume bullet generators."
               upcomingFeatures={[
-                'Tiered difficulty levels (Beginner, Intermediate, Production/Capstone)',
-                'Full architectural blueprints and schema guides',
-                'Recommended API integrations and starter boilerplate links',
-                'Resume bullet-point generators for each project',
-              ]}
-            />
-          }
-        />
-        <Route
-          path="/resources/notes"
-          element={
-            <ModulePlaceholder
-              moduleName="Notes, W3Schools & External Platforms"
-              category="Knowledge Base"
-              targetPhase="Phase 2"
-              description="Semester-wise revision notes, quick-reference cheat sheets, and integrated links for W3Schools, LeetCode, and HackerRank."
-              upcomingFeatures={[
-                'Concise PDF/Markdown notes for OS, DBMS, CN, and TOC',
-                'Direct links to LeetCode 75, NeetCode 150, and Striver A2Z sheets',
-                'W3Schools language syntax cheat sheets',
-                'Offline download options for fast semester prep',
+                '12 Domain categories (AI/ML, GenAI, Cyber, FullStack, Backend, DevOps, Systems, Web3)',
+                'Full system architecture diagrams and database schema designs',
+                'Interactive project progress tracker (Idea → Planning → Building → Testing → Deployed)',
+                'Prerequisite roadmap topics and interview defense questions',
               ]}
             />
           }
         />
 
-        {/* Phase 3: Roadmaps & Practice */}
-        <Route
-          path="/roadmaps"
-          element={
-            <ModulePlaceholder
-              moduleName="Interactive Coding Roadmaps"
-              category="Career Guidance"
-              targetPhase="Phase 3"
-              description="Dynamic roadmap graphs covering Fullstack Web, AI/ML, DevOps, Cybersecurity, Systems, and DSA with progress checkoffs."
-              upcomingFeatures={[
-                'Interactive node-based visual roadmap graphs',
-                'Milestone checkbox tracking saved to your database profile',
-                'Curated reading & video materials per roadmap node',
-                'Custom personal roadmap generator by graduation year',
-              ]}
-            />
-          }
-        />
-        <Route
-          path="/placement-hub"
-          element={
-            <ModulePlaceholder
-              moduleName="Placement Hub & Company Archive"
-              category="Career Acceleration"
-              targetPhase="Phase 3"
-              description="Tier-1/Tier-2 company hiring patterns, CTC breakdowns, eligibility criteria, online assessment formats, and campus drives."
-              upcomingFeatures={[
-                'FAANG / Product / Service company breakdown & CTC benchmarks',
-                'Past online test (OT) question patterns and coding topics',
-                'Eligibility filter (CGPA, Branch, Year)',
-                'Live recruitment drive notification alerts',
-              ]}
-            />
-          }
-        />
-        <Route
-          path="/interview-prep"
-          element={
-            <ModulePlaceholder
-              moduleName="Interview Preparation & CS Fundamentals"
-              category="Career Acceleration"
-              targetPhase="Phase 3"
-              description="Comprehensive DSA patterns, System Design primers, and top 100 core subject interview questions."
-              upcomingFeatures={[
-                '14 Essential DSA patterns (Two Pointers, Sliding Window, Top K, etc.)',
-                'Low-Level and High-Level System Design primers for students',
-                'Top 50 interview questions for DBMS, OS, Computer Networks & OOPs',
-                'Mock behavioral and HR interview question bank',
-              ]}
-            />
-          }
-        />
-        <Route
-          path="/dashboard"
-          element={
-            <ModulePlaceholder
-              moduleName="Student Dashboard & Learning Analytics"
-              category="User Center"
-              targetPhase="Phase 3"
-              description="Personal command center monitoring active roadmaps, daily problem streaks, saved items, and upcoming deadlines."
-              upcomingFeatures={[
-                'Active roadmap completion percentage meters',
-                'Daily problem solving streak counter and GitHub-style heatmap',
-                'Quick access to saved bookmarks and notes',
-                'Target graduation timeline and readiness index',
-              ]}
-            />
-          }
-        />
-        <Route
-          path="/progress"
-          element={
-            <ModulePlaceholder
-              moduleName="Progress Tracking & Heatmap"
-              category="User Center"
-              targetPhase="Phase 3"
-              description="Detailed metrics and historical activity breakdown across quizzes, roadmaps, and DSA sheets."
-              upcomingFeatures={[
-                'Weekly and monthly activity logs',
-                'Skill radar chart by CS domain',
-                'Milestone completion certificates',
-              ]}
-            />
-          }
-        />
-
-        {/* Phase 4: Opportunities & Practice */}
+        {/* 5. HACKATHON HUB */}
         <Route
           path="/hackathons"
           element={
             <ModulePlaceholder
-              moduleName="Hackathon Hub"
+              moduleName="Hackathon Hub & Problem Analyzer"
               category="Opportunities"
-              targetPhase="Phase 4"
-              description="Real-time directory of national and global student hackathons with countdown timers, team matching, and prize details."
+              targetPhase="Phase 9"
+              description="Real-time directory of student hackathons with live countdown timers, a 12-step Problem Statement Analyzer, team role management, and pitch preparation checklists."
               upcomingFeatures={[
                 'Live countdown timers for registration and submission deadlines',
-                'Mode filter (Online, In-person, Hybrid)',
-                'Team formation matchmaker board for students',
-                'Direct registration links and submission reminders',
-              ]}
-            />
-          }
-        />
-        <Route
-          path="/announcements"
-          element={
-            <ModulePlaceholder
-              moduleName="Department & Campus Announcements"
-              category="Campus Connect"
-              targetPhase="Phase 4"
-              description="Central broadcast board for departmental notices, workshop announcements, tech fests, and placement alerts."
-              upcomingFeatures={[
-                'Priority tags (Urgent, Normal, Low)',
-                'Category filters (Placements, Hackathons, Academics, Workshops)',
-                'Push notifications for critical departmental notices',
-              ]}
-            />
-          }
-        />
-        <Route
-          path="/assessments"
-          element={
-            <ModulePlaceholder
-              moduleName="Skill Assessment & Mock Arena"
-              category="Skill Verification"
-              targetPhase="Phase 4"
-              description="Timed technical MCQs and coding quizzes to evaluate readiness in DSA, SQL, Web, and Core CS subjects."
-              upcomingFeatures={[
-                'Timed 20-minute rapid-fire technical quizzes',
-                'Automated scoring and comprehensive answer explanations',
-                'Weak-topic identification and targeted resource recommendations',
+                '12-Step Problem Statement Analyzer (Root Cause, Solution, MVP, Architecture, Success Metrics)',
+                'Team role allocation builder (Lead, Frontend, Backend, AI/ML, Pitch/PPT)',
+                'Demo day pitch deck checklist and technical Q&A preparation',
               ]}
             />
           }
         />
 
-        {/* Phase 5: AI Tools & Utility */}
+        {/* 6. PLACEMENT HUB */}
         <Route
-          path="/chatbot"
+          path="/placement"
           element={
             <ModulePlaceholder
-              moduleName="AI Career Chatbot"
-              category="AI Advisory"
-              targetPhase="Phase 5"
-              description="Context-aware AI career counselor capable of answering syllabus queries, reviewing project ideas, and debugging concepts."
+              moduleName="Placement Hub & Interview Preparation"
+              category="Career Acceleration"
+              targetPhase="Phase 8"
+              description="Comprehensive interview question archives (DSA, OOP, DBMS, OS, Computer Networks, System Design), 14 core DSA pattern masteries, and company-specific hiring insights."
               upcomingFeatures={[
-                'Streamed AI responses tailored to CSE curricula and tech stacks',
-                'Pre-engineered prompt templates (Code review, Resume bullet builder, Career advice)',
-                'Domain-specific roadmapping and interview Q&A mock partner',
+                '14 Core DSA pattern deep-dives (Two Pointers, Sliding Window, Fast/Slow Pointers, Top K)',
+                'Top interview Q&As for DBMS (SQL, ACID, Indexing) and OS (Processes, Virtual Memory)',
+                'Company hiring archives (CTC benchmarks, Online Assessment test patterns, past questions)',
+                'Topic-wise solved/attempted/bookmarked practice tracker',
               ]}
             />
           }
         />
+        <Route path="/placement-hub" element={<Navigate to="/placement" replace />} />
+        <Route path="/interview-prep" element={<Navigate to="/placement" replace />} />
+
+        {/* 7. CAREER ROADMAP */}
         <Route
-          path="/resume-builder"
+          path="/roadmap"
           element={
             <ModulePlaceholder
-              moduleName="ATS-Optimized Resume Builder"
+              moduleName="Personal Career Roadmap (FY to Final Year)"
+              category="Career Guidance"
+              targetPhase="Phase 5"
+              description="Interactive 4-year and 8-semester roadmap with 6-stage milestone checkpoints (Learn, Practice, Build, Test, Explain, Interview Ready) and progress tracking."
+              upcomingFeatures={[
+                '4-Year progression: FY (Foundations), SY (Core CSE), TY (Specialization), Final Year (Industry Capstone)',
+                'Semester 1 to Semester 8 detailed syllabus and milestone checkoffs',
+                'Granular progress bars per subject (e.g. DSA: 60% Complete)',
+                'Specialization roadmaps: Fullstack, AI/ML, DevOps, Cybersecurity, Systems & Cloud',
+              ]}
+            />
+          }
+        />
+        <Route path="/roadmaps" element={<Navigate to="/roadmap" replace />} />
+
+        {/* 8. RESUME */}
+        <Route
+          path="/resume"
+          element={
+            <ModulePlaceholder
+              moduleName="ATS-Optimized Resume Builder & Analyzer"
               category="Career Tool"
-              targetPhase="Phase 5"
-              description="Interactive resume builder designed specifically for CS students with standard single-page tech formats and ATS scoring."
+              targetPhase="Phase 10"
+              description="Engineered specifically for CS engineering students with single-page tech templates (Harvard / Deedy format), real-time ATS scoring, and PDF export."
               upcomingFeatures={[
-                'Single-page tech resume templates (Standard Harvard / Deedy format)',
-                'Real-time ATS keyword matching against job descriptions',
-                'Direct PDF and LaTeX code export',
+                'Section editors: Header, Summary, Education, Skills, Projects, Experience, Hackathons',
+                'Role-specific keyword optimization (SWE, Frontend, Backend, AI/ML, DevOps, Cyber)',
+                'Zero fake metrics policy: strictly validates student inputs and projects',
+                'One-click PDF export and LaTeX template generation',
               ]}
             />
           }
         />
+        <Route path="/resume-builder" element={<Navigate to="/resume" replace />} />
+
+        {/* 9. RESOURCES */}
+        <Route
+          path="/resources"
+          element={
+            <ModulePlaceholder
+              moduleName="International CSE Books & Legal Resource Guide"
+              category="Knowledge Base"
+              targetPhase="Phase 7"
+              description="Legitimate publisher and open-access links to standard computer science reference textbooks across Algorithms, DBMS, OS, Networks, and System Design."
+              upcomingFeatures={[
+                'Book directory (CLRS, Silberschatz, Tanenbaum, Designing Data-Intensive Applications)',
+                'Categorized by difficulty (Beginner, Intermediate, Advanced)',
+                'Official library, publisher, and legal open-access citations',
+                'Direct bookmarking to your personal reading list',
+              ]}
+            />
+          }
+        />
+        <Route path="/resources/youtube" element={<Navigate to="/learn" replace />} />
+        <Route path="/resources/coursera" element={<Navigate to="/learn" replace />} />
+        <Route path="/resources/projects" element={<Navigate to="/projects" replace />} />
+        <Route path="/resources/notes" element={<Navigate to="/resources" replace />} />
+
+        {/* 10. ANNOUNCEMENTS */}
+        <Route
+          path="/announcements"
+          element={
+            <ModulePlaceholder
+              moduleName="Campus & Department Announcements"
+              category="Campus Connect"
+              targetPhase="Phase 16"
+              description="Broadcast board for departmental updates, placement drive alerts, hackathon registrations, workshops, and exam notices with priority badges."
+              upcomingFeatures={[
+                'Priority tags: Urgent, Normal, Low',
+                'Category filters: Placements, Hackathons, Academics, Workshops',
+                'Direct deadline reminders and bookmarking',
+              ]}
+            />
+          }
+        />
+
+        {/* SECONDARY UTILITIES */}
+        <Route
+          path="/ai-assistant"
+          element={
+            <ModulePlaceholder
+              moduleName="AI Career Assistant"
+              category="AI Advisory"
+              targetPhase="Phase 13"
+              description="Context-aware AI career mentor referencing VidyaPath's structured knowledge base, roadmaps, project blueprints, and interview banks."
+              upcomingFeatures={[
+                'Semester-aware guidance ("What should I learn after DSA in Semester 3?")',
+                'Project concept review and architectural feedback',
+                'Mock technical interview defense partner',
+                'Clear distinction between portal knowledge and generative suggestions',
+              ]}
+            />
+          }
+        />
+        <Route path="/chatbot" element={<Navigate to="/ai-assistant" replace />} />
+
         <Route
           path="/bookmarks"
           element={
             <ModulePlaceholder
-              moduleName="Unified Bookmark System"
+              moduleName="My Bookmarks & Saved Collections"
               category="Personal Library"
-              targetPhase="Phase 2"
-              description="Organized personal collections of saved roadmaps, interview questions, hackathons, and learning resources."
+              targetPhase="Phase 12"
+              description="Organized personal collections of saved projects, interview questions, books, courses, hackathons, and roadmap nodes."
               upcomingFeatures={[
-                'Categorized bookmark folders (Interview Prep, Weekend Watch, Hackathons)',
-                'Quick-tagging and personal note annotations',
-                'Export bookmarks to JSON or Markdown',
+                'Category filters: All, Projects, Interview Q&A, Books, Hackathons, Courses',
+                'Custom bookmark collections and folder organization',
+                'Export saved resources to Markdown or JSON',
               ]}
             />
           }
         />
+
         <Route
-          path="/notifications"
+          path="/dashboard"
           element={
             <ModulePlaceholder
-              moduleName="Notification Center"
-              category="Platform Alerts"
-              targetPhase="Phase 4"
-              description="Personalized notifications for upcoming application deadlines, newly published resources, and announcements."
+              moduleName="Student Dashboard & Career Readiness Index"
+              category="User Center"
+              targetPhase="Phase 14"
+              description="Personal command center monitoring active 4-year roadmap progress, DSA solved counts, active project milestones, and personalized next recommended actions."
               upcomingFeatures={[
-                'Deadline reminders 24 hours prior to placement/hackathon closures',
-                'Mark as read / unread filters',
+                'Career Progress %, DSA %, Projects %, Resume %, Placement % overview meters',
+                'Next Recommended Actions engine based on actual student progress',
+                'Daily problem streak tracker and GitHub-style learning heatmap',
               ]}
             />
           }
         />
+
+        <Route
+          path="/profile"
+          element={
+            <ModulePlaceholder
+              moduleName="Student Profile & Academic Portfolio"
+              category="User Center"
+              targetPhase="Phase 2"
+              description="Manage your college, branch, current semester (1-8), graduation year, target specializations, GitHub/LinkedIn links, and verified skills."
+              upcomingFeatures={[
+                'Semester & specialization selector to customize portal recommendations',
+                'Target role selector (Full-Stack, AI/ML, Cloud/DevOps, Cyber)',
+                'Portfolio and resume link synchronization',
+              ]}
+            />
+          }
+        />
+
         <Route
           path="/admin"
           element={
             <ModulePlaceholder
-              moduleName="Admin & Faculty Moderation Panel"
-              category="Platform Governance"
-              targetPhase="Phase 5"
-              description="Role-based administration dashboard for approving student submissions, adding company drives, and broadcasting alerts."
+              moduleName="Admin Governance & Content Management"
+              category="Staff Only"
+              targetPhase="Phase 15"
+              description="Role-based administration panel for managing project blueprints, placement drives, announcements, book catalogs, and user moderation."
               upcomingFeatures={[
-                'Resource curation & approval queue',
-                'Placement drive creator with deadline management',
-                'Broadcast announcement authoring with urgent priority tagging',
-                'User role management and student directory',
+                'Project & Resource seed manager with schema validation',
+                'Placement drive creator with eligibility criteria and deadline timers',
+                'Urgent announcement broadcast engine',
+                'Platform analytics and audit logs',
               ]}
             />
           }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, HelpCircle } from 'lucide-react';
+import { Home, HelpCircle } from 'lucide-react';
 import { Button } from '../../components/common/Button';
 import './NotFound.css';
 

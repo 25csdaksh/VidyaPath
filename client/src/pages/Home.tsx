@@ -3,307 +3,265 @@ import { Link } from 'react-router-dom';
 import {
   Compass,
   ArrowRight,
-  GraduationCap,
-  Video,
-  Award,
   FolderGit2,
-  FileCode2,
   Trophy,
-  Megaphone,
-  BotMessageSquare,
   Milestone,
-  FileText,
-  Briefcase,
   Layers,
-  HelpCircle,
-  Bookmark,
-  TrendingUp,
-  ShieldAlert,
-  Search,
-  CheckCircle,
+  CheckCircle2,
   Sparkles,
-  Zap,
-  Globe
+  Clock,
+  BookOpen,
+  Check
 } from 'lucide-react';
 import { Button } from '../components/common/Button';
-import { Card, CardBody } from '../components/common/Card';
+import { Card, CardBody, CardHeader } from '../components/common/Card';
 import { Badge } from '../components/common/Badge';
+import { useAuth } from '../context/AuthContext';
 import './Home.css';
 
-interface ModuleCard {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  icon: React.ReactNode;
-  path: string;
-  badge?: string;
-}
-
 export const Home: React.FC = () => {
-  const portalModules: ModuleCard[] = [
+  const { user, isAuthenticated } = useAuth();
+
+  const platformPillars = [
     {
-      id: 1,
-      title: 'About CSE',
-      description: 'Curriculum overview, core pillars, specialization tracks, and industry domains.',
-      category: 'Foundation',
-      icon: <GraduationCap size={22} />,
-      path: '/about-cse',
+      title: 'LEARN',
+      subtitle: 'Foundations & Concepts',
+      desc: 'Syllabus breakdown, curated YouTube playlists, accredited MOOCs, and semester notes.',
+      icon: <BookOpen size={24} />,
+      link: '/learn',
+      color: 'brand',
+      items: ['About CSE Guide', 'YouTube Curated Hub', 'Coursera MOOCs', 'Notes & Cheat Sheets'],
     },
     {
-      id: 2,
-      title: 'YouTube Learning Hub',
-      description: 'Curated playlists and creators for DSA, Web Dev, AI/ML, and Core CS subjects.',
-      category: 'Learning',
-      icon: <Video size={22} />,
-      path: '/resources/youtube',
-      badge: 'Curated',
+      title: 'BUILD',
+      subtitle: 'Real-World Systems',
+      desc: 'Searchable project database with full system architecture, database design & API specs.',
+      icon: <FolderGit2 size={24} />,
+      link: '/projects',
+      color: 'brand',
+      items: ['Low / Med / High Projects', 'Architecture Diagrams', 'Resume Bullet Generator', 'State Tracker'],
     },
     {
-      id: 3,
-      title: 'Coursera & MOOCs',
-      description: 'Accredited certifications, financial aid tips, and high-impact specialization tracks.',
-      category: 'Learning',
-      icon: <Award size={22} />,
-      path: '/resources/coursera',
+      title: 'COMPETE',
+      subtitle: 'Hackathons & Contests',
+      desc: 'National & global hackathon tracker with a 12-step problem statement analyzer and pitch guide.',
+      icon: <Trophy size={24} />,
+      link: '/hackathons',
+      color: 'brand',
+      items: ['Live Deadline Countdown', '12-Step Problem Analyzer', 'Team Role Matcher', 'Pitch Deck Checklist'],
     },
     {
-      id: 4,
-      title: 'Project Blueprints',
-      description: 'Tiered project ideas (Beginner to Advanced) with system architecture and tech stacks.',
-      category: 'Practice',
-      icon: <FolderGit2 size={22} />,
-      path: '/resources/projects',
-      badge: 'Popular',
+      title: 'PREPARE',
+      subtitle: 'Interviews & DSA',
+      desc: '14 Core DSA patterns, DBMS, OS, Computer Networks, and top product company hiring archives.',
+      icon: <Layers size={24} />,
+      link: '/placement',
+      color: 'brand',
+      items: ['DSA Topic Practice', 'Company Hiring Drives', 'DBMS & OS Primers', 'Mock Interview Arena'],
     },
     {
-      id: 5,
-      title: 'Notes & Platforms',
-      description: 'Semester cheat sheets, W3Schools quick guides, LeetCode & HackerRank sheet links.',
-      category: 'Learning',
-      icon: <FileCode2 size={22} />,
-      path: '/resources/notes',
-    },
-    {
-      id: 6,
-      title: 'Hackathon Hub',
-      description: 'Upcoming hackathons, prize pools, submission dates, and team formation opportunities.',
-      category: 'Opportunities',
-      icon: <Trophy size={22} />,
-      path: '/hackathons',
-      badge: 'Live Tracker',
-    },
-    {
-      id: 7,
-      title: 'Announcements',
-      description: 'Departmental notices, campus tech events, workshop alerts, and critical updates.',
-      category: 'Updates',
-      icon: <Megaphone size={22} />,
-      path: '/announcements',
-    },
-    {
-      id: 8,
-      title: 'AI Career Chatbot',
-      description: 'Intelligent career counseling, resume feedback, and domain roadmapping assistant.',
-      category: 'AI Powered',
-      icon: <BotMessageSquare size={22} />,
-      path: '/chatbot',
-      badge: 'AI Assistant',
-    },
-    {
-      id: 9,
-      title: 'Personal Career Roadmap',
-      description: 'Interactive milestone tracker tailored to your target graduation year and dream role.',
-      category: 'Career',
-      icon: <TrendingUp size={22} />,
-      path: '/progress',
-    },
-    {
-      id: 10,
-      title: 'ATS Resume Builder',
-      description: 'Engineered for tech recruiters with markdown export, LaTeX templates, and ATS scoring.',
-      category: 'Career',
-      icon: <FileText size={22} />,
-      path: '/resume-builder',
-      badge: 'Tool',
-    },
-    {
-      id: 11,
-      title: 'Global Search System',
-      description: 'Instant Command-K search across all 20 modules, documentation, and practice problems.',
-      category: 'Utility',
-      icon: <Search size={22} />,
-      path: '/search',
-    },
-    {
-      id: 12,
-      title: 'Unified Bookmark System',
-      description: 'Save favorite courses, interview questions, hackathons, and roadmaps in custom folders.',
-      category: 'Utility',
-      icon: <Bookmark size={22} />,
-      path: '/bookmarks',
-    },
-    {
-      id: 13,
-      title: 'Placement Hub',
-      description: 'Company-specific hiring patterns, CTC breakdowns, eligibility criteria, and past drives.',
-      category: 'Placement',
-      icon: <Briefcase size={22} />,
-      path: '/placement-hub',
-      badge: 'High Value',
-    },
-    {
-      id: 14,
-      title: 'Interview Preparation',
-      description: 'DSA patterns, System Design fundamentals, DBMS, OS, and Computer Network questions.',
-      category: 'Placement',
-      icon: <Layers size={22} />,
-      path: '/interview-prep',
-    },
-    {
-      id: 15,
-      title: 'Coding Roadmaps',
-      description: 'Visual step-by-step tracks: Fullstack, AI/ML, DevOps, Cyber Security, Systems & Cloud.',
-      category: 'Roadmaps',
-      icon: <Milestone size={22} />,
-      path: '/roadmaps',
-      badge: 'Interactive',
-    },
-    {
-      id: 16,
-      title: 'Skill Assessment',
-      description: 'Timed MCQs, coding challenges, and mock technical evaluation with instant feedback.',
-      category: 'Practice',
-      icon: <HelpCircle size={22} />,
-      path: '/assessments',
-    },
-    {
-      id: 17,
-      title: 'Student Dashboard',
-      description: 'Central command center showing active roadmaps, daily streaks, bookmarks, and stats.',
-      category: 'Dashboard',
-      icon: <Compass size={22} />,
-      path: '/dashboard',
-    },
-    {
-      id: 18,
-      title: 'Progress Tracking',
-      description: 'Visual heatmaps, topic completion charts, and continuous readiness scores.',
-      category: 'Analytics',
-      icon: <Zap size={22} />,
-      path: '/progress',
-    },
-    {
-      id: 19,
-      title: 'Notifications Hub',
-      description: 'Real-time alerts for application deadlines, hackathons, and newly published notes.',
-      category: 'Updates',
-      icon: <Globe size={22} />,
-      path: '/notifications',
-    },
-    {
-      id: 20,
-      title: 'Admin Panel',
-      description: 'Role-based management for faculty and admins to curate content and broadcast drives.',
-      category: 'Management',
-      icon: <ShieldAlert size={22} />,
-      path: '/admin',
-      badge: 'Staff Only',
+      title: 'CAREER',
+      subtitle: 'Roadmaps & ATS Resume',
+      desc: 'Interactive 4-year milestone roadmaps and single-page ATS-optimized tech resume builder.',
+      icon: <Milestone size={24} />,
+      link: '/roadmap',
+      color: 'brand',
+      items: ['4-Year / 8-Semester Path', 'ATS Resume Builder', 'AI Career Counselor', 'Placement Readiness'],
     },
   ];
 
   return (
     <div className="home-page">
-      {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="home-hero">
         <div className="home-hero__badge-container">
           <Badge variant="brand" size="md" icon={<Sparkles size={14} />}>
-            Production-Grade CSE Learning Ecosystem
+            VidyaPath • Centralized CSE Career & Learning Ecosystem
           </Badge>
         </div>
 
         <h1 className="home-hero__title">
-          Master Computer Science. <br />
-          <span className="home-hero__title-accent">Accelerate Your Tech Career.</span>
+          Your Complete CSE <br />
+          <span className="home-hero__title-accent">Career Journey</span>
         </h1>
 
         <p className="home-hero__subtitle">
-          A centralized, open platform unifying 20 essential modules — from semester curriculum
-          guides and curated YouTube resources to placement archives and ATS resume tooling.
+          Learn. Build. Compete. Prepare. Get Career Ready.
         </p>
 
         <div className="home-hero__cta-group">
-          <Link to="/about-cse">
+          <Link to="/roadmap">
             <Button variant="primary" size="lg" rightIcon={<ArrowRight size={18} />}>
-              Explore CSE Guide
+              Explore Career Roadmap
             </Button>
           </Link>
-          <Link to="/roadmaps">
-            <Button variant="secondary" size="lg" leftIcon={<Milestone size={18} />}>
-              View Career Roadmaps
+          <Link to="/projects">
+            <Button variant="outline" size="lg" leftIcon={<FolderGit2 size={18} />}>
+              Explore Projects
             </Button>
           </Link>
         </div>
 
-        {/* Foundation Metric Badges */}
+        {/* Core Value Pillars */}
         <div className="home-hero__metrics">
           <div className="home-hero__metric-pill">
-            <CheckCircle size={16} className="home-hero__metric-icon" />
-            <span>20 Interconnected Modules</span>
+            <CheckCircle2 size={15} className="home-hero__metric-icon" />
+            <span>4-Year Academic Progression</span>
           </div>
           <div className="home-hero__metric-pill">
-            <CheckCircle size={16} className="home-hero__metric-icon" />
-            <span>Dark Green 60:30:10 Design</span>
+            <CheckCircle2 size={15} className="home-hero__metric-icon" />
+            <span>Real-World System Architectures</span>
           </div>
           <div className="home-hero__metric-pill">
-            <CheckCircle size={16} className="home-hero__metric-icon" />
-            <span>High-Performance REST Architecture</span>
+            <CheckCircle2 size={15} className="home-hero__metric-icon" />
+            <span>Placement & Interview Archive</span>
           </div>
         </div>
       </section>
 
-      {/* Modules Showcase Grid */}
-      <section className="home-modules">
-        <div className="home-modules__header">
-          <div>
-            <span className="home-modules__eyebrow">Comprehensive Platform Scope</span>
-            <h2 className="home-modules__title">All 20 Centralized Modules</h2>
-          </div>
-          <p className="home-modules__desc">
-            Explore every dimension of your computer science journey with curated paths, verified resources, and real-time placement tracking.
+      {/* 2. Personalized "Continue Your Journey" Section */}
+      <section className="home-journey-section">
+        <Card variant="brand" className="home-journey-card">
+          <CardHeader>
+            <div className="home-journey__header-left">
+              <div className="home-journey__avatar-icon">
+                <Compass size={20} />
+              </div>
+              <div>
+                <h3 className="home-journey__title">
+                  {isAuthenticated && user
+                    ? `Continue Your Journey, ${user.name.split(' ')[0]}`
+                    : 'Personalized Student Roadmap Tracker'}
+                </h3>
+                <span className="home-journey__subtitle">
+                  {isAuthenticated
+                    ? 'Your real-time academic, project, and interview progress'
+                    : 'Sign in to sync your semester milestones, saved projects, and practice streak'}
+                </span>
+              </div>
+            </div>
+            <Badge variant="brand" size="sm">
+              {isAuthenticated ? 'Active Semester 3 (SY)' : 'Demo Profile View'}
+            </Badge>
+          </CardHeader>
+
+          <CardBody>
+            <div className="home-journey__grid">
+              {/* Semester & Roadmap Stage */}
+              <div className="home-journey__stat-box">
+                <span className="home-journey__stat-label">Current Academic Stage</span>
+                <h4 className="home-journey__stat-val">Semester 3 • Core CSE</h4>
+                <p className="home-journey__stat-sub">DSA, OOP, Computer Networks & DBMS</p>
+                <div className="home-journey__progress-bar">
+                  <div className="home-journey__progress-fill" style={{ width: '65%' }} />
+                </div>
+                <span className="home-journey__progress-text">65% Semester Milestones Completed</span>
+              </div>
+
+              {/* Ongoing Project */}
+              <div className="home-journey__stat-box">
+                <span className="home-journey__stat-label">Active Project In-Progress</span>
+                <h4 className="home-journey__stat-val">Distributed Rate Limiter</h4>
+                <div className="home-journey__stage-badge">
+                  <Badge variant="warning" size="sm">Status: Building API (3/5)</Badge>
+                </div>
+                <p className="home-journey__stat-sub">Redis Token Bucket & Express Gateway</p>
+                <Link to="/projects" className="home-journey__box-link">
+                  Open Project Blueprint →
+                </Link>
+              </div>
+
+              {/* Placement & DSA Readiness */}
+              <div className="home-journey__stat-box">
+                <span className="home-journey__stat-label">Placement & DSA Preparation</span>
+                <h4 className="home-journey__stat-val">42 / 100 Topics Solved</h4>
+                <p className="home-journey__stat-sub">Arrays, LinkedList, Trees & Sliding Window</p>
+                <div className="home-journey__progress-bar">
+                  <div className="home-journey__progress-fill" style={{ width: '42%' }} />
+                </div>
+                <Link to="/placement" className="home-journey__box-link">
+                  Practice Next: Graphs & DP →
+                </Link>
+              </div>
+
+              {/* Upcoming Hackathon & Deadlines */}
+              <div className="home-journey__stat-box">
+                <span className="home-journey__stat-label">Upcoming Hackathons</span>
+                <h4 className="home-journey__stat-val">Smart India Hackathon (SIH)</h4>
+                <div className="home-journey__deadline-pill">
+                  <Clock size={14} />
+                  <span>Registration Closes in 12 Days</span>
+                </div>
+                <Link to="/hackathons" className="home-journey__box-link">
+                  View SIH Problem Analyzer →
+                </Link>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+      </section>
+
+      {/* 3. Platform Categories (Learn, Build, Compete, Prepare, Career) */}
+      <section className="home-pillars-section">
+        <div className="home-section-header">
+          <span className="home-eyebrow">End-to-End Progression</span>
+          <h2 className="home-section-title">Explore Platform Pillars</h2>
+          <p className="home-section-desc">
+            A cohesive architecture designed to solve the question: "What should I do next to become industry ready?"
           </p>
         </div>
 
-        <div className="home-modules__grid">
-          {portalModules.map((mod) => (
-            <Link to={mod.path} key={mod.id} className="home-module__link">
-              <Card variant="default" interactive className="home-module__card">
-                <CardBody>
-                  <div className="home-module__top">
-                    <div className="home-module__icon-box">
-                      {mod.icon}
+        <div className="home-pillars-grid">
+          {platformPillars.map((pillar, idx) => (
+            <Card key={idx} variant="default" interactive className="home-pillar-card">
+              <CardBody>
+                <div className="home-pillar__icon-box">
+                  {pillar.icon}
+                </div>
+                <span className="home-pillar__title">{pillar.title}</span>
+                <span className="home-pillar__subtitle">{pillar.subtitle}</span>
+                <p className="home-pillar__desc">{pillar.desc}</p>
+
+                <div className="home-pillar__items">
+                  {pillar.items.map((item, itemIdx) => (
+                    <div key={itemIdx} className="home-pillar__item-row">
+                      <Check size={14} className="home-pillar__check" />
+                      <span>{item}</span>
                     </div>
-                    {mod.badge && (
-                      <Badge variant="brand" size="sm">
-                        {mod.badge}
-                      </Badge>
-                    )}
-                  </div>
+                  ))}
+                </div>
 
-                  <div className="home-module__meta">
-                    <span className="home-module__category">{mod.category}</span>
-                    <h3 className="home-module__card-title">{mod.title}</h3>
-                    <p className="home-module__card-desc">{mod.description}</p>
-                  </div>
-
-                  <div className="home-module__footer">
-                    <span className="home-module__action-text">Explore Module</span>
-                    <ArrowRight size={14} className="home-module__action-arrow" />
-                  </div>
-                </CardBody>
-              </Card>
-            </Link>
+                <Link to={pillar.link} className="home-pillar__action">
+                  <span>Enter {pillar.title} Hub</span>
+                  <ArrowRight size={14} />
+                </Link>
+              </CardBody>
+            </Card>
           ))}
+        </div>
+      </section>
+
+      {/* 4. AI Career Assistant & ATS Resume Quick Banner */}
+      <section className="home-ai-banner">
+        <div className="home-ai-banner__content">
+          <Badge variant="brand" size="sm" icon={<Sparkles size={14} />}>
+            Intelligent AI Advisory
+          </Badge>
+          <h2>Ask anything about your CSE Roadmap & Placements</h2>
+          <p>
+            The VidyaPath AI Assistant is grounded directly on our curated repository of 4-year roadmaps,
+            interview questions, project architectures, and textbook reading lists.
+          </p>
+          <div className="home-ai-banner__prompts">
+            <span className="home-ai-banner__prompt-chip">"What project should I build after learning Node.js?"</span>
+            <span className="home-ai-banner__prompt-chip">"Explain B-Trees vs Hash Indexing for DBMS interview"</span>
+            <span className="home-ai-banner__prompt-chip">"Review my resume bullet points for Backend Engineer"</span>
+          </div>
+          <Link to="/ai-assistant">
+            <Button variant="primary" size="md" rightIcon={<ArrowRight size={16} />}>
+              Open AI Career Assistant
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
