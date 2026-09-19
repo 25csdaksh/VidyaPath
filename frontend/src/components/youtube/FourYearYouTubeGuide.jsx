@@ -623,7 +623,7 @@ export const FOUR_YEAR_SUBJECTS_DATA = {
         channels: [
           { name: 'Krish Naik', url: 'https://www.youtube.com/results?search_query=Krish%20Naik' },
           { name: 'freeCodeCamp.org', url: 'https://www.youtube.com/results?search_query=freeCodeCamp.org' },
-          { name: 'Alex The Analyst', url: 'https://www.youtube.com/results?search_query=Alex%20The%20Analian' },
+          { name: 'Alex The Analyst', url: 'https://www.youtube.com/results?search_query=Alex%20The%20Analyst' },
         ],
         searches: [
           { query: 'Data Science full course', url: 'https://www.youtube.com/results?search_query=Data%20Science%20full%20course' },
