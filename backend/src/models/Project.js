@@ -78,14 +78,12 @@ const projectSchema = new mongoose.Schema(
       },
     ],
     architecture: {
-      pattern: String, // e.g. "Microservices", "Event-Driven", "Layered Monolith"
+      pattern: String,
       overview: String,
       diagramNotes: String,
     },
     databaseRequirements: {
-      type: String, // e.g. "PostgreSQL + Redis"
-      schemaDesign: String,
-      indexingStrategy: String,
+      type: mongoose.Schema.Types.Mixed,
     },
     apiRequirements: [
       {

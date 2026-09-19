@@ -16,7 +16,21 @@ const roadmapItemSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ['DSA', 'CoreCS', 'WebDev', 'Systems', 'AI_ML', 'DevOps', 'Cybersecurity', 'Database', 'General'],
+      enum: [
+        'DSA',
+        'CoreCS',
+        'WebDev',
+        'Systems',
+        'AI_ML',
+        'DevOps',
+        'Cybersecurity',
+        'Database',
+        'OS',
+        'Networks',
+        'Placement',
+        'Career',
+        'General',
+      ],
       default: 'General',
       index: true,
     },
@@ -24,7 +38,6 @@ const roadmapItemSchema = new mongoose.Schema(
       type: String,
       default: '',
     },
-    // The 6 Milestone Stages for Every Topic
     learnGuide: {
       type: String,
       default: '',
