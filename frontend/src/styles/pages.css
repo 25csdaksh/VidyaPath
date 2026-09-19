@@ -62,16 +62,119 @@
 }
 
 .filter-btn:hover {
-  background: var(--primary-100);
-  color: var(--primary-800);
-  border-color: var(--primary-300);
+  background: var(--lavender-100);
+  color: var(--lavender-900);
+  border-color: var(--lavender-300);
 }
 
 .filter-btn.active {
-  background: var(--primary-800);
+  background: var(--lavender-800);
   color: #ffffff;
-  border-color: var(--primary-800);
-  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.25);
+  border-color: var(--lavender-800);
+  box-shadow: 0 2px 10px rgba(107, 33, 168, 0.28);
+}
+
+/* Roadmap Detailed Table & Topic Styling */
+.roadmap-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+
+.roadmap-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.roadmap-table th {
+  background: var(--lavender-50);
+  color: var(--lavender-950);
+  padding: 0.9rem 1.25rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-heading);
+}
+
+.roadmap-table td {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--border-color-subtle);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.roadmap-table tr:hover td {
+  background: #fdfaff;
+}
+
+.topic-section-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.topic-section-card:hover {
+  border-color: var(--lavender-300);
+  box-shadow: var(--shadow-md);
+}
+
+.topic-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color-subtle);
+}
+
+.topic-badge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--lavender-100);
+  color: var(--lavender-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-flow-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.25rem;
+}
+
+.step-flow-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 /* Page Card Grids */
