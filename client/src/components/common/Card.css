@@ -1,0 +1,60 @@
+.card {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.card--default {
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-xs);
+}
+
+.card--elevated {
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-md);
+}
+
+.card--bordered {
+  border: 1.5px solid var(--border-medium);
+  box-shadow: none;
+}
+
+.card--brand {
+  border: 1px solid var(--brand-primary-200);
+  background: linear-gradient(180deg, #ffffff 0%, var(--brand-primary-50) 100%);
+}
+
+.card--interactive {
+  cursor: pointer;
+}
+
+.card--interactive:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-primary-300);
+  box-shadow: var(--shadow-lg);
+}
+
+.card__header {
+  padding: var(--spacing-5) var(--spacing-6);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__body {
+  padding: var(--spacing-6);
+  flex: 1 1 auto;
+}
+
+.card__footer {
+  padding: var(--spacing-4) var(--spacing-6);
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface-subtle);
+  display: flex;
+  align-items: center;
+}
