@@ -11,61 +11,74 @@
      - 10% Accent Power: Deep Forest / Emerald Green Brand & Amber Accolades
      ======================================================== */
 
-  /* 60% Dominant Neutral Canvas (Light Theme Primary) */
-  --bg-primary: #f8fafc;
+  /* 60% Dominant Neutral Canvas (Egg-White / Warm Creamy Pearl) */
+  --bg-primary: #faf8f5;
   --bg-secondary: #ffffff;
-  --bg-tertiary: #f1f5f9;
-  --bg-surface: rgba(255, 255, 255, 0.95);
-  --bg-surface-hover: #f8fafc;
-  --bg-glass: rgba(255, 255, 255, 0.82);
-  --border-glass: rgba(15, 23, 42, 0.08);
-  --border-color: #e2e8f0;
-  --border-color-subtle: #edf2f7;
-  --border-focus: #166534;
+  --bg-tertiary: #f4effa;
+  --bg-surface: rgba(255, 253, 250, 0.95);
+  --bg-surface-hover: #f7f2fb;
+  --bg-glass: rgba(255, 253, 250, 0.88);
+  --border-glass: rgba(107, 33, 168, 0.08);
+  --border-color: #e5ddef;
+  --border-color-subtle: #f1ecf6;
+  --border-focus: #7c3aed;
 
-  /* 30% Structural Contrast (Typography & Elements) */
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-  --text-subtle: #94a3b8;
+  /* 30% Structural Contrast (Typography & Deep Elements) */
+  --text-primary: #1e1b2e;
+  --text-secondary: #3b3553;
+  --text-muted: #6b6380;
+  --text-subtle: #998fa8;
   --text-inverse: #ffffff;
 
-  /* 10% Primary Brand (Dark Green / Forest / Pine) - NO BLUE MAIN */
-  --primary-50: #f0fdf4;
-  --primary-100: #dcfce7;
-  --primary-200: #bbf7d0;
-  --primary-300: #86efac;
-  --primary-400: #4ade80;
-  --primary-500: #22c55e;
-  --primary-600: #16a34a;
-  --primary-700: #15803d;
-  --primary-800: #166534; /* Deep Forest Green (Main Brand) */
-  --primary-900: #14532d; /* Pine Dark Green */
-  --primary-950: #052e16;
+  /* 10% Primary Brand (Rich Royal Lavender & Violet Glow) */
+  --lavender-50: #faf5ff;
+  --lavender-100: #f3e8ff;
+  --lavender-200: #e9d5ff;
+  --lavender-300: #d8b4fe;
+  --lavender-400: #c084fc;
+  --lavender-500: #a855f7;
+  --lavender-600: #9333ea;
+  --lavender-700: #7e22ce;
+  --lavender-800: #6b21a8;
+  --lavender-900: #581c87;
+  --lavender-950: #3b0764;
 
-  /* Brand Gradients (Deep Forest Green to Emerald) */
-  --primary-gradient: linear-gradient(135deg, #166534 0%, #15803d 50%, #047857 100%);
-  --brand-gradient-subtle: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-  --accent-gradient-gold: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  --primary-50: #faf5ff;
+  --primary-100: #f3e8ff;
+  --primary-200: #e9d5ff;
+  --primary-300: #d8b4fe;
+  --primary-400: #c084fc;
+  --primary-500: #a855f7;
+  --primary-600: #9333ea;
+  --primary-700: #7e22ce;
+  --primary-800: #6d28d9; /* Deep Royal Lavender */
+  --primary-900: #581c87; /* Regal Violet */
+  --primary-950: #3b0764;
 
-  /* Academic & Status Accents */
-  --color-success: #15803d;
+  /* Brand Gradients (Royal Violet to Radiant Lilac) */
+  --primary-gradient: linear-gradient(135deg, #4c1d95 0%, #6d28d9 45%, #9333ea 80%, #a855f7 100%);
+  --lavender-hero-gradient: linear-gradient(135deg, #2e1065 0%, #4c1d95 40%, #6d28d9 80%, #7e22ce 100%);
+  --brand-gradient-subtle: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  --accent-gradient-gold: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+
+  /* Status Accents */
+  --color-success: #16a34a;
   --color-success-bg: #dcfce7;
   --color-warning: #d97706;
   --color-warning-bg: #fef3c7;
-  --color-danger: #dc2626;
-  --color-danger-bg: #fee2e2;
-  --color-info: #0d9488; /* Academic Teal / Cyan */
-  --color-info-bg: #ccfbf1;
+  --color-danger: #e11d48;
+  --color-danger-bg: #ffe4e6;
+  --color-info: #7c3aed;
+  --color-info-bg: #f3e8ff;
   --color-accent-amber: #b45309;
 
-  /* Shadows & Elevations */
-  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
-  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-  --shadow-glow-green: 0 0 20px -3px rgba(22, 101, 52, 0.25);
+  /* Shadows & Glowing Lavender Elevations */
+  --shadow-xs: 0 1px 2px 0 rgba(46, 16, 101, 0.04);
+  --shadow-sm: 0 2px 4px 0 rgba(46, 16, 101, 0.06), 0 1px 2px -1px rgba(46, 16, 101, 0.04);
+  --shadow-md: 0 4px 10px -2px rgba(46, 16, 101, 0.08), 0 2px 4px -2px rgba(46, 16, 101, 0.04);
+  --shadow-lg: 0 12px 20px -4px rgba(46, 16, 101, 0.1), 0 4px 6px -4px rgba(46, 16, 101, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(46, 16, 101, 0.12), 0 8px 10px -6px rgba(46, 16, 101, 0.05);
+  --shadow-glow-lavender: 0 0 25px -3px rgba(124, 58, 237, 0.3);
 
   /* Layout Spacing & Geometry */
   --navbar-height: 68px;
