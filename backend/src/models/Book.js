@@ -81,6 +81,11 @@ const bookSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    isPublished: {
+      type: Boolean,
+      default: true,
+      index: true,
+    },
   },
   {
     timestamps: true,

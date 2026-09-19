@@ -65,11 +65,32 @@ const profileSchema = new mongoose.Schema(
       trim: true,
       default: '',
     },
+    leetcode: {
+      type: String,
+      trim: true,
+      default: '',
+    },
+    codeforces: {
+      type: String,
+      trim: true,
+      default: '',
+    },
     careerGoal: {
       type: String,
       trim: true,
       default: '',
     },
+    targetRole: {
+      type: String,
+      trim: true,
+      default: '',
+    },
+    targetCompanies: [
+      {
+        type: String,
+        trim: true,
+      },
+    ],
     specialization: {
       type: String,
       enum: [

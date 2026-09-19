@@ -1,0 +1,118 @@
+:root {
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* ========================================================
+     60:30:10 COLOR BALANCE (LIGHT THEME DEFAULT)
+     - 60% Dominant Background & Neutral Canvas: Crisp slate/snow
+     - 30% Structural Contrast: Deep slate text & card surfaces
+     - 10% Accent Power: Deep Forest / Emerald Green Brand & Amber Accolades
+     ======================================================== */
+
+  /* 60% Dominant Neutral Canvas (Light Theme Primary) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-surface: rgba(255, 255, 255, 0.95);
+  --bg-surface-hover: #f8fafc;
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --border-glass: rgba(15, 23, 42, 0.08);
+  --border-color: #e2e8f0;
+  --border-color-subtle: #edf2f7;
+  --border-focus: #166534;
+
+  /* 30% Structural Contrast (Typography & Elements) */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* 10% Primary Brand (Dark Green / Forest / Pine) - NO BLUE MAIN */
+  --primary-50: #f0fdf4;
+  --primary-100: #dcfce7;
+  --primary-200: #bbf7d0;
+  --primary-300: #86efac;
+  --primary-400: #4ade80;
+  --primary-500: #22c55e;
+  --primary-600: #16a34a;
+  --primary-700: #15803d;
+  --primary-800: #166534; /* Deep Forest Green (Main Brand) */
+  --primary-900: #14532d; /* Pine Dark Green */
+  --primary-950: #052e16;
+
+  /* Brand Gradients (Deep Forest Green to Emerald) */
+  --primary-gradient: linear-gradient(135deg, #166534 0%, #15803d 50%, #047857 100%);
+  --brand-gradient-subtle: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  --accent-gradient-gold: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+
+  /* Academic & Status Accents */
+  --color-success: #15803d;
+  --color-success-bg: #dcfce7;
+  --color-warning: #d97706;
+  --color-warning-bg: #fef3c7;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fee2e2;
+  --color-info: #0d9488; /* Academic Teal / Cyan */
+  --color-info-bg: #ccfbf1;
+  --color-accent-amber: #b45309;
+
+  /* Shadows & Elevations */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-glow-green: 0 0 20px -3px rgba(22, 101, 52, 0.25);
+
+  /* Layout Spacing & Geometry */
+  --navbar-height: 68px;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Motion & Animations */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Optional Dark Theme Switch */
+[data-theme='dark'] {
+  --bg-primary: #0a110d;
+  --bg-secondary: #101c15;
+  --bg-tertiary: #172a20;
+  --bg-surface: rgba(16, 28, 21, 0.85);
+  --bg-surface-hover: #1b3327;
+  --bg-glass: rgba(16, 28, 21, 0.75);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --border-color-subtle: rgba(255, 255, 255, 0.06);
+  --border-focus: #22c55e;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --text-inverse: #0f172a;
+
+  --primary-800: #22c55e;
+  --primary-900: #16a34a;
+
+  --color-success-bg: rgba(22, 163, 74, 0.2);
+  --color-warning-bg: rgba(217, 119, 6, 0.2);
+  --color-danger-bg: rgba(220, 38, 38, 0.2);
+  --color-info-bg: rgba(13, 148, 136, 0.2);
+
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-glow-green: 0 0 25px -3px rgba(34, 197, 94, 0.3);
+}

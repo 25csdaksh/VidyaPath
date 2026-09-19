@@ -63,6 +63,11 @@ const resourceSchema = new mongoose.Schema(
       min: 1,
       max: 5,
     },
+    isPublished: {
+      type: Boolean,
+      default: true,
+      index: true,
+    },
   },
   {
     timestamps: true,

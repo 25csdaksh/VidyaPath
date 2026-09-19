@@ -10,7 +10,15 @@
     "seed:projects": "node src/seed/seed.js --projects",
     "seed:roadmap": "node src/seed/seed.js --roadmap",
     "seed:interviews": "node src/seed/seed.js --interviews",
-    "seed:books": "node src/seed/seed.js --books"
+    "seed:books": "node src/seed/seed.js --books",
+    "test": "node tests/auth_test.js && node tests/api_modules_test.js && node tests/backend_complete_suite.js && node tests/personalizedExperienceTest.js && node tests/aiAssistantTest.js && node tests/adminSuiteTest.js && node tests/securityAuditTest.js",
+    "test:auth": "node tests/auth_test.js",
+    "test:api": "node tests/api_modules_test.js",
+    "test:suite": "node tests/backend_complete_suite.js",
+    "test:personalized": "node tests/personalizedExperienceTest.js",
+    "test:ai": "node tests/aiAssistantTest.js",
+    "test:admin": "node tests/adminSuiteTest.js",
+    "test:security": "node tests/securityAuditTest.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

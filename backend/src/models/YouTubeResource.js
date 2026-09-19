@@ -53,6 +53,11 @@ const youTubeResourceSchema = new mongoose.Schema(
         index: true,
       },
     ],
+    isPublished: {
+      type: Boolean,
+      default: true,
+      index: true,
+    },
   },
   {
     timestamps: true,

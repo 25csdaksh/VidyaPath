@@ -21,6 +21,8 @@ const ResumeVersion = require('./ResumeVersion');
 const Notification = require('./Notification');
 const UserProgress = require('./UserProgress');
 const AIConversation = require('./AIConversation');
+const ChatConversation = require('./ChatConversation');
+const AuditLog = require('./AuditLog');
 
 module.exports = {
   User,
@@ -46,4 +48,6 @@ module.exports = {
   Notification,
   UserProgress,
   AIConversation,
+  ChatConversation,
+  AuditLog,
 };
