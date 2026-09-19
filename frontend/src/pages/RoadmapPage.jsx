@@ -46,6 +46,7 @@ import {
   FileText,
   Workflow,
   Sparkle,
+  Video,
 } from 'lucide-react';
 import Button from '../components/common/Button';
 import Card from '../components/common/Card';
@@ -54,6 +55,7 @@ import ProgressBar from '../components/common/ProgressBar';
 import Skeleton from '../components/common/Skeleton';
 import EmptyState from '../components/feedback/EmptyState';
 import ErrorState from '../components/feedback/ErrorState';
+import FourYearYouTubeGuide from '../components/youtube/FourYearYouTubeGuide';
 import roadmapService from '../services/roadmapService';
 import dashboardService from '../services/dashboardService';
 import { useRoadmapProgress } from '../hooks/useRoadmapProgress';
@@ -272,6 +274,7 @@ export const RoadmapPage = () => {
       <div className="roadmap-view-tabs" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', boxShadow: 'var(--shadow-sm)' }}>
         {[
           { id: 'guide', label: '📖 Complete 4-Year Master Guide', icon: BookOpen },
+          { id: 'youtube', label: '📺 4-Year YouTube Video Guide', icon: Video },
           { id: 'semesters', label: '📅 Semester 1-8 Live DB Tracker', icon: Map },
           { id: 'languages', label: '💻 Languages: When & Why? (Sec 6)', icon: Code },
           { id: 'skillmatrix', label: '📊 4-Year Skill Matrix (Sec 7)', icon: Workflow },
@@ -299,6 +302,71 @@ export const RoadmapPage = () => {
           ======================================================== */}
       {activeView === 'guide' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {/* Quick YouTube Learning Guide Jump Banner */}
+          <div
+            style={{
+              background: 'linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%)',
+              border: '1px solid #d8b4fe',
+              borderRadius: '16px',
+              padding: '1.25rem 1.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '1rem',
+              flexWrap: 'wrap',
+              boxShadow: 'var(--shadow-xs)',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <div
+                style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #6d28d9, #9333ea)',
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <Video size={22} />
+              </div>
+              <div>
+                <div style={{ fontWeight: 800, fontSize: '1.05rem', color: '#3b0764' }}>
+                  📺 Looking for Subject-wise YouTube Lectures?
+                </div>
+                <div style={{ fontSize: '0.85rem', color: '#6b21a8' }}>
+                  Explore 38 subjects (FY → SY → TY → Final), top 20 creators, dual-channel picks & direct 1-click searches.
+                </div>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={() => setActiveView('youtube')}
+                icon={ArrowRight}
+                iconPosition="right"
+              >
+                Open YouTube Guide
+              </Button>
+              <Link to="/youtube">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  style={{ borderColor: '#7c3aed', color: '#6d28d9' }}
+                  icon={ExternalLink}
+                  iconPosition="right"
+                >
+                  YouTube Hub
+                </Button>
+              </Link>
+            </div>
+          </div>
+
           {/* Section 1: CSE at a Glance */}
           <div className="topic-section-card">
             <div className="topic-section-header">
@@ -1696,6 +1764,13 @@ export const RoadmapPage = () => {
             </p>
           </div>
         </div>
+      )}
+
+      {/* ========================================================
+          VIEW 8: 4-YEAR YOUTUBE VIDEO GUIDE (SUBJECT-WISE & 20+ CREATORS)
+          ======================================================== */}
+      {activeView === 'youtube' && (
+        <FourYearYouTubeGuide />
       )}
     </div>
   );
