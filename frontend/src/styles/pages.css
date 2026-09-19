@@ -278,6 +278,157 @@
   color: #ffffff;
 }
 
+/* 4-Year CSE Comprehensive Hub Styles */
+.roadmap-view-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.4rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+}
+
+.roadmap-view-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.roadmap-view-tab:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.roadmap-view-tab.active {
+  background: #166534;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.28);
+}
+
+.year-hero-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.year-hero-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.year-hero-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: #166534;
+}
+
+.year-hero-card.active {
+  border-color: #166534;
+  background: #f0fdf4;
+  box-shadow: 0 4px 14px rgba(22, 101, 52, 0.15);
+}
+
+.year-hero-card.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #166534, #22c55e);
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.lang-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lang-card:hover {
+  border-color: #166534;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.career-track-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.career-track-card:hover {
+  border-color: #166534;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.readiness-check-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem 1.35rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.readiness-check-item:hover {
+  border-color: #166534;
+  background: #f8fafc;
+}
+
+.readiness-check-item.checked {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
 /* Project Details Specific Layout */
 .project-detail-layout {
   display: grid;
