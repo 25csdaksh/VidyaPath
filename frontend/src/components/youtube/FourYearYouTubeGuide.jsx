@@ -1005,11 +1005,11 @@ export const FourYearYouTubeGuide = () => {
       {/* Hero Header */}
       <div
         style={{
-          background: 'linear-gradient(135deg, #2e1065 0%, #4c1d95 35%, #6d28d9 75%, #7e22ce 100%)',
+          background: 'var(--navy-hero-gradient)',
           borderRadius: '24px',
           padding: '2.5rem 2rem',
           color: '#ffffff',
-          boxShadow: '0 20px 40px -15px rgba(109, 40, 217, 0.35)',
+          boxShadow: 'var(--shadow-lg), var(--shadow-glow-navy)',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
@@ -1027,7 +1027,7 @@ export const FourYearYouTubeGuide = () => {
           >
             <Video size={16} /> CSE 4-YEAR YOUTUBE LEARNING GUIDE
           </span>
-          <span style={{ fontSize: '0.85rem', color: '#e9d5ff', fontWeight: 600 }}>
+          <span style={{ fontSize: '0.85rem', color: 'var(--aegean-200)', fontWeight: 600 }}>
             Subject-wise • Easy Explanation • Multiple YouTube Channels • Clickable Links
           </span>
         </div>
@@ -1053,7 +1053,7 @@ export const FourYearYouTubeGuide = () => {
               cursor: 'pointer',
               border: 'none',
               background: subView === 'curriculum' ? '#ffffff' : 'rgba(255, 255, 255, 0.15)',
-              color: subView === 'curriculum' ? '#4c1d95' : '#ffffff',
+              color: subView === 'curriculum' ? 'var(--navy-800)' : '#ffffff',
             }}
           >
             🎓 4-Year Subject Guide ({Object.values(FOUR_YEAR_SUBJECTS_DATA).reduce((acc, y) => acc + y.subjects.length, 0)} Subjects)
@@ -1068,7 +1068,7 @@ export const FourYearYouTubeGuide = () => {
               cursor: 'pointer',
               border: 'none',
               background: subView === 'creators' ? '#ffffff' : 'rgba(255, 255, 255, 0.15)',
-              color: subView === 'creators' ? '#4c1d95' : '#ffffff',
+              color: subView === 'creators' ? 'var(--navy-800)' : '#ffffff',
             }}
           >
             📺 Top 20 Creators
@@ -1083,7 +1083,7 @@ export const FourYearYouTubeGuide = () => {
               cursor: 'pointer',
               border: 'none',
               background: subView === 'specialization' ? '#ffffff' : 'rgba(255, 255, 255, 0.15)',
-              color: subView === 'specialization' ? '#4c1d95' : '#ffffff',
+              color: subView === 'specialization' ? 'var(--navy-800)' : '#ffffff',
             }}
           >
             🚀 Specialization Sequences & Study Rules

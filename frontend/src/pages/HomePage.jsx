@@ -85,11 +85,11 @@ export const HomePage = () => {
       badge: 'Academic',
     },
     {
-      title: 'Courses & Specializations',
-      desc: 'Direct paths to top-rated online specializations from Stanford, MIT & DeepLearning.AI.',
+      title: 'Coursera & Specializations',
+      desc: '35 subject-wise certifications mapped across 4 years from Google, IBM, Meta, Stanford & DeepLearning.AI.',
       icon: GraduationCap,
       link: '/courses',
-      badge: 'Certified',
+      badge: '35 Certs',
     },
     {
       title: 'Hackathon Playbook',

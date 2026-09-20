@@ -35,6 +35,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
 }
 
 .sidebar-logo {
@@ -44,7 +45,7 @@
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--navy-800);
   text-decoration: none;
 }
 
@@ -71,20 +72,22 @@
 }
 
 .nav-link:hover {
-  background: var(--bg-surface-hover);
-  color: var(--text-primary);
+  background: var(--aegean-100);
+  color: var(--navy-800);
 }
 
 .nav-link.active {
-  background: rgba(99, 102, 241, 0.15);
-  color: var(--primary-400);
-  border: 1px solid rgba(99, 102, 241, 0.3);
-  font-weight: 600;
+  background: var(--aegean-100);
+  color: var(--navy-800);
+  border: 1px solid var(--aegean-300);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(14, 47, 118, 0.08);
 }
 
 .sidebar-footer {
   padding: 1rem 0.75rem;
   border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
 }
 
 /* Navbar Styles */
@@ -149,8 +152,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 40%),
-              radial-gradient(circle at bottom left, rgba(217, 70, 239, 0.1), transparent 40%),
+  background: radial-gradient(circle at top right, rgba(170, 192, 225, 0.3), transparent 45%),
+              radial-gradient(circle at bottom left, rgba(14, 47, 118, 0.08), transparent 45%),
               var(--bg-primary);
   padding: 2rem 1rem;
 }
@@ -159,6 +162,10 @@
   width: 100%;
   max-width: 460px;
   padding: 2.5rem 2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Responsive Media Queries */

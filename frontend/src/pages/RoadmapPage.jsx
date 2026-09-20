@@ -56,6 +56,8 @@ import Skeleton from '../components/common/Skeleton';
 import EmptyState from '../components/feedback/EmptyState';
 import ErrorState from '../components/feedback/ErrorState';
 import FourYearYouTubeGuide from '../components/youtube/FourYearYouTubeGuide';
+import FourYearCourseraGuide from '../components/coursera/FourYearCourseraGuide';
+import PersonalCareerRoadmap from '../components/roadmap/PersonalCareerRoadmap';
 import roadmapService from '../services/roadmapService';
 import dashboardService from '../services/dashboardService';
 import { useRoadmapProgress } from '../hooks/useRoadmapProgress';
@@ -211,13 +213,13 @@ export const RoadmapPage = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', backgroundColor: 'var(--bg-primary)', minHeight: '100vh', paddingBottom: '3.5rem' }}>
-      {/* 60:30:10 Design: Luxurious Royal Lavender & Egg-White Academic Hero Banner */}
+      {/* 60:30:10 Design: Luxurious Santorini Navy & Aegean Academic Hero Banner */}
       <div
         className="hero-banner"
         style={{
-          background: 'linear-gradient(135deg, #1e0836 0%, #3b0764 35%, #581c87 70%, #6d28d9 100%)',
-          border: '1px solid rgba(216, 180, 254, 0.25)',
-          boxShadow: '0 20px 30px -10px rgba(107, 33, 168, 0.25), 0 0 30px rgba(168, 85, 247, 0.15)',
+          background: 'var(--navy-hero-gradient)',
+          border: '1px solid rgba(170, 192, 225, 0.25)',
+          boxShadow: 'var(--shadow-lg), var(--shadow-glow-navy)',
         }}
       >
         <div style={{ position: 'relative', zIndex: 1, maxWidth: '880px' }}>
@@ -227,32 +229,32 @@ export const RoadmapPage = () => {
               alignItems: 'center',
               gap: '0.6rem',
               background: 'rgba(255, 255, 255, 0.12)',
-              border: '1px solid rgba(233, 213, 255, 0.3)',
+              border: '1px solid rgba(170, 192, 225, 0.3)',
               padding: '0.4rem 1rem',
               borderRadius: '9999px',
               fontSize: '0.85rem',
               fontWeight: 700,
-              color: '#f3e8ff',
+              color: 'var(--aegean-200)',
               marginBottom: '1.25rem',
               backdropFilter: 'blur(12px)',
             }}
           >
-            <Compass size={16} style={{ color: '#d8b4fe' }} />
+            <Compass size={16} style={{ color: 'var(--aegean-300)' }} />
             <span>CSE – 4 YEAR ROADMAP • Subjects • Programming Languages • Skills • Projects • Career Path</span>
           </div>
 
-          <h1 className="hero-title" style={{ color: '#ffffff', letterSpacing: '-0.03em' }}>
+          <h1 className="hero-title" style={{ color: '#ffffff', letterSpacing: '-0.02em' }}>
             A Practical Guide for a <span>Computer Science & Engineering</span> Student
           </h1>
-          <p className="hero-subtitle" style={{ color: '#e9d5ff', fontSize: '1.05rem', lineHeight: 1.6 }}>
+          <p className="hero-subtitle" style={{ color: 'rgba(255, 255, 255, 0.92)', fontSize: '1.05rem', lineHeight: 1.6 }}>
             Navigate the complete 4-year journey from programming fundamentals to core computer science, advanced technologies, internships, specializations, and final-year capstone engineering.
           </p>
 
           {/* Important Academic Note Banner */}
           <div
             style={{
-              background: 'rgba(0, 0, 0, 0.25)',
-              border: '1px solid rgba(216, 180, 254, 0.3)',
+              background: 'rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(170, 192, 225, 0.25)',
               borderRadius: 'var(--radius-md)',
               padding: '1rem 1.25rem',
               marginTop: '1.5rem',
@@ -262,8 +264,8 @@ export const RoadmapPage = () => {
               backdropFilter: 'blur(8px)',
             }}
           >
-            <Info size={20} style={{ color: '#d8b4fe', flexShrink: 0, marginTop: '2px' }} />
-            <div style={{ fontSize: '0.85rem', color: '#f3e8ff', lineHeight: 1.5 }}>
+            <Info size={20} style={{ color: 'var(--aegean-200)', flexShrink: 0, marginTop: '2px' }} />
+            <div style={{ fontSize: '0.85rem', color: '#ffffff', lineHeight: 1.5 }}>
               <strong style={{ color: '#ffffff' }}>Important Note:</strong> This document gives a detailed, practical overview of a typical 4-year CSE degree. Exact subjects, semester names, credits and programming languages vary by university and college. Use this as a roadmap for your student portal; the official syllabus of your university should be used for exact subject mapping.
             </div>
           </div>
@@ -274,6 +276,8 @@ export const RoadmapPage = () => {
       <div className="roadmap-view-tabs" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', boxShadow: 'var(--shadow-sm)' }}>
         {[
           { id: 'guide', label: '📖 Complete 4-Year Master Guide', icon: BookOpen },
+          { id: 'personal', label: '🎯 Personal Career Roadmap (21 Secs)', icon: Compass },
+          { id: 'coursera', label: '📜 4-Year Coursera Guide', icon: GraduationCap },
           { id: 'youtube', label: '📺 4-Year YouTube Video Guide', icon: Video },
           { id: 'semesters', label: '📅 Semester 1-8 Live DB Tracker', icon: Map },
           { id: 'languages', label: '💻 Languages: When & Why? (Sec 6)', icon: Code },
@@ -302,68 +306,189 @@ export const RoadmapPage = () => {
           ======================================================== */}
       {activeView === 'guide' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          {/* Quick YouTube Learning Guide Jump Banner */}
-          <div
-            style={{
-              background: 'linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%)',
-              border: '1px solid #d8b4fe',
-              borderRadius: '16px',
-              padding: '1.25rem 1.5rem',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '1rem',
-              flexWrap: 'wrap',
-              boxShadow: 'var(--shadow-xs)',
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <div
-                style={{
-                  width: '42px',
-                  height: '42px',
-                  borderRadius: '12px',
-                  background: 'linear-gradient(135deg, #6d28d9, #9333ea)',
-                  color: '#ffffff',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0,
-                }}
-              >
-                <Video size={22} />
+          {/* Quick Learning Guides Dual Jump Banners */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1rem' }}>
+            {/* Coursera Certificate Guide Jump Banner */}
+            <div
+              style={{
+                background: 'var(--bg-secondary)',
+                border: '1px solid var(--border-color)',
+                borderRadius: 'var(--radius-lg)',
+                padding: '1.25rem 1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '1rem',
+                flexWrap: 'wrap',
+                boxShadow: 'var(--shadow-sm)',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <div
+                  style={{
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '12px',
+                    background: 'var(--navy-hero-gradient)',
+                    color: '#ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                  }}
+                >
+                  <GraduationCap size={22} />
+                </div>
+                <div>
+                  <div style={{ fontWeight: 800, fontSize: '1.05rem', color: 'var(--text-primary)' }}>
+                    📜 Coursera Certificate Guide
+                  </div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                    35 resume-friendly courses (FY → Final), 6 tracks, resume shortlist & paths.
+                  </div>
+                </div>
               </div>
-              <div>
-                <div style={{ fontWeight: 800, fontSize: '1.05rem', color: '#3b0764' }}>
-                  📺 Looking for Subject-wise YouTube Lectures?
-                </div>
-                <div style={{ fontSize: '0.85rem', color: '#6b21a8' }}>
-                  Explore 38 subjects (FY → SY → TY → Final), top 20 creators, dual-channel picks & direct 1-click searches.
-                </div>
+
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={() => setActiveView('coursera')}
+                  icon={ArrowRight}
+                  iconPosition="right"
+                >
+                  Open Guide
+                </Button>
+                <Link to="/courses">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    icon={ExternalLink}
+                    iconPosition="right"
+                  >
+                    Courses Hub
+                  </Button>
+                </Link>
               </div>
             </div>
 
-            <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
-              <Button
-                variant="primary"
-                size="sm"
-                onClick={() => setActiveView('youtube')}
-                icon={ArrowRight}
-                iconPosition="right"
-              >
-                Open YouTube Guide
-              </Button>
-              <Link to="/youtube">
+            {/* YouTube Learning Guide Jump Banner */}
+            <div
+              style={{
+                background: 'var(--bg-secondary)',
+                border: '1px solid var(--border-color)',
+                borderRadius: 'var(--radius-lg)',
+                padding: '1.25rem 1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '1rem',
+                flexWrap: 'wrap',
+                boxShadow: 'var(--shadow-sm)',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <div
+                  style={{
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '12px',
+                    background: 'var(--navy-hero-gradient)',
+                    color: '#ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                  }}
+                >
+                  <Video size={22} />
+                </div>
+                <div>
+                  <div style={{ fontWeight: 800, fontSize: '1.05rem', color: 'var(--text-primary)' }}>
+                    📺 Subject-wise YouTube Lectures
+                  </div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                    38 subjects (FY → Final), top 20 creators & direct 1-click searches.
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
                 <Button
-                  variant="outline"
+                  variant="primary"
                   size="sm"
-                  style={{ borderColor: '#7c3aed', color: '#6d28d9' }}
-                  icon={ExternalLink}
+                  onClick={() => setActiveView('youtube')}
+                  icon={ArrowRight}
                   iconPosition="right"
                 >
-                  YouTube Hub
+                  YouTube Guide
                 </Button>
-              </Link>
+                <Link to="/youtube">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    icon={ExternalLink}
+                    iconPosition="right"
+                  >
+                    YouTube Hub
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Personal Career Roadmap Jump Banner */}
+            <div
+              style={{
+                background: 'var(--bg-secondary)',
+                border: '1px solid var(--border-color)',
+                borderRadius: 'var(--radius-lg)',
+                padding: '1.25rem 1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '1rem',
+                flexWrap: 'wrap',
+                boxShadow: 'var(--shadow-sm)',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <div
+                  style={{
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '12px',
+                    background: 'var(--navy-hero-gradient)',
+                    color: '#ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                  }}
+                >
+                  <Compass size={22} />
+                </div>
+                <div>
+                  <div style={{ fontWeight: 800, fontSize: '1.05rem', color: 'var(--text-primary)' }}>
+                    🎯 Personal Career Roadmap
+                  </div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                    Syllabus + Skills + Projects + 16-step execution + 30-day action sprint.
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={() => setActiveView('personal')}
+                  icon={ArrowRight}
+                  iconPosition="right"
+                  style={{ background: '#4338ca', borderColor: '#4338ca' }}
+                >
+                  Personal Roadmap
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -1401,8 +1526,8 @@ export const RoadmapPage = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div className="page-header-content">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-              <Badge variant="primary" style={{ background: '#7c3aed', color: '#ffffff' }}>Section 8</Badge>
-              <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>Graduation Standard</Badge>
+              <Badge variant="primary">Section 8</Badge>
+              <Badge variant="neutral">Graduation Standard</Badge>
             </div>
             <h2>8. What a CSE Student Should Have by Graduation</h2>
             <p>
@@ -1414,21 +1539,21 @@ export const RoadmapPage = () => {
           <Card
             style={{
               padding: '2rem',
-              background: 'linear-gradient(135deg, #1e0836 0%, #4c1d95 60%, #6d28d9 100%)',
+              background: 'var(--navy-hero-gradient)',
               color: '#ffffff',
-              boxShadow: '0 12px 24px -6px rgba(107, 33, 168, 0.3)',
-              border: '1px solid rgba(216, 180, 254, 0.25)',
+              boxShadow: 'var(--shadow-lg), var(--shadow-glow-navy)',
+              border: '1px solid rgba(170, 192, 225, 0.25)',
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
               <div>
-                <Badge variant="neutral" style={{ background: 'rgba(255,255,255,0.18)', color: '#d8b4fe', marginBottom: '0.5rem', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Badge variant="neutral" style={{ background: 'rgba(255,255,255,0.18)', color: 'var(--aegean-200)', marginBottom: '0.5rem', border: '1px solid rgba(255,255,255,0.2)' }}>
                   Interactive Self-Assessment
                 </Badge>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.35rem' }}>
                   Your Graduation Readiness Score: {readinessScore}%
                 </h3>
-                <p style={{ color: '#e9d5ff', fontSize: '0.925rem', maxWidth: '600px', lineHeight: 1.55 }}>
+                <p style={{ color: 'rgba(255, 255, 255, 0.92)', fontSize: '0.925rem', maxWidth: '600px', lineHeight: 1.55 }}>
                   Check off the competencies below as you progress through your CSE degree. Aim for 85%+ before starting your 7th semester placement season.
                 </p>
               </div>
@@ -1437,17 +1562,17 @@ export const RoadmapPage = () => {
                 style={{
                   minWidth: '220px',
                   background: 'rgba(0,0,0,0.25)',
-                  border: '1px solid rgba(216, 180, 254, 0.2)',
+                  border: '1px solid rgba(170, 192, 225, 0.25)',
                   padding: '1.25rem',
                   borderRadius: 'var(--radius-lg)',
                   textAlign: 'center',
                   backdropFilter: 'blur(8px)',
                 }}
               >
-                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#d8b4fe', lineHeight: 1 }}>
+                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--aegean-200)', lineHeight: 1 }}>
                   {Object.values(checkedReadiness).filter(Boolean).length} / {graduationCriteria.length}
                 </div>
-                <div style={{ fontSize: '0.8rem', color: '#f3e8ff', marginTop: '0.35rem', fontWeight: 600 }}>
+                <div style={{ fontSize: '0.8rem', color: '#ffffff', marginTop: '0.35rem', fontWeight: 600 }}>
                   Core Milestones Mastered
                 </div>
               </div>
@@ -1764,6 +1889,20 @@ export const RoadmapPage = () => {
             </p>
           </div>
         </div>
+      )}
+
+      {/* ========================================================
+          VIEW: PERSONAL 4-YEAR CAREER ROADMAP (21 SECTIONS)
+          ======================================================== */}
+      {activeView === 'personal' && (
+        <PersonalCareerRoadmap />
+      )}
+
+      {/* ========================================================
+          VIEW: 4-YEAR COURSERA CERTIFICATE GUIDE (35 COURSES)
+          ======================================================== */}
+      {activeView === 'coursera' && (
+        <FourYearCourseraGuide />
       )}
 
       {/* ========================================================

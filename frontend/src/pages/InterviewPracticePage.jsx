@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import {
   HelpCircle,
   Search,
@@ -11,6 +11,8 @@ import {
   Bookmark,
   Award,
   Zap,
+  BookOpen,
+  ArrowRight,
 } from 'lucide-react';
 import Input from '../components/common/Input';
 import Button from '../components/common/Button';
@@ -25,9 +27,11 @@ import { useBookmarks } from '../hooks/useBookmarks';
 import { getErrorDetails } from '../utils/errorHandler';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
+import PlacementMasterGuide from '../components/placement/PlacementMasterGuide';
 
 export const InterviewPracticePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [activeTab, setActiveTab] = useState(searchParams.get('view') === 'master' ? 'master' : 'practice');
   const [questions, setQuestions] = useState([]);
   const [meta, setMeta] = useState({ page: 1, totalPages: 1, total: 0 });
   const [isLoading, setIsLoading] = useState(true);
@@ -81,8 +85,10 @@ export const InterviewPracticePage = () => {
   }, [searchParams, selectedCategory, selectedDifficulty, searchQuery, isAuthenticated]);
 
   useEffect(() => {
-    fetchQuestions();
-  }, [fetchQuestions]);
+    if (activeTab === 'practice') {
+      fetchQuestions();
+    }
+  }, [fetchQuestions, activeTab]);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -128,223 +134,281 @@ export const InterviewPracticePage = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-      {/* Header */}
-      <div className="page-header-flex">
-        <div className="page-header-content">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-            <Badge variant="primary"><HelpCircle size={14} /> Placement Question Bank</Badge>
-            <Badge variant="neutral">{meta.total || questions.length} Questions</Badge>
-            {isAuthenticated && (
-              <Badge variant="success">
-                <CheckCircle2 size={12} style={{ marginRight: '4px' }} />
-                {practicedIds.length} Practiced
-              </Badge>
-            )}
-          </div>
-          <h1>Technical Interview Question Bank</h1>
-          <p>
-            Curated high-frequency questions in DBMS, Operating Systems, Computer Networks, DSA, and System Design with detailed standard answers.
-          </p>
-        </div>
-      </div>
-
-      {/* Filter and Search Bar */}
-      <div className="filter-bar">
-        <form onSubmit={handleSearchSubmit} style={{ display: 'flex', flex: 1, minWidth: '260px', gap: '0.5rem' }}>
-          <Input
-            placeholder="Search questions (e.g., Indexing, Deadlock, TCP, Binary Tree)..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            icon={Search}
-            style={{ width: '100%' }}
-          />
-          <Button type="submit" variant="primary">Search</Button>
-        </form>
-
-        <div className="filter-group">
-          <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)' }}>Difficulty:</span>
-          {difficulties.map((diff) => (
-            <button
-              key={diff}
-              className={`filter-btn ${selectedDifficulty === diff ? 'active' : ''}`}
-              onClick={() => {
-                setSelectedDifficulty(diff);
-                setSearchParams({
-                  page: '1',
-                  ...(searchQuery ? { q: searchQuery } : {}),
-                  ...(selectedCategory !== 'All' ? { category: selectedCategory } : {}),
-                  ...(diff !== 'All' ? { difficulty: diff } : {}),
-                });
-              }}
-            >
-              {diff}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Category Pills */}
-      <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '0.5rem' }}>
-        {categories.map((cat) => (
+      {/* Top Mode Switcher */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+        <div style={{ display: 'flex', gap: '0.5rem', background: 'var(--bg-secondary)', padding: '0.35rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
           <button
-            key={cat}
-            className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
-            onClick={() => {
-              setSelectedCategory(cat);
-              setSearchParams({
-                page: '1',
-                ...(searchQuery ? { q: searchQuery } : {}),
-                ...(cat !== 'All' ? { category: cat } : {}),
-                ...(selectedDifficulty !== 'All' ? { difficulty: selectedDifficulty } : {}),
-              });
+            onClick={() => setActiveTab('master')}
+            style={{
+              padding: '0.55rem 1.15rem',
+              borderRadius: 'var(--radius-sm)',
+              border: 'none',
+              background: activeTab === 'master' ? 'var(--primary-600)' : 'transparent',
+              color: activeTab === 'master' ? '#ffffff' : 'var(--text-secondary)',
+              fontWeight: activeTab === 'master' ? 700 : 500,
+              fontSize: '0.88rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              transition: 'all 0.15s ease',
             }}
           >
-            {cat}
+            <BookOpen size={16} />
+            Interview Master Guide (25 Sections)
           </button>
-        ))}
+          <button
+            onClick={() => setActiveTab('practice')}
+            style={{
+              padding: '0.55rem 1.15rem',
+              borderRadius: 'var(--radius-sm)',
+              border: 'none',
+              background: activeTab === 'practice' ? 'var(--primary-600)' : 'transparent',
+              color: activeTab === 'practice' ? '#ffffff' : 'var(--text-secondary)',
+              fontWeight: activeTab === 'practice' ? 700 : 500,
+              fontSize: '0.88rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              transition: 'all 0.15s ease',
+            }}
+          >
+            <HelpCircle size={16} />
+            Interactive Question Bank
+          </button>
+        </div>
+
+        <Link to="/placements">
+          <Button variant="outline" size="sm" icon={ArrowRight} iconPosition="right">
+            Recruitment Hub & Strategy
+          </Button>
+        </Link>
       </div>
 
-      {/* 4 States Handling */}
-      {isLoading ? (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {[1, 2, 3, 4, 5].map((n) => (
-            <Skeleton key={n} height={110} variant="rounded" />
-          ))}
-        </div>
-      ) : errorDetails ? (
-        <ErrorState error={errorDetails} onRetry={fetchQuestions} />
-      ) : questions.length === 0 ? (
-        <EmptyState
-          title="No Questions Found"
-          message="No interview questions matched your current topic filter or query."
-          actionLabel="Reset Filters"
-          onAction={resetFilters}
-        />
+      {activeTab === 'master' ? (
+        <PlacementMasterGuide />
       ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {questions.map((q) => {
-            const isDone = practicedIds.includes(q._id);
-            const isExpanded = !!expandedIds[q._id];
-            const isSaved = isBookmarked(q._id);
-
-            return (
-              <div key={q._id} className="interview-qa-box">
-                <div className="interview-question-row">
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', flex: 1 }}>
-                    <div
-                      className={`milestone-checkbox ${isDone ? 'checked' : ''}`}
-                      onClick={() => handleTogglePracticed(q._id)}
-                      role="checkbox"
-                      aria-checked={isDone}
-                      tabIndex={0}
-                      title={isDone ? 'Marked as Practiced' : 'Mark as Practiced'}
-                      style={{ marginTop: '3px' }}
-                    >
-                      {isDone && <CheckCircle2 size={16} />}
-                    </div>
-
-                    <div style={{ flex: 1 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem', flexWrap: 'wrap' }}>
-                        <Badge variant="primary">{q.category}</Badge>
-                        <Badge variant="info">{q.topic}</Badge>
-                        <Badge variant={q.difficulty === 'Easy' ? 'success' : q.difficulty === 'Hard' ? 'danger' : 'warning'}>
-                          {q.difficulty}
-                        </Badge>
-                      </div>
-                      <h3
-                        onClick={() => toggleExpand(q._id)}
-                        style={{
-                          fontSize: '1.15rem',
-                          fontWeight: 700,
-                          color: isDone ? 'var(--primary-800)' : 'var(--text-primary)',
-                          cursor: 'pointer',
-                          lineHeight: 1.4,
-                        }}
-                      >
-                        {q.question}
-                      </h3>
-                    </div>
-                  </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <button
-                      onClick={() => toggleBookmark(q, 'InterviewQuestion')}
-                      style={{
-                        background: 'none',
-                        border: 'none',
-                        cursor: 'pointer',
-                        color: isSaved ? 'var(--primary-800)' : 'var(--text-muted)',
-                        padding: '4px',
-                      }}
-                      title={isSaved ? 'Remove Bookmark' : 'Bookmark'}
-                    >
-                      <Bookmark size={18} fill={isSaved ? 'currentColor' : 'none'} />
-                    </button>
-
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      icon={isExpanded ? ChevronUp : ChevronDown}
-                      onClick={() => toggleExpand(q._id)}
-                    >
-                      {isExpanded ? 'Hide Answer' : 'View Answer'}
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Collapsible Answer Panel */}
-                {isExpanded && (
-                  <div className="interview-answer-panel">
-                    <div style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
-                      Detailed Technical Answer:
-                    </div>
-                    <div style={{ whiteSpace: 'pre-line', color: 'var(--text-secondary)', lineHeight: 1.65, fontSize: '0.925rem', marginBottom: '1rem' }}>
-                      {q.answer}
-                    </div>
-
-                    {/* Key Takeaways */}
-                    {q.keyTakeaways && q.keyTakeaways.length > 0 && (
-                      <div style={{ background: 'var(--bg-tertiary)', padding: '0.85rem 1rem', borderRadius: 'var(--radius-sm)', marginBottom: '0.75rem' }}>
-                        <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--primary-800)', marginBottom: '0.25rem' }}>
-                          Key Takeaways for the Interviewer:
-                        </div>
-                        <ul style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                          {q.keyTakeaways.map((k, i) => (
-                            <li key={i}>{k}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {/* Common Pitfalls */}
-                    {q.commonPitfalls && q.commonPitfalls.length > 0 && (
-                      <div style={{ background: 'var(--color-danger-bg)', padding: '0.85rem 1rem', borderRadius: 'var(--radius-sm)' }}>
-                        <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-danger)', marginBottom: '0.25rem' }}>
-                          Common Mistakes Candidates Make:
-                        </div>
-                        <ul style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                          {q.commonPitfalls.map((p, i) => (
-                            <li key={i}>{p}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {/* Header */}
+          <div className="page-header-flex">
+            <div className="page-header-content">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <Badge variant="primary"><HelpCircle size={14} /> Placement Question Bank</Badge>
+                <Badge variant="neutral">{meta.total || questions.length} Questions</Badge>
+                {isAuthenticated && (
+                  <Badge variant="success">
+                    <CheckCircle2 size={12} style={{ marginRight: '4px' }} />
+                    {practicedIds.length} Practiced
+                  </Badge>
                 )}
               </div>
-            );
-          })}
+              <h1>Technical Interview Question Bank</h1>
+              <p>
+                Curated high-frequency questions in DBMS, Operating Systems, Computer Networks, DSA, and System Design with detailed standard answers.
+              </p>
+            </div>
+          </div>
 
-          {meta.totalPages > 1 && (
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}>
-              <Pagination
-                currentPage={meta.page || 1}
-                totalPages={meta.totalPages}
-                onPageChange={(p) => {
-                  setSearchParams({ ...Object.fromEntries(searchParams.entries()), page: p.toString() });
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
+          {/* Filter and Search Bar */}
+          <div className="filter-bar">
+            <form onSubmit={handleSearchSubmit} style={{ display: 'flex', flex: 1, minWidth: '260px', gap: '0.5rem' }}>
+              <Input
+                placeholder="Search questions (e.g., Indexing, Deadlock, TCP, Binary Tree)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                icon={Search}
+                style={{ width: '100%' }}
               />
+              <Button type="submit" variant="primary">Search</Button>
+            </form>
+
+            <div className="filter-group">
+              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)' }}>Difficulty:</span>
+              {difficulties.map((diff) => (
+                <button
+                  key={diff}
+                  className={`filter-btn ${selectedDifficulty === diff ? 'active' : ''}`}
+                  onClick={() => {
+                    setSelectedDifficulty(diff);
+                    setSearchParams({
+                      page: '1',
+                      ...(searchQuery ? { q: searchQuery } : {}),
+                      ...(selectedCategory !== 'All' ? { category: selectedCategory } : {}),
+                      ...(diff !== 'All' ? { difficulty: diff } : {}),
+                    });
+                  }}
+                >
+                  {diff}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Category Pills */}
+          <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '0.5rem' }}>
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setSearchParams({
+                    page: '1',
+                    ...(searchQuery ? { q: searchQuery } : {}),
+                    ...(cat !== 'All' ? { category: cat } : {}),
+                    ...(selectedDifficulty !== 'All' ? { difficulty: selectedDifficulty } : {}),
+                  });
+                }}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* 4 States Handling */}
+          {isLoading ? (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {[1, 2, 3, 4, 5].map((n) => (
+                <Skeleton key={n} height={110} variant="rounded" />
+              ))}
+            </div>
+          ) : errorDetails ? (
+            <ErrorState error={errorDetails} onRetry={fetchQuestions} />
+          ) : questions.length === 0 ? (
+            <EmptyState
+              title="No Questions Found"
+              message="No interview questions matched your current topic filter or query."
+              actionLabel="Reset Filters"
+              onAction={resetFilters}
+            />
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {questions.map((q) => {
+                const isDone = practicedIds.includes(q._id);
+                const isExpanded = !!expandedIds[q._id];
+                const isSaved = isBookmarked(q._id);
+
+                return (
+                  <div key={q._id} className="interview-qa-box">
+                    <div className="interview-question-row">
+                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', flex: 1 }}>
+                        <div
+                          className={`milestone-checkbox ${isDone ? 'checked' : ''}`}
+                          onClick={() => handleTogglePracticed(q._id)}
+                          role="checkbox"
+                          aria-checked={isDone}
+                          tabIndex={0}
+                          title={isDone ? 'Marked as Practiced' : 'Mark as Practiced'}
+                          style={{ marginTop: '3px' }}
+                        >
+                          {isDone && <CheckCircle2 size={16} />}
+                        </div>
+
+                        <div style={{ flex: 1 }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem', flexWrap: 'wrap' }}>
+                            <Badge variant="primary">{q.category}</Badge>
+                            <Badge variant="info">{q.topic}</Badge>
+                            <Badge variant={q.difficulty === 'Easy' ? 'success' : q.difficulty === 'Hard' ? 'danger' : 'warning'}>
+                              {q.difficulty}
+                            </Badge>
+                          </div>
+                          <h3
+                            onClick={() => toggleExpand(q._id)}
+                            style={{
+                              fontSize: '1.15rem',
+                              fontWeight: 700,
+                              color: isDone ? 'var(--primary-800)' : 'var(--text-primary)',
+                              cursor: 'pointer',
+                              lineHeight: 1.4,
+                            }}
+                          >
+                            {q.question}
+                          </h3>
+                        </div>
+                      </div>
+
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <button
+                          onClick={() => toggleBookmark(q, 'InterviewQuestion')}
+                          style={{
+                            background: 'none',
+                            border: 'none',
+                            cursor: 'pointer',
+                            color: isSaved ? 'var(--primary-800)' : 'var(--text-muted)',
+                            padding: '4px',
+                          }}
+                          title={isSaved ? 'Remove Bookmark' : 'Bookmark'}
+                        >
+                          <Bookmark size={18} fill={isSaved ? 'currentColor' : 'none'} />
+                        </button>
+
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          icon={isExpanded ? ChevronUp : ChevronDown}
+                          onClick={() => toggleExpand(q._id)}
+                        >
+                          {isExpanded ? 'Hide Answer' : 'View Answer'}
+                        </Button>
+                      </div>
+                    </div>
+
+                    {/* Collapsible Answer Panel */}
+                    {isExpanded && (
+                      <div className="interview-answer-panel">
+                        <div style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
+                          Detailed Technical Answer:
+                        </div>
+                        <div style={{ whiteSpace: 'pre-line', color: 'var(--text-secondary)', lineHeight: 1.65, fontSize: '0.925rem', marginBottom: '1rem' }}>
+                          {q.answer}
+                        </div>
+
+                        {/* Key Takeaways */}
+                        {q.keyTakeaways && q.keyTakeaways.length > 0 && (
+                          <div style={{ background: 'var(--bg-tertiary)', padding: '0.85rem 1rem', borderRadius: 'var(--radius-sm)', marginBottom: '0.75rem' }}>
+                            <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--primary-800)', marginBottom: '0.25rem' }}>
+                              Key Takeaways for the Interviewer:
+                            </div>
+                            <ul style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                              {q.keyTakeaways.map((k, i) => (
+                                <li key={i}>{k}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Common Pitfalls */}
+                        {q.commonPitfalls && q.commonPitfalls.length > 0 && (
+                          <div style={{ background: 'var(--color-danger-bg)', padding: '0.85rem 1rem', borderRadius: 'var(--radius-sm)' }}>
+                            <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-danger)', marginBottom: '0.25rem' }}>
+                              Common Mistakes Candidates Make:
+                            </div>
+                            <ul style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                              {q.commonPitfalls.map((p, i) => (
+                                <li key={i}>{p}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+
+              {meta.totalPages > 1 && (
+                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}>
+                  <Pagination
+                    currentPage={meta.page || 1}
+                    totalPages={meta.totalPages}
+                    onPageChange={(p) => {
+                      setSearchParams({ ...Object.fromEntries(searchParams.entries()), page: p.toString() });
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  />
+                </div>
+              )}
             </div>
           )}
         </div>

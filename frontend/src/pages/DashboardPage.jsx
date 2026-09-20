@@ -159,7 +159,7 @@ export const DashboardPage = () => {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {/* Pillar 10: Career Goal & Target Vision Card */}
-          <Card style={{ padding: '1.75rem', background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)', border: '1px solid #bbf7d0' }}>
+          <Card style={{ padding: '1.75rem', background: 'var(--aegean-50)', border: '1px solid var(--border-color)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1.25rem' }}>
               <div style={{ flex: 1, minWidth: '280px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
@@ -169,11 +169,11 @@ export const DashboardPage = () => {
                   </span>
                 </div>
 
-                <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#14532d', marginBottom: '0.35rem' }}>
+                <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
                   {metrics.profile?.careerGoal || metrics.profile?.targetRole || 'Define Your Target Engineering Role'}
                 </h2>
 
-                <p style={{ fontSize: '0.9rem', color: '#166534', lineHeight: 1.5, marginBottom: '0.75rem' }}>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '0.75rem' }}>
                   {metrics.profile?.targetRole
                     ? `Aiming for ${metrics.profile.targetRole} positions • Class of ${metrics.profile.graduationYear || '2026'}`
                     : 'Set your dream job role and target companies in your profile to tailor your personalized study plan.'}
@@ -181,7 +181,7 @@ export const DashboardPage = () => {
 
                 {metrics.profile?.targetCompanies && metrics.profile.targetCompanies.length > 0 && (
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
-                    <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#166534', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
                       <Building2 size={13} /> Dream Companies:
                     </span>
                     {metrics.profile.targetCompanies.map((comp, idx) => (
@@ -190,12 +190,12 @@ export const DashboardPage = () => {
                         style={{
                           fontSize: '0.8rem',
                           fontWeight: 600,
-                          background: '#ffffff',
-                          color: '#166534',
+                          background: 'var(--bg-secondary)',
+                          color: 'var(--primary-800)',
                           padding: '2px 8px',
                           borderRadius: '12px',
-                          border: '1px solid #86efac',
-                          boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                          border: '1px solid var(--border-color)',
+                          boxShadow: 'var(--shadow-xs)',
                         }}
                       >
                         {comp}

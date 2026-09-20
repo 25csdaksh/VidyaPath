@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   FileText,
   Save,
@@ -12,6 +13,7 @@ import {
   Printer,
   ChevronDown,
   ChevronUp,
+  BookOpen,
 } from 'lucide-react';
 import Input from '../components/common/Input';
 import Button from '../components/common/Button';
@@ -199,7 +201,12 @@ export const ResumeBuilderPage = () => {
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <Link to="/resume-guide">
+            <Button variant="secondary" icon={BookOpen}>
+              Master Guide (28 Secs)
+            </Button>
+          </Link>
           <Button variant="outline" icon={Printer} onClick={handlePrint}>
             Print / PDF
           </Button>

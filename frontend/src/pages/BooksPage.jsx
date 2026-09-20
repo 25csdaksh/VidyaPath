@@ -440,17 +440,18 @@ export const BooksPage = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', paddingBottom: '3rem' }}>
       {/* ========================================================
-          HERO BANNER: LAVENDER & EGG-WHITE PREMIUM GLASS
+          HERO BANNER: SANTORINI AEGEAN & NAVY
           ======================================================== */}
       <div
         style={{
-          background: 'linear-gradient(135deg, #2e1065 0%, #4c1d95 35%, #6d28d9 75%, #7e22ce 100%)',
+          background: 'var(--navy-hero-gradient)',
           borderRadius: '24px',
           padding: '2.5rem 2rem',
           color: '#ffffff',
           position: 'relative',
           overflow: 'hidden',
-          boxShadow: '0 20px 40px -15px rgba(109, 40, 217, 0.35)',
+          boxShadow: 'var(--shadow-lg), var(--shadow-glow-navy)',
+          border: '1px solid rgba(170, 192, 225, 0.25)',
         }}
       >
         <div style={{ position: 'relative', zIndex: 1 }}>
@@ -467,19 +468,20 @@ export const BooksPage = () => {
                 fontSize: '0.85rem',
                 fontWeight: 700,
                 border: '1px solid rgba(255, 255, 255, 0.25)',
+                color: '#ffffff',
               }}
             >
               <BookOpen size={16} /> INTERNATIONAL CSE BOOK GUIDE
             </span>
             <span
               style={{
-                background: 'rgba(216, 180, 254, 0.2)',
+                background: 'rgba(170, 192, 225, 0.2)',
                 backdropFilter: 'blur(8px)',
                 padding: '0.4rem 0.85rem',
                 borderRadius: '9999px',
                 fontSize: '0.8rem',
                 fontWeight: 600,
-                color: '#e9d5ff',
+                color: 'var(--aegean-200)',
               }}
             >
               Programming • Web Development • AI/ML • Cybersecurity • Core Computer Science
@@ -502,7 +504,7 @@ export const BooksPage = () => {
           <p
             style={{
               fontSize: '1rem',
-              color: 'rgba(255, 255, 255, 0.9)',
+              color: 'rgba(255, 255, 255, 0.92)',
               maxWidth: '850px',
               lineHeight: 1.6,
               marginBottom: '1.75rem',
@@ -521,23 +523,23 @@ export const BooksPage = () => {
             }}
           >
             <div style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(6px)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f3e8ff' }}>19 Areas</div>
-              <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.75)' }}>Subject-wise Catalog</div>
+              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--aegean-200)' }}>19 Areas</div>
+              <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.85)' }}>Subject-wise Catalog</div>
             </div>
 
             <div style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(6px)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f3e8ff' }}>70+ Books</div>
-              <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.75)' }}>Standard Global Editions</div>
+              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff' }}>70+ Books</div>
+              <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.85)' }}>Standard Global Editions</div>
             </div>
 
             <div style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(6px)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f3e8ff' }}>14 Core</div>
-              <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.75)' }}>Essential Shortlist</div>
+              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--aegean-300)' }}>14 Core</div>
+              <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.85)' }}>Essential Shortlist</div>
             </div>
 
             <div style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(6px)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f3e8ff' }}>4 Years</div>
-              <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.75)' }}>FY to Final Year Mapping</div>
+              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff' }}>4 Years</div>
+              <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.85)' }}>FY to Final Year Mapping</div>
             </div>
           </div>
         </div>

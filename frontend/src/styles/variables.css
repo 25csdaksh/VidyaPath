@@ -5,80 +5,102 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* ========================================================
-     60:30:10 COLOR BALANCE (LIGHT THEME DEFAULT)
-     - 60% Dominant Background & Neutral Canvas: Crisp slate/snow
-     - 30% Structural Contrast: Deep slate text & card surfaces
-     - 10% Accent Power: Deep Forest / Emerald Green Brand & Amber Accolades
+     SANTORINI AEGEAN 60:30:10 COLOR BALANCE
+     - 60% Dominant Base / Pure Ice Canvas: #F5FEFF
+     - 30% Structural Aegean Blue: #AAC0E1
+     - 10% Deep Mediterranean Navy Blue Accent: #0E2F76
      ======================================================== */
 
-  /* 60% Dominant Neutral Canvas (Egg-White / Warm Creamy Pearl) */
-  --bg-primary: #faf8f5;
+  /* 60% Dominant Canvas (Crisp Porcelain / Ice-White #F5FEFF) */
+  --bg-primary: #f5feff;
   --bg-secondary: #ffffff;
-  --bg-tertiary: #f4effa;
-  --bg-surface: rgba(255, 253, 250, 0.95);
-  --bg-surface-hover: #f7f2fb;
-  --bg-glass: rgba(255, 253, 250, 0.88);
-  --border-glass: rgba(107, 33, 168, 0.08);
-  --border-color: #e5ddef;
-  --border-color-subtle: #f1ecf6;
-  --border-focus: #7c3aed;
+  --bg-tertiary: #ebf3fd;
+  --bg-surface: rgba(255, 255, 255, 0.96);
+  --bg-surface-hover: #f0f6fe;
+  --bg-glass: rgba(245, 254, 255, 0.92);
+  --border-glass: rgba(14, 47, 118, 0.08);
+  --border-color: #d0e0f5;
+  --border-color-subtle: #e5effc;
+  --border-focus: #0e2f76;
 
-  /* 30% Structural Contrast (Typography & Deep Elements) */
-  --text-primary: #1e1b2e;
-  --text-secondary: #3b3553;
-  --text-muted: #6b6380;
-  --text-subtle: #998fa8;
+  /* 30% Structural Contrast & Typography (Deep Aegean & Slate Blues) */
+  --text-primary: #0a193d;
+  --text-secondary: #1e3a68;
+  --text-muted: #4b6894;
+  --text-subtle: #7896c2;
   --text-inverse: #ffffff;
 
-  /* 10% Primary Brand (Rich Royal Lavender & Violet Glow) */
-  --lavender-50: #faf5ff;
-  --lavender-100: #f3e8ff;
-  --lavender-200: #e9d5ff;
-  --lavender-300: #d8b4fe;
-  --lavender-400: #c084fc;
-  --lavender-500: #a855f7;
-  --lavender-600: #9333ea;
-  --lavender-700: #7e22ce;
-  --lavender-800: #6b21a8;
-  --lavender-900: #581c87;
-  --lavender-950: #3b0764;
+  /* 30% Aegean Soft Blues (#AAC0E1 Palette Scale) */
+  --aegean-50: #f5f9fe;
+  --aegean-100: #e7f0fc;
+  --aegean-200: #cbdef8;
+  --aegean-300: #aac0e1; /* Exact Swatch 2 */
+  --aegean-400: #82a4d3;
+  --aegean-500: #5784c0;
+  --aegean-600: #3a68a5;
+  --aegean-700: #294f83;
+  --aegean-800: #1d3a63;
+  --aegean-900: #142845;
 
-  --primary-50: #faf5ff;
-  --primary-100: #f3e8ff;
-  --primary-200: #e9d5ff;
-  --primary-300: #d8b4fe;
-  --primary-400: #c084fc;
-  --primary-500: #a855f7;
-  --primary-600: #9333ea;
-  --primary-700: #7e22ce;
-  --primary-800: #6d28d9; /* Deep Royal Lavender */
-  --primary-900: #581c87; /* Regal Violet */
-  --primary-950: #3b0764;
+  /* 10% Deep Navy Blue Brand Scale (#0E2F76 Palette Scale) */
+  --navy-50: #eef4fe;
+  --navy-100: #dae6fc;
+  --navy-200: #b5cefa;
+  --navy-300: #81acf6;
+  --navy-400: #4984ee;
+  --navy-500: #2463e2;
+  --navy-600: #1449be;
+  --navy-700: #103b9b;
+  --navy-800: #0e2f76; /* Exact Swatch 3 (Core Primary Brand) */
+  --navy-900: #092055; /* Deep Anchor Navy */
+  --navy-950: #051234;
 
-  /* Brand Gradients (Royal Violet to Radiant Lilac) */
-  --primary-gradient: linear-gradient(135deg, #4c1d95 0%, #6d28d9 45%, #9333ea 80%, #a855f7 100%);
-  --lavender-hero-gradient: linear-gradient(135deg, #2e1065 0%, #4c1d95 40%, #6d28d9 80%, #7e22ce 100%);
-  --brand-gradient-subtle: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  /* Primary Brand Aliases */
+  --primary-50: #eef4fe;
+  --primary-100: #dae6fc;
+  --primary-200: #cbdef8;
+  --primary-300: #aac0e1;
+  --primary-400: #4984ee;
+  --primary-500: #2463e2;
+  --primary-600: #1449be;
+  --primary-700: #103b9b;
+  --primary-800: #0e2f76; /* Core Navy Accent */
+  --primary-900: #092055;
+  --primary-950: #051234;
+
+  /* Accent Helpers for Subsystems */
+  --accent-blue: #0e2f76;
+  --accent-sky: #aac0e1;
+  --accent-purple: #4984ee;
+  --accent-emerald: #10b981;
+  --accent-amber: #d97706;
+
+  /* Brand Gradients (Santorini Aegean Navy to Sky) */
+  --primary-gradient: linear-gradient(135deg, #092055 0%, #0e2f76 50%, #2062d9 100%);
+  --navy-hero-gradient: linear-gradient(135deg, #092055 0%, #0e2f76 45%, #194ca8 80%, #2b6ad6 100%);
+  --aegean-subtle-gradient: linear-gradient(135deg, #f5feff 0%, #e8f2fc 50%, #aac0e1 100%);
+  --brand-gradient-subtle: linear-gradient(135deg, #f5feff 0%, #ebf4fd 100%);
   --accent-gradient-gold: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
 
   /* Status Accents */
-  --color-success: #16a34a;
-  --color-success-bg: #dcfce7;
+  --color-success: #0d9488;
+  --color-success-bg: #ccfbf1;
   --color-warning: #d97706;
   --color-warning-bg: #fef3c7;
   --color-danger: #e11d48;
   --color-danger-bg: #ffe4e6;
-  --color-info: #7c3aed;
-  --color-info-bg: #f3e8ff;
+  --color-info: #0e2f76;
+  --color-info-bg: #ebf3fd;
   --color-accent-amber: #b45309;
 
-  /* Shadows & Glowing Lavender Elevations */
-  --shadow-xs: 0 1px 2px 0 rgba(46, 16, 101, 0.04);
-  --shadow-sm: 0 2px 4px 0 rgba(46, 16, 101, 0.06), 0 1px 2px -1px rgba(46, 16, 101, 0.04);
-  --shadow-md: 0 4px 10px -2px rgba(46, 16, 101, 0.08), 0 2px 4px -2px rgba(46, 16, 101, 0.04);
-  --shadow-lg: 0 12px 20px -4px rgba(46, 16, 101, 0.1), 0 4px 6px -4px rgba(46, 16, 101, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(46, 16, 101, 0.12), 0 8px 10px -6px rgba(46, 16, 101, 0.05);
-  --shadow-glow-lavender: 0 0 25px -3px rgba(124, 58, 237, 0.3);
+  /* Shadows & Elevated Navy Elevations */
+  --shadow-xs: 0 1px 2px 0 rgba(14, 47, 118, 0.04);
+  --shadow-sm: 0 2px 5px 0 rgba(14, 47, 118, 0.05), 0 1px 2px -1px rgba(14, 47, 118, 0.03);
+  --shadow-md: 0 5px 14px -2px rgba(14, 47, 118, 0.08), 0 2px 5px -2px rgba(14, 47, 118, 0.04);
+  --shadow-lg: 0 14px 24px -4px rgba(14, 47, 118, 0.12), 0 4px 10px -4px rgba(14, 47, 118, 0.05);
+  --shadow-xl: 0 22px 32px -5px rgba(14, 47, 118, 0.16), 0 8px 14px -6px rgba(14, 47, 118, 0.06);
+  --shadow-glow-navy: 0 0 25px -2px rgba(14, 47, 118, 0.28);
+  --shadow-glow-aegean: 0 0 20px -2px rgba(170, 192, 225, 0.45);
 
   /* Layout Spacing & Geometry */
   --navbar-height: 68px;
@@ -97,35 +119,35 @@
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Optional Dark Theme Switch */
+/* Dark Mode Theme Tuning for Navy & Aegean */
 [data-theme='dark'] {
-  --bg-primary: #0a110d;
-  --bg-secondary: #101c15;
-  --bg-tertiary: #172a20;
-  --bg-surface: rgba(16, 28, 21, 0.85);
-  --bg-surface-hover: #1b3327;
-  --bg-glass: rgba(16, 28, 21, 0.75);
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-color: rgba(255, 255, 255, 0.12);
-  --border-color-subtle: rgba(255, 255, 255, 0.06);
-  --border-focus: #22c55e;
+  --bg-primary: #050d1e;
+  --bg-secondary: #091733;
+  --bg-tertiary: #10244c;
+  --bg-surface: rgba(9, 23, 51, 0.9);
+  --bg-surface-hover: #142d5c;
+  --bg-glass: rgba(9, 23, 51, 0.85);
+  --border-glass: rgba(170, 192, 225, 0.15);
+  --border-color: rgba(170, 192, 225, 0.2);
+  --border-color-subtle: rgba(170, 192, 225, 0.1);
+  --border-focus: #4984ee;
 
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-subtle: #64748b;
-  --text-inverse: #0f172a;
+  --text-primary: #f5feff;
+  --text-secondary: #cbdef8;
+  --text-muted: #aac0e1;
+  --text-subtle: #7896c2;
+  --text-inverse: #050d1e;
 
-  --primary-800: #22c55e;
-  --primary-900: #16a34a;
+  --primary-800: #2463e2;
+  --primary-900: #0e2f76;
 
-  --color-success-bg: rgba(22, 163, 74, 0.2);
+  --color-success-bg: rgba(13, 148, 136, 0.2);
   --color-warning-bg: rgba(217, 119, 6, 0.2);
-  --color-danger-bg: rgba(220, 38, 38, 0.2);
-  --color-info-bg: rgba(13, 148, 136, 0.2);
+  --color-danger-bg: rgba(225, 29, 72, 0.2);
+  --color-info-bg: rgba(14, 47, 118, 0.3);
 
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-  --shadow-glow-green: 0 0 25px -3px rgba(34, 197, 94, 0.3);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 18px -3px rgba(0, 0, 0, 0.6);
+  --shadow-glow-navy: 0 0 25px -2px rgba(36, 99, 226, 0.4);
 }
