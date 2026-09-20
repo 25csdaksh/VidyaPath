@@ -60,7 +60,7 @@ export const Navbar = ({ onToggleSidebar }) => {
 
   return (
     <header className="app-navbar">
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1, maxWidth: '600px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1, maxWidth: '600px' }}>
         <button
           className="btn btn-ghost btn-sm"
           onClick={onToggleSidebar}
@@ -70,7 +70,7 @@ export const Navbar = ({ onToggleSidebar }) => {
           <Menu size={20} />
         </button>
 
-        <div style={{ flex: 1, maxWidth: '420px' }}>
+        <div className="navbar-search-wrapper" style={{ flex: 1, maxWidth: '420px' }}>
           <Search
             value={searchQuery}
             onChange={setSearchQuery}
@@ -81,7 +81,7 @@ export const Navbar = ({ onToggleSidebar }) => {
         </div>
       </div>
 
-      <div className="navbar-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+      <div className="navbar-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
         {/* AI Career Assistant Studio Button */}
         {isAuthenticated && (
           <Link
@@ -97,7 +97,7 @@ export const Navbar = ({ onToggleSidebar }) => {
                 background: 'rgba(22, 101, 52, 0.1)',
                 color: '#166534',
                 border: '1px solid rgba(22, 101, 52, 0.25)',
-                padding: '0.3rem 0.65rem',
+                padding: '0.35rem 0.65rem',
                 borderRadius: 'var(--radius-full)',
                 fontSize: '0.825rem',
                 fontWeight: 700,
@@ -105,7 +105,7 @@ export const Navbar = ({ onToggleSidebar }) => {
               }}
             >
               <Sparkles size={15} color="#166534" />
-              <span>AI Assistant</span>
+              <span className="navbar-pill-text">AI Assistant</span>
             </div>
           </Link>
         )}
@@ -125,7 +125,7 @@ export const Navbar = ({ onToggleSidebar }) => {
                 background: 'rgba(234, 88, 12, 0.12)',
                 color: '#ea580c',
                 border: '1px solid rgba(234, 88, 12, 0.25)',
-                padding: '0.3rem 0.65rem',
+                padding: '0.35rem 0.65rem',
                 borderRadius: 'var(--radius-full)',
                 fontSize: '0.825rem',
                 fontWeight: 700,
@@ -133,7 +133,7 @@ export const Navbar = ({ onToggleSidebar }) => {
               }}
             >
               <Flame size={16} fill="#ea580c" />
-              <span>Streak Active</span>
+              <span className="navbar-pill-text">Streak</span>
             </div>
           </Link>
         )}
@@ -320,7 +320,7 @@ export const Navbar = ({ onToggleSidebar }) => {
                 >
                   {user?.name ? user.name.charAt(0).toUpperCase() : 'U'}
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left' }}>
+                <div className="navbar-user-text" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left' }}>
                   <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.1 }}>
                     {user?.name}
                   </span>

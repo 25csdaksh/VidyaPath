@@ -19,12 +19,19 @@ import {
   Sparkles,
   ShieldAlert,
   Bot,
+  X,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import Logo from '../common/Logo';
 
-export const Sidebar = ({ isOpen }) => {
+export const Sidebar = ({ isOpen, onClose }) => {
   const { isAuthenticated, user } = useAuth();
+
+  const handleNavClick = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
 
   const navItems = [
     { label: 'Dashboard', path: '/dashboard', icon: LayoutDashboard, requiresAuth: true },
@@ -53,10 +60,30 @@ export const Sidebar = ({ isOpen }) => {
 
   return (
     <aside className={`app-sidebar ${isOpen ? 'open' : ''}`}>
-      <div className="sidebar-header" style={{ padding: '0.85rem 1rem' }}>
-        <NavLink to="/" className="sidebar-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+      <div className="sidebar-header" style={{ padding: '0.85rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <NavLink to="/" onClick={handleNavClick} className="sidebar-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
           <Logo size="sm" />
         </NavLink>
+        {onClose && (
+          <button
+            className="sidebar-close-mobile"
+            onClick={onClose}
+            aria-label="Close Sidebar"
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'var(--text-muted)',
+              cursor: 'pointer',
+              padding: '4px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: 'var(--radius-sm)',
+            }}
+          >
+            <X size={20} />
+          </button>
+        )}
       </div>
 
       <nav className="sidebar-nav">
@@ -67,6 +94,7 @@ export const Sidebar = ({ isOpen }) => {
             <NavLink
               key={item.path}
               to={item.path}
+              onClick={handleNavClick}
               className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
             >
               <Icon size={18} />

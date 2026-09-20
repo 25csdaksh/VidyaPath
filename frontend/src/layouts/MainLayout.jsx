@@ -13,9 +13,20 @@ export const MainLayout = () => {
     setSidebarOpen((prev) => !prev);
   };
 
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
   return (
     <div className="app-container">
-      <Sidebar isOpen={sidebarOpen} />
+      {sidebarOpen && (
+        <div
+          className="sidebar-backdrop"
+          onClick={closeSidebar}
+          aria-label="Close menu"
+        />
+      )}
+      <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
       <div className="main-content-wrapper">
         <Navbar onToggleSidebar={toggleSidebar} />
         <main className="page-container">

@@ -124,27 +124,13 @@ export const LandingPage = () => {
       {/* ========================================================
           TOP PUBLIC NAVBAR (SANTORINI DEEP NAVY GLASSMORPHIC)
           ======================================================== */}
-      <header
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 40,
-          backgroundColor: '#071536',
-          backdropFilter: 'blur(16px)',
-          borderBottom: '1px solid rgba(170, 192, 225, 0.2)',
-          padding: '0.85rem 2rem',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.25)',
-        }}
-      >
+      <header className="landing-header">
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
           <Logo size="md" />
         </Link>
 
         {/* Top Header Action Buttons */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
           <Link to="/login" style={{ textDecoration: 'none' }}>
             <Button
               variant="outline"
@@ -154,6 +140,7 @@ export const LandingPage = () => {
                 color: '#ffffff',
                 borderColor: 'rgba(170, 192, 225, 0.4)',
                 background: 'rgba(255, 255, 255, 0.08)',
+                padding: '0.4rem 0.8rem',
               }}
             >
               Sign In
@@ -168,6 +155,7 @@ export const LandingPage = () => {
                 background: 'linear-gradient(135deg, #184DA6 0%, #2566D9 100%)',
                 color: '#ffffff',
                 border: '1px solid #3B82F6',
+                padding: '0.4rem 0.8rem',
               }}
             >
               Create Account
@@ -179,47 +167,14 @@ export const LandingPage = () => {
       {/* ========================================================
           MAIN HERO BANNER (HIGH CONTRAST & VISIBLE TYPOGRAPHY)
           ======================================================== */}
-      <section
-        style={{
-          padding: '5.5rem 2rem 5rem 2rem',
-          background: 'radial-gradient(circle at 80% 20%, rgba(24, 77, 166, 0.45), transparent 55%), radial-gradient(circle at 10% 80%, rgba(9, 32, 85, 0.85), transparent 55%), #071536',
-          borderBottom: '1px solid rgba(170, 192, 225, 0.2)',
-          textAlign: 'center',
-          color: '#ffffff',
-        }}
-      >
+      <section className="landing-hero">
         <div style={{ maxWidth: '960px', margin: '0 auto' }}>
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              background: 'rgba(56, 189, 248, 0.12)',
-              border: '1px solid rgba(56, 189, 248, 0.35)',
-              padding: '0.5rem 1.25rem',
-              borderRadius: '9999px',
-              fontSize: '0.9rem',
-              fontWeight: 700,
-              color: '#93C5FD',
-              marginBottom: '1.75rem',
-              backdropFilter: 'blur(10px)',
-            }}
-          >
-            <Sparkles size={16} style={{ color: '#38BDF8' }} />
+          <div className="landing-hero-badge">
+            <Sparkles size={15} style={{ color: '#38BDF8', flexShrink: 0 }} />
             <span>The Definitive 4-Year CSE Career & Academic Architecture</span>
           </div>
 
-          <h1
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2.4rem, 5.5vw, 4.2rem)',
-              fontWeight: 800,
-              lineHeight: 1.2,
-              letterSpacing: '-0.02em',
-              color: '#ffffff',
-              marginBottom: '1.5rem',
-            }}
-          >
+          <h1 className="landing-hero-title">
             Empowering Computer Science Students to{' '}
             <span
               style={{
@@ -233,29 +188,20 @@ export const LandingPage = () => {
             </span>
           </h1>
 
-          <p
-            style={{
-              fontSize: 'clamp(1.05rem, 2vw, 1.25rem)',
-              color: '#E2EDFC',
-              lineHeight: 1.7,
-              maxWidth: '820px',
-              margin: '0 auto 2.5rem auto',
-              fontWeight: 400,
-            }}
-          >
+          <p className="landing-hero-subtitle">
             Navigate your complete undergraduate journey from foundational coding in C/Python to core computer science (DSA, OS, DBMS), Tier-1 engineering projects, Coursera professional certifications, and product company placements.
           </p>
 
           {/* Hero Action Buttons */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+          <div className="landing-hero-actions">
             <Link to="/register" style={{ textDecoration: 'none' }}>
               <Button
                 variant="primary"
                 size="lg"
                 icon={UserPlus}
                 style={{
-                  padding: '0.95rem 2.25rem',
-                  fontSize: '1.05rem',
+                  padding: '0.85rem 2rem',
+                  fontSize: '1rem',
                   fontWeight: 700,
                   background: 'linear-gradient(135deg, #184DA6 0%, #2566D9 100%)',
                   border: '1px solid #60A5FA',
@@ -271,8 +217,8 @@ export const LandingPage = () => {
                 size="lg"
                 icon={LogIn}
                 style={{
-                  padding: '0.95rem 2.25rem',
-                  fontSize: '1.05rem',
+                  padding: '0.85rem 2rem',
+                  fontSize: '1rem',
                   fontWeight: 700,
                   color: '#ffffff',
                   borderColor: 'rgba(255, 255, 255, 0.45)',
@@ -286,27 +232,18 @@ export const LandingPage = () => {
           </div>
 
           {/* Key Feature Metric Badges (High Contrast Glass Pills) */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              flexWrap: 'wrap',
-              gap: '0.75rem',
-              maxWidth: '900px',
-              margin: '0 auto',
-            }}
-          >
-            <div style={{ background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(147, 197, 253, 0.3)', padding: '0.55rem 1.2rem', borderRadius: '9999px', fontSize: '0.88rem', fontWeight: 600, color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={16} color="#38BDF8" /> 4-Year Semester Roadmap (Sem 1-8)
+          <div className="landing-metrics-grid">
+            <div className="landing-metric-pill">
+              <CheckCircle2 size={16} color="#38BDF8" style={{ flexShrink: 0 }} /> 4-Year Semester Roadmap (Sem 1-8)
             </div>
-            <div style={{ background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(147, 197, 253, 0.3)', padding: '0.55rem 1.2rem', borderRadius: '9999px', fontSize: '0.88rem', fontWeight: 600, color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={16} color="#38BDF8" /> 45+ Tier-1 Industry Projects
+            <div className="landing-metric-pill">
+              <CheckCircle2 size={16} color="#38BDF8" style={{ flexShrink: 0 }} /> 45+ Tier-1 Industry Projects
             </div>
-            <div style={{ background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(147, 197, 253, 0.3)', padding: '0.55rem 1.2rem', borderRadius: '9999px', fontSize: '0.88rem', fontWeight: 600, color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={16} color="#38BDF8" /> 70+ Global Standard Textbooks
+            <div className="landing-metric-pill">
+              <CheckCircle2 size={16} color="#38BDF8" style={{ flexShrink: 0 }} /> 70+ Global Standard Textbooks
             </div>
-            <div style={{ background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(147, 197, 253, 0.3)', padding: '0.55rem 1.2rem', borderRadius: '9999px', fontSize: '0.88rem', fontWeight: 600, color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={16} color="#38BDF8" /> 35+ Coursera Specializations
+            <div className="landing-metric-pill">
+              <CheckCircle2 size={16} color="#38BDF8" style={{ flexShrink: 0 }} /> 35+ Coursera Specializations
             </div>
           </div>
         </div>
@@ -315,28 +252,28 @@ export const LandingPage = () => {
       {/* ========================================================
           PLATFORM CORE PILLARS GRID
           ======================================================== */}
-      <section style={{ padding: '4.5rem 2rem', maxWidth: '1300px', margin: '0 auto', width: '100%' }}>
-        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+      <section className="landing-pillars-section">
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <Badge variant="primary" style={{ marginBottom: '0.5rem' }}>Complete Ecosystem</Badge>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.6rem, 5vw, 2.2rem)', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
             Everything a Computer Science Student Needs
           </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: '650px', margin: '0 auto' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '650px', margin: '0 auto' }}>
             A curated, comprehensive suite of tools, curricula, project banks, and AI advisory to excel in engineering and campus placements.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+        <div className="landing-pillars-grid">
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
             return (
               <Card
                 key={idx}
                 style={{
-                  padding: '1.75rem',
+                  padding: '1.5rem',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '1rem',
+                  gap: '0.85rem',
                   border: '1px solid var(--border-color)',
                   transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                 }}
@@ -344,9 +281,9 @@ export const LandingPage = () => {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div
                     style={{
-                      width: '46px',
-                      height: '46px',
-                      borderRadius: '12px',
+                      width: '42px',
+                      height: '42px',
+                      borderRadius: '10px',
                       background: 'var(--navy-hero-gradient)',
                       color: '#ffffff',
                       display: 'flex',
@@ -354,16 +291,16 @@ export const LandingPage = () => {
                       justifyContent: 'center',
                     }}
                   >
-                    <Icon size={22} />
+                    <Icon size={20} />
                   </div>
                   <Badge variant="neutral">{pillar.badge}</Badge>
                 </div>
 
                 <div>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
                     {pillar.title}
                   </h3>
-                  <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
                     {pillar.desc}
                   </p>
                 </div>
@@ -376,19 +313,19 @@ export const LandingPage = () => {
       {/* ========================================================
           THE 4-YEAR UNDERGRADUATE PROGRESSION ARC
           ======================================================== */}
-      <section style={{ padding: '4.5rem 2rem', backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
+      <section className="landing-arc-section">
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <Badge variant="primary" style={{ marginBottom: '0.5rem' }}>Structured Progression</Badge>
-            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
+            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.6rem, 5vw, 2.2rem)', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
               The 4-Year CSE Milestone Arc
             </h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: '650px', margin: '0 auto' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '650px', margin: '0 auto' }}>
               Clear semester objectives guiding you from beginner programmer to professional software engineer.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
+          <div className="landing-arc-grid">
             {fourYearArc.map((arc, idx) => (
               <div
                 key={idx}
@@ -396,10 +333,10 @@ export const LandingPage = () => {
                   background: 'var(--bg-primary)',
                   border: '1px solid var(--border-color)',
                   borderRadius: 'var(--radius-lg)',
-                  padding: '1.75rem',
+                  padding: '1.5rem',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '0.85rem',
+                  gap: '0.75rem',
                   position: 'relative',
                 }}
               >
@@ -408,18 +345,18 @@ export const LandingPage = () => {
                   <span style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)' }}>{arc.sub}</span>
                 </div>
 
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                   {arc.year}
                 </h3>
-                <div style={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--primary-800)' }}>
+                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--primary-800)' }}>
                   {arc.focus}
                 </div>
 
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, background: 'var(--bg-tertiary)', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5, background: 'var(--bg-tertiary)', padding: '0.6rem 0.75rem', borderRadius: 'var(--radius-sm)' }}>
                   <strong>Key Tech: </strong>{arc.tech}
                 </div>
 
-                <div style={{ marginTop: 'auto', paddingTop: '0.5rem', fontSize: '0.82rem', color: 'var(--text-primary)', fontWeight: 600 }}>
+                <div style={{ marginTop: 'auto', paddingTop: '0.4rem', fontSize: '0.8rem', color: 'var(--text-primary)', fontWeight: 600 }}>
                   🎯 <strong>Target: </strong>{arc.outcome}
                 </div>
               </div>
@@ -431,17 +368,8 @@ export const LandingPage = () => {
       {/* ========================================================
           BOTTOM CALL TO ACTION (CTA)
           ======================================================== */}
-      <section style={{ padding: '5rem 2rem', maxWidth: '1000px', margin: '0 auto', textAlign: 'center', width: '100%' }}>
-        <div
-          style={{
-            background: 'var(--navy-hero-gradient)',
-            borderRadius: 'var(--radius-xl)',
-            padding: '3.5rem 2.5rem',
-            color: '#ffffff',
-            boxShadow: 'var(--shadow-lg), var(--shadow-glow-navy)',
-            border: '1px solid rgba(170, 192, 225, 0.25)',
-          }}
-        >
+      <section className="landing-cta-section">
+        <div className="landing-cta-box">
           <Badge
             variant="primary"
             style={{
@@ -449,7 +377,7 @@ export const LandingPage = () => {
               color: '#ffffff',
               borderColor: 'rgba(255, 255, 255, 0.3)',
               padding: '0.35rem 0.85rem',
-              fontSize: '0.85rem',
+              fontSize: '0.825rem',
               fontWeight: 700,
               marginBottom: '1.25rem',
               display: 'inline-flex',
@@ -461,7 +389,7 @@ export const LandingPage = () => {
           <h2
             style={{
               fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2rem, 4vw, 2.8rem)',
+              fontSize: 'clamp(1.6rem, 5vw, 2.6rem)',
               fontWeight: 800,
               letterSpacing: '-0.02em',
               lineHeight: 1.2,
@@ -474,25 +402,25 @@ export const LandingPage = () => {
 
           <p
             style={{
-              fontSize: '1.1rem',
+              fontSize: 'clamp(0.95rem, 3.5vw, 1.05rem)',
               color: 'rgba(255, 255, 255, 0.92)',
               maxWidth: '680px',
-              margin: '0 auto 2.25rem auto',
+              margin: '0 auto 2rem auto',
               lineHeight: 1.6,
             }}
           >
             Create your student account now to unlock the interactive roadmap, AI study advisor, project banks, and placement interview master guides.
           </p>
 
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+          <div className="landing-hero-actions" style={{ marginBottom: 0 }}>
             <Link to="/register" style={{ textDecoration: 'none' }}>
               <Button
                 variant="secondary"
                 size="lg"
                 icon={UserPlus}
                 style={{
-                  padding: '0.9rem 2.25rem',
-                  fontSize: '1.05rem',
+                  padding: '0.85rem 2rem',
+                  fontSize: '1rem',
                   backgroundColor: '#ffffff',
                   color: 'var(--primary-900)',
                   fontWeight: 800,
@@ -507,8 +435,8 @@ export const LandingPage = () => {
                 size="lg"
                 icon={LogIn}
                 style={{
-                  padding: '0.9rem 2.25rem',
-                  fontSize: '1.05rem',
+                  padding: '0.85rem 2rem',
+                  fontSize: '1rem',
                   color: '#ffffff',
                   borderColor: 'rgba(255, 255, 255, 0.6)',
                 }}
@@ -523,22 +451,13 @@ export const LandingPage = () => {
       {/* ========================================================
           FOOTER
           ======================================================== */}
-      <footer
-        style={{
-          marginTop: 'auto',
-          backgroundColor: '#071536',
-          borderTop: '1px solid rgba(170, 192, 225, 0.2)',
-          padding: '2.5rem 2rem',
-          textAlign: 'center',
-          color: '#ffffff',
-        }}
-      >
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
+      <footer className="landing-footer">
+        <div className="landing-footer-inner">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
             <Logo size="sm" />
           </div>
 
-          <div style={{ fontSize: '0.88rem', color: 'var(--aegean-200)' }}>
+          <div style={{ fontSize: '0.85rem', color: 'var(--aegean-200)' }}>
             © {new Date().getFullYear()} VidyaPath CSE Career & Academic Platform. All rights reserved.
           </div>
 
