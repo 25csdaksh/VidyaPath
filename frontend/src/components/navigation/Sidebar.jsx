@@ -21,6 +21,7 @@ import {
   Bot,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import Logo from '../common/Logo';
 
 export const Sidebar = ({ isOpen }) => {
   const { isAuthenticated, user } = useAuth();
@@ -52,23 +53,9 @@ export const Sidebar = ({ isOpen }) => {
 
   return (
     <aside className={`app-sidebar ${isOpen ? 'open' : ''}`}>
-      <div className="sidebar-header">
-        <NavLink to="/" className="sidebar-logo">
-          <div
-            style={{
-              width: '34px',
-              height: '34px',
-              borderRadius: '8px',
-              background: 'var(--primary-gradient)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#ffffff',
-            }}
-          >
-            <Sparkles size={18} />
-          </div>
-          <span>VidyaPath</span>
+      <div className="sidebar-header" style={{ padding: '0.85rem 1rem' }}>
+        <NavLink to="/" className="sidebar-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <Logo size="sm" />
         </NavLink>
       </div>
 

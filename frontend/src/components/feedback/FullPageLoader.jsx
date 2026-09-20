@@ -1,5 +1,6 @@
 import React from 'react';
 import Spinner from '../common/Spinner';
+import Logo from '../common/Logo';
 
 export const FullPageLoader = ({ message = 'Loading VidyaPath Hub...' }) => {
   return (
@@ -16,10 +17,11 @@ export const FullPageLoader = ({ message = 'Loading VidyaPath Hub...' }) => {
         zIndex: 99999,
       }}
     >
+      <Logo size="lg" />
       <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <Spinner size="lg" />
+        <Spinner size="md" />
       </div>
-      <p style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-secondary)', fontSize: '1rem', fontWeight: 500 }}>
+      <p style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-secondary)', fontSize: '0.95rem', fontWeight: 600 }}>
         {message}
       </p>
     </div>

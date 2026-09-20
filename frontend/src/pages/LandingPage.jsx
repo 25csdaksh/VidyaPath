@@ -27,6 +27,7 @@ import { useAuth } from '../context/AuthContext';
 import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import Badge from '../components/common/Badge';
+import Logo from '../components/common/Logo';
 
 export const LandingPage = () => {
   const { isAuthenticated, isLoading } = useAuth();
@@ -131,39 +132,16 @@ export const LandingPage = () => {
           backgroundColor: '#071536',
           backdropFilter: 'blur(16px)',
           borderBottom: '1px solid rgba(170, 192, 225, 0.2)',
-          padding: '1rem 2rem',
+          padding: '0.85rem 2rem',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.25)',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-          <div
-            style={{
-              width: '40px',
-              height: '40px',
-              borderRadius: '10px',
-              background: 'linear-gradient(135deg, #184DA6 0%, #2566D9 100%)',
-              border: '1px solid rgba(255, 255, 255, 0.25)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#ffffff',
-              boxShadow: '0 4px 12px rgba(37, 102, 217, 0.3)',
-            }}
-          >
-            <Sparkles size={20} />
-          </div>
-          <div>
-            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
-              VidyaPath
-            </div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--aegean-200)', fontWeight: 600 }}>
-              CSE Career & Academic Platform
-            </div>
-          </div>
-        </div>
+        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <Logo size="md" />
+        </Link>
 
         {/* Top Header Action Buttons */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
@@ -557,25 +535,11 @@ export const LandingPage = () => {
       >
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '8px',
-                background: 'linear-gradient(135deg, #184DA6 0%, #2566D9 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff',
-              }}
-            >
-              <Sparkles size={16} />
-            </div>
-            <span style={{ fontWeight: 800, fontSize: '1.1rem', color: '#ffffff' }}>VidyaPath CSE</span>
+            <Logo size="sm" />
           </div>
 
           <div style={{ fontSize: '0.88rem', color: 'var(--aegean-200)' }}>
-            © {new Date().getFullYear()} VidyaPath CSE Career & Academic Platform. Built with Santorini 60:30:10 Design Architecture.
+            © {new Date().getFullYear()} VidyaPath CSE Career & Academic Platform. All rights reserved.
           </div>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
