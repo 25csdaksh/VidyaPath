@@ -1,3 +1,5 @@
+const dns = require('dns');
+try { dns.setServers(['8.8.8.8', '1.1.1.1']); } catch (e) {}
 const mongoose = require('mongoose');
 const env = require('../config/env');
 const y1 = require('../data/knowledge/1st_year_foundation.json');

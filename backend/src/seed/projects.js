@@ -3,8 +3,6 @@
 // 5 Projects per Field across 12 Disciplines
 // ========================================================
 
-const { INDUSTRY_PROJECTS } = require('../../frontend/src/components/projects/industryProjectsData_backend');
-
 // We will construct the seed array directly
 const projectsSeedData = [
   // 1. AI / MACHINE LEARNING
