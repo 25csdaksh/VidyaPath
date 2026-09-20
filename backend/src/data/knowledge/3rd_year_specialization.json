@@ -1,0 +1,390 @@
+{
+  "year": 3,
+  "academicLevel": "Third Year (TY)",
+  "phaseTitle": "Advanced Systems, Specializations & Tier-1 Projects",
+  "semesters": [5, 6],
+  "overview": "Third year is the bridge to professional engineering. In this year, you develop one deep specialization (Full-Stack, AI/ML, Cloud/DevOps, or Cybersecurity), build Tier-1 resume projects with production architecture, study Computer Networks, prepare your 1-page ATS resume, and apply for 3rd-year summer internships.",
+  "keyGoals": [
+    "Choose and master ONE core specialization track (Web/Cloud, AI/ML, Cybersecurity, Data).",
+    "Build 2 high-impact Tier-1 resume projects with caching (Redis), message queues, and cloud deployment.",
+    "Master Computer Networks (OSI, TCP/IP, HTTP/1.1 vs HTTP/2 vs HTTP/3, DNS, WebSockets).",
+    "Complete a 1-page ATS-compliant engineering resume using the Google XYZ formula.",
+    "Solve 250+ DSA questions and start practicing Mock Technical Interviews.",
+    "Secure a 3rd-year summer internship via campus hiring or off-campus cold outreach."
+  ],
+  "subjects": [
+    {
+      "code": "CS301",
+      "name": "Computer Networks (CN & Internet Protocols)",
+      "category": "Core Computer Science",
+      "importance": "Critical - Evaluated in all backend, cloud, systems, and full-stack interviews",
+      "coreConcepts": [
+        "OSI 7-Layer Model & TCP/IP Architecture",
+        "Application Layer: HTTP/HTTPS, DNS, FTP, SMTP, WebSockets, gRPC",
+        "Transport Layer: TCP (3-Way Handshake, Flow Control with Sliding Window, Congestion Control) vs UDP",
+        "Network Layer: IPv4 vs IPv6, Subnetting & CIDR, Routing Protocols (OSPF, BGP)",
+        "Link Layer & Physical: MAC Addressing, ARP, Ethernet, Switching vs Routing",
+        "Network Security: TLS/SSL Handshake, Certificates, Symmetric vs Asymmetric Cryptography, Firewalls"
+      ],
+      "recommendedBooks": [
+        {
+          "title": "Computer Networking: A Top-Down Approach",
+          "author": "James F. Kurose & Keith W. Ross (UMass Amherst)",
+          "edition": "8th Edition",
+          "type": "The Global Standard Bible",
+          "recommendedChapters": [
+            "Chapter 1: Computer Networks and the Internet",
+            "Chapter 2: Application Layer (HTTP, DNS, Socket Programming)",
+            "Chapter 3: Transport Layer (Principles of Reliable Data Transfer, TCP)",
+            "Chapter 4-5: Network Layer: Data Plane and Control Plane",
+            "Chapter 8: Security in Computer Networks"
+          ],
+          "whyRead": "The single best networking book in the world, starting from user applications down to physical wires."
+        }
+      ],
+      "recommendedCourses": [
+        {
+          "platform": "Coursera",
+          "title": "The Bits and Bytes of Networking",
+          "offeredBy": "Google",
+          "duration": "6 Weeks",
+          "url": "https://www.coursera.org/learn/computer-networking",
+          "skills": ["TCP/IP", "DNS", "Subnetting", "Routing", "Network Troubleshooting"]
+        }
+      ],
+      "youtubePlaylists": [
+        {
+          "creator": "Gate Smashers",
+          "language": "Hindi",
+          "topic": "Computer Networks Complete Series (Subnetting, TCP Handshake, Flow Control)",
+          "searchQuery": "Gate Smashers Computer Networks Playlist",
+          "bestFor": "Subnetting calculations, CRC checksums, and exam preparation"
+        },
+        {
+          "creator": "Hussein Nasser / ByteByteGo",
+          "language": "English",
+          "topic": "Networking Protocols for Backend Engineers",
+          "searchQuery": "Hussein Nasser HTTP TCP WebSockets Playlist",
+          "bestFor": "Practical backend engineering: connection pooling, HTTP/2 multiplexing, and TLS termination"
+        }
+      ]
+    },
+    {
+      "code": "CS302",
+      "name": "Artificial Intelligence & Machine Learning (AI/ML)",
+      "category": "Advanced Specialization",
+      "importance": "High - Required for Data Science, AI Engineer, and ML Research roles",
+      "coreConcepts": [
+        "Supervised Learning: Linear Regression, Logistic Regression, Decision Trees, Random Forests, XGBoost",
+        "Unsupervised Learning: K-Means Clustering, PCA Dimensionality Reduction",
+        "Model Evaluation: Overfitting vs Underfitting, Bias-Variance Tradeoff, Precision, Recall, F1-Score, ROC-AUC",
+        "Deep Learning: Perceptron, Multi-Layer Perceptrons (MLP), Backpropagation, Gradient Descent (SGD, Adam)",
+        "Convolutional Neural Networks (CNNs) for Computer Vision",
+        "Recurrent Neural Networks (RNNs), LSTM, and Transformer Architecture Basics for NLP",
+        "MLOps & Deployment: Dockerizing models, FastAPI inference endpoints"
+      ],
+      "recommendedBooks": [
+        {
+          "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+          "author": "Aurélien Géron",
+          "edition": "3rd Edition",
+          "type": "Practical Industry Standard",
+          "recommendedChapters": [
+            "Part I: The Fundamentals of Machine Learning (Ch 1-9)",
+            "Part II: Neural Networks and Deep Learning (Ch 10-16)"
+          ],
+          "whyRead": "Most practical, code-heavy machine learning book with real end-to-end projects."
+        },
+        {
+          "title": "Deep Learning",
+          "author": "Ian Goodfellow, Yoshua Bengio, Aaron Courville",
+          "edition": "MIT Press",
+          "type": "Theoretical Deep Learning Bible",
+          "whyRead": "The definitive theoretical guide for deep learning math, optimization, and generative models."
+        }
+      ],
+      "recommendedCourses": [
+        {
+          "platform": "Coursera",
+          "title": "Machine Learning Specialization",
+          "offeredBy": "DeepLearning.AI & Stanford University (Prof. Andrew Ng)",
+          "duration": "3 Months",
+          "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+          "skills": ["Supervised Learning", "Neural Networks", "Decision Trees", "Unsupervised Learning", "Recommender Systems"]
+        },
+        {
+          "platform": "Coursera",
+          "title": "Deep Learning Specialization",
+          "offeredBy": "DeepLearning.AI (Prof. Andrew Ng)",
+          "duration": "5 Months",
+          "url": "https://www.coursera.org/specializations/deep-learning",
+          "skills": ["CNNs", "RNNs", "Transformers", "Hyperparameter Tuning", "TensorFlow/PyTorch"]
+        }
+      ],
+      "youtubePlaylists": [
+        {
+          "creator": "Krish Naik / CampusX",
+          "language": "Hindi / English",
+          "topic": "Complete Machine Learning & Deep Learning Master Series",
+          "searchQuery": "CampusX Machine Learning Playlist / Krish Naik Deep Learning",
+          "bestFor": "Complete mathematical derivations and hands-on Python/Scikit-Learn implementation"
+        },
+        {
+          "creator": "StatQuest with Josh Starmer",
+          "language": "English",
+          "topic": "Machine Learning Clearly Explained Step-by-Step",
+          "searchQuery": "StatQuest Machine Learning Playlist",
+          "bestFor": "Intuitive, visual understanding of PCA, Random Forests, and Gradient Boosting"
+        }
+      ]
+    },
+    {
+      "code": "CS303",
+      "name": "Cloud Computing & DevOps",
+      "category": "Systems & Infrastructure",
+      "importance": "High - Essential for deploying, scaling, and managing cloud-native software",
+      "coreConcepts": [
+        "Cloud Service Models: IaaS (EC2), PaaS (Render, Elastic Beanstalk), SaaS, Serverless (AWS Lambda)",
+        "Containerization: Docker (Dockerfiles, Multi-stage builds, Docker Compose)",
+        "Container Orchestration: Kubernetes basics (Pods, Deployments, Services, Ingress)",
+        "CI/CD Pipelines: GitHub Actions (automated testing, linting, build & deployment)",
+        "Infrastructure as Code (IaC): Terraform basics",
+        "Observability & Monitoring: Prometheus, Grafana, Structured Logging"
+      ],
+      "recommendedBooks": [
+        {
+          "title": "The DevOps Handbook",
+          "author": "Gene Kim, Jez Humble, Patrick Debois, John Willis",
+          "edition": "2nd Edition",
+          "type": "Industry Standard",
+          "whyRead": "Explains how high-performing tech companies achieve continuous delivery and zero-downtime deployments."
+        }
+      ],
+      "recommendedCourses": [
+        {
+          "platform": "Coursera",
+          "title": "IBM DevOps and Software Engineering Professional Certificate",
+          "offeredBy": "IBM",
+          "duration": "10 Months (Self-Paced)",
+          "url": "https://www.coursera.org/professional-certificates/devops-and-software-engineering",
+          "skills": ["Docker", "Kubernetes", "CI/CD with GitHub Actions", "TDD & Agile", "Microservices"]
+        },
+        {
+          "platform": "Coursera",
+          "title": "AWS Cloud Technical Essentials",
+          "offeredBy": "Amazon Web Services (AWS)",
+          "duration": "4 Weeks",
+          "url": "https://www.coursera.org/learn/aws-cloud-technical-essentials"
+        }
+      ],
+      "youtubePlaylists": [
+        {
+          "creator": "TechWorld with Nana",
+          "language": "English",
+          "topic": "Docker & Kubernetes Full Tutorials for Beginners",
+          "searchQuery": "TechWorld with Nana Docker Kubernetes Playlist",
+          "bestFor": "Clear, visual diagrams and practical DevOps walkthroughs"
+        },
+        {
+          "creator": "Praveen Singampalli / Abhishek Veeramalla",
+          "language": "English / Hindi",
+          "topic": "DevOps Real-Time Projects with GitHub Actions & AWS",
+          "searchQuery": "Abhishek Veeramalla DevOps Zero to Hero",
+          "bestFor": "Real production CI/CD pipelines and hands-on AWS setup"
+        }
+      ]
+    },
+    {
+      "code": "CS304",
+      "name": "Software Engineering & System Design Fundamentals",
+      "category": "Software Architecture",
+      "importance": "High - Transition from writing code to architecting systems",
+      "coreConcepts": [
+        "Design Patterns (GoF): Factory, Strategy, Singleton, Observer, Decorator, Adapter",
+        "High-Level Architecture: Monolith vs Microservices, Event-Driven Architecture",
+        "Scalability Concepts: Horizontal vs Vertical Scaling, Load Balancing (Round Robin, Least Connections)",
+        "Caching Strategies: Redis (Cache-Aside, Write-Through, Write-Back), CDN (Cloudflare)",
+        "Asynchronous Messaging: Message Queues (Kafka, RabbitMQ, SQS)",
+        "Database Scaling: Read Replicas, Database Sharding, Connection Pooling"
+      ],
+      "recommendedBooks": [
+        {
+          "title": "Designing Data-Intensive Applications (DDIA)",
+          "author": "Martin Kleppmann (University of Cambridge)",
+          "edition": "1st Edition (O'Reilly)",
+          "type": "The Industry Bible for Distributed Systems",
+          "recommendedChapters": [
+            "Chapter 1: Reliable, Scalable, and Maintainable Applications",
+            "Chapter 3: Storage and Retrieval",
+            "Chapter 5: Replication (Leader-Follower, Multi-Leader)",
+            "Chapter 6: Partitioning / Sharding",
+            "Chapter 11: Stream Processing"
+          ],
+          "whyRead": "The single most revered book in tech for understanding databases, replication, and distributed systems."
+        },
+        {
+          "title": "Head First Design Patterns",
+          "author": "Eric Freeman & Elisabeth Robson",
+          "edition": "2nd Edition",
+          "type": "OOP Design Patterns Classic",
+          "whyRead": "Teaches object-oriented design patterns with humorous, memorable real-world examples."
+        }
+      ],
+      "recommendedCourses": [
+        {
+          "platform": "Coursera",
+          "title": "Software Design and Architecture Specialization",
+          "offeredBy": "University of Alberta",
+          "duration": "4 Months",
+          "url": "https://www.coursera.org/specializations/software-design-architecture"
+        }
+      ],
+      "youtubePlaylists": [
+        {
+          "creator": "Gaurav Sen",
+          "language": "English",
+          "topic": "System Design for Software Engineers",
+          "searchQuery": "Gaurav Sen System Design Playlist",
+          "bestFor": "Load balancers, consistent hashing, message queues, and rate limiters"
+        },
+        {
+          "creator": "ByteByteGo (Alex Xu)",
+          "language": "English",
+          "topic": "Visual System Design & Architecture Concepts",
+          "searchQuery": "ByteByteGo System Design Visual Animations",
+          "bestFor": "Short, beautiful architectural animations of real-world systems (Netflix, WhatsApp, Uber)"
+        }
+      ]
+    }
+  ],
+  "recommendedProjects": [
+    {
+      "id": "ty-proj-1",
+      "title": "Real-Time Distributed Collaborative Document Editor (Google Docs Clone)",
+      "domain": "Advanced Full-Stack & Distributed Systems",
+      "difficulty": "High",
+      "estimatedDuration": "6-8 Weeks",
+      "techStack": ["React / Next.js", "Node.js", "WebSockets / Socket.io", "Redis Pub/Sub", "Operational Transformation / CRDT", "MongoDB"],
+      "problemStatement": "Multiple users editing the same document simultaneously cause conflicting edits and race conditions without conflict resolution.",
+      "keyFeatures": [
+        "Real-time synchronized text editing across multiple connected clients with cursor presence.",
+        "Conflict-free replicated data types (CRDT / Yjs) or Operational Transformation algorithm preventing text scrambling.",
+        "Redis Pub/Sub layer allowing horizontal scaling across multiple backend socket servers.",
+        "Document revision history with time-travel rewind and version snapshots."
+      ],
+      "learningOutcomes": ["WebSocket concurrency", "Redis Pub/Sub message distribution", "CRDT conflict resolution"]
+    },
+    {
+      "id": "ty-proj-2",
+      "title": "Production E-Commerce Platform with Microservices & Payment Gateway",
+      "domain": "Enterprise Full-Stack & Cloud",
+      "difficulty": "High",
+      "estimatedDuration": "6-8 Weeks",
+      "techStack": ["Node.js / Go / Spring Boot", "React.js", "PostgreSQL", "Redis", "Kafka / RabbitMQ", "Docker", "Stripe / Razorpay API"],
+      "problemStatement": "Large e-commerce systems require decoupled services (Auth, Product Catalog, Order Processing, Payment, Notification) that do not bring down the entire website during flash sales.",
+      "keyFeatures": [
+        "Decoupled services communicating via REST APIs and asynchronous Kafka events (e.g. `OrderCreated` triggers payment and inventory reservation).",
+        "Redis caching on high-read product catalog endpoints reducing DB load by 70%.",
+        "Distributed transaction handling (Saga pattern) handling failed payment rollbacks.",
+        "Full test suite with Jest / Supertest and automated GitHub Actions CI/CD pipeline deploying Docker containers."
+      ],
+      "learningOutcomes": ["Microservices architecture", "Event-driven design with Kafka", "Payment webhook security & idempotency"]
+    },
+    {
+      "id": "ty-proj-3",
+      "title": "End-to-End AI Medical Document & X-Ray Analysis SaaS",
+      "domain": "AI/ML & Computer Vision",
+      "difficulty": "High",
+      "estimatedDuration": "6-8 Weeks",
+      "techStack": ["Python (PyTorch / TensorFlow)", "FastAPI", "React.js", "Docker", "HuggingFace Transformers"],
+      "problemStatement": "Automate preliminary clinical report analysis and chest X-ray disease detection to assist triage staff in hospitals.",
+      "keyFeatures": [
+        "Fine-tuned Convolutional Neural Network (ResNet-50 / EfficientNet) classifying 14 common chest conditions (e.g., Pneumonia, Cardiomegaly).",
+        "Grad-CAM visual heatmap overlay showing exactly which lung region influenced the model's prediction.",
+        "FastAPI async inference endpoint containerized in Docker with <120ms P99 latency.",
+        "OCR text extraction summarizing key patient vitals from scanned medical reports."
+      ],
+      "learningOutcomes": ["Transfer learning & fine-tuning in PyTorch", "Grad-CAM explainability", "FastAPI microservice deployment"]
+    },
+    {
+      "id": "ty-proj-4",
+      "title": "Distributed Cloud File Storage with Chunking & Deduplication (Dropbox Clone)",
+      "domain": "Cloud & Storage Systems",
+      "difficulty": "High",
+      "estimatedDuration": "5-7 Weeks",
+      "techStack": ["Go / Node.js", "AWS S3 / MinIO", "PostgreSQL", "SHA-256 Hashing", "Docker Compose"],
+      "problemStatement": "Uploading large files repeatedly wastes cloud bandwidth and storage if multiple users upload identical file copies.",
+      "keyFeatures": [
+        "Client-side file splitting into 4MB chunks and computing content-based SHA-256 hashes.",
+        "Content-addressable storage deduplication (stores duplicate blocks only once).",
+        "Resumable multipart uploads surviving network disconnections.",
+        "Time-limited presigned S3 download URLs for secure file sharing."
+      ],
+      "learningOutcomes": ["Distributed object storage mechanics", "Content-addressable deduplication", "AWS S3 API architecture"]
+    },
+    {
+      "id": "ty-proj-5",
+      "title": "Automated Vulnerability Scanner & Penetration Testing Tool",
+      "domain": "Cybersecurity & Systems",
+      "difficulty": "Medium-High",
+      "estimatedDuration": "4-6 Weeks",
+      "techStack": ["Python", "Asyncio / Scapy", "Nmap engine", "SQLite / PostgreSQL", "FastAPI"],
+      "problemStatement": "Companies need automated tools to scan target domains for open ports, outdated SSL versions, exposed `.env` files, and standard OWASP Top 10 vulnerabilities.",
+      "keyFeatures": [
+        "Asynchronous TCP/UDP port scanner benchmarking 1,000 ports in <5 seconds using async sockets.",
+        "Automated header auditor checking for CSP, X-Frame-Options, HSTS, and CORS misconfigurations.",
+        "SQL injection (SQLi) and Cross-Site Scripting (XSS) payload injector detecting unescaped parameters.",
+        "Generates clean PDF security audit reports with severity scores (CVSS metrics)."
+      ],
+      "learningOutcomes": ["Network socket auditing", "OWASP Top 10 vulnerability detection", "Asynchronous Python (asyncio)"]
+    }
+  ],
+  "internshipPrepBlueprint": {
+    "timeline": "Months 1-5 (Sem 5 & Sem 6)",
+    "actionSteps": [
+      "1. Finalize 1-Page ATS Resume with 2 Tier-1 Projects (Google XYZ format).",
+      "2. Complete 200+ LeetCode DSA questions (focus on Graphs, Trees, and DP).",
+      "3. Build active LinkedIn profile: post weekly project learnings and connect with 50+ campus alumni & engineers.",
+      "4. Prepare STAR behavioral answers (Situation, Task, Action, Result) for 10 common HR questions.",
+      "5. Apply systematically to 50+ companies (on-campus portal, referrals via LinkedIn alumni, AngelList/Wellfound for funded startups)."
+    ]
+  },
+  "monthlySprintRoadmap": [
+    {
+      "month": "Month 1 (Sem 5)",
+      "focus": "Computer Networks & Specialization Deep Dive",
+      "tasks": [
+        "Read Kurose & Ross CN Chapters 1 to 3 (HTTP, DNS, TCP Handshake & Flow Control).",
+        "Start chosen Specialization Track (Full-Stack, AI/ML, Cloud, or Cyber).",
+        "Solve 30 advanced DSA questions on Graphs and Shortest Paths."
+      ]
+    },
+    {
+      "month": "Month 2 (Sem 5)",
+      "focus": "Tier-1 Project Architecture & Build",
+      "tasks": [
+        "Architect and start Project 1 (e.g. Distributed Collaborative Editor or E-Commerce Microservices).",
+        "Implement Redis caching, database indexing, and Docker containerization.",
+        "Deploy MVP live on cloud with public demo URL and detailed GitHub README."
+      ]
+    },
+    {
+      "month": "Month 3 (Sem 6)",
+      "focus": "System Design Foundations & Resume Audit",
+      "tasks": [
+        "Watch Gaurav Sen / ByteByteGo System Design videos (Load Balancers, Caching, Sharding).",
+        "Conduct 16-point ATS resume audit using the CSE Resume Master Guide.",
+        "Conduct 3 mock technical interviews with peers on CoderPad/Google Docs."
+      ]
+    },
+    {
+      "month": "Month 4 (Sem 6)",
+      "focus": "Internship Drives & Final Polish",
+      "tasks": [
+        "Apply to summer internship openings via referral and college TPO portal.",
+        "Revise Operating Systems, DBMS, and Computer Networks rapid-fire questions.",
+        "Complete second Tier-1 project and polish GitHub commits."
+      ]
+    }
+  ]
+}

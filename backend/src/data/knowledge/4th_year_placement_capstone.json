@@ -1,0 +1,278 @@
+{
+  "year": 4,
+  "academicLevel": "Final Year (4th Year / TY to Final Year)",
+  "phaseTitle": "Industry Placement, Capstone Engineering & Career Launch",
+  "semesters": [7, 8],
+  "overview": "Final year is the culmination of your 4-year CSE journey. The first semester (Sem 7) is dedicated to campus placements, off-campus hiring drives, and product company interviews. The second semester (Sem 8) focuses on the Major Capstone Engineering Project, production deployment, research publications, or full-time corporate internship.",
+  "keyGoals": [
+    "Clear Tier-1/Tier-2 product & services company hiring pipelines (OA + Technical + Managerial + HR).",
+    "Complete a production-grade Major Capstone Engineering Project solving a real-world enterprise problem.",
+    "Master High-Level and Low-Level System Design (HLD & LLD).",
+    "Perform 10+ live technical mock interviews with peer feedback on live coding and problem explanation.",
+    "Achieve 85%+ on the 8-point CSE Graduation Readiness standard."
+  ],
+  "subjects": [
+    {
+      "code": "CS401",
+      "name": "Distributed Systems & Cloud Architecture (System Design)",
+      "category": "Advanced Systems Engineering",
+      "importance": "Critical - Evaluated in Senior/Tier-1 SDE hiring rounds",
+      "coreConcepts": [
+        "CAP Theorem & PACELC Theorem",
+        "Consistency Models: Strong Consistency, Eventual Consistency, Linearizability",
+        "Distributed Consensus: Raft & Paxos algorithms, Split-brain problem",
+        "High-Level Design Problems: URL Shortener (Bitly), Rate Limiter (Token Bucket / Leaky Bucket), Distributed Cache, Notification Service, Video Streaming (YouTube/Netflix)",
+        "Database Sharding Strategies: Consistent Hashing, Range-based vs Hash-based partitioning",
+        "Microservices Observability: Distributed Tracing (Jaeger, OpenTelemetry), Centralized Logging (ELK Stack)"
+      ],
+      "recommendedBooks": [
+        {
+          "title": "Designing Data-Intensive Applications (DDIA)",
+          "author": "Martin Kleppmann (University of Cambridge)",
+          "edition": "1st Edition (O'Reilly)",
+          "type": "The Industry Bible for Distributed Systems",
+          "recommendedChapters": [
+            "Chapter 5: Replication (Leader-Follower, Quorums)",
+            "Chapter 6: Partitioning / Sharding & Rebalancing",
+            "Chapter 7: Transactions & Distributed Locking",
+            "Chapter 9: Consistency and Consensus (Raft/Paxos)"
+          ],
+          "whyRead": "Mandatory reading for anyone aiming for Top Tech companies (Google, Microsoft, Amazon, Uber)."
+        },
+        {
+          "title": "System Design Interview – An Insider's Guide (Volume 1 & 2)",
+          "author": "Alex Xu & Sahn Lam",
+          "edition": "2nd Edition",
+          "type": "Interview Architecture Standard",
+          "recommendedChapters": [
+            "Chapter 1: Scale from Zero to Millions of Users",
+            "Chapter 4: Design a Rate Limiter",
+            "Chapter 6: Design a Key-Value Store",
+            "Chapter 11: Design a News Feed System"
+          ],
+          "whyRead": "Step-by-step interview blueprints with back-of-the-envelope calculations and visual diagrams."
+        }
+      ],
+      "recommendedCourses": [
+        {
+          "platform": "Coursera",
+          "title": "Google Cloud Professional Cloud Architect Certification",
+          "offeredBy": "Google Cloud",
+          "duration": "3 Months",
+          "url": "https://www.coursera.org/professional-certificates/gcp-cloud-architect",
+          "skills": ["Cloud Architecture", "GCP", "Kubernetes", "High Availability", "Disaster Recovery"]
+        }
+      ],
+      "youtubePlaylists": [
+        {
+          "creator": "NeetCode / Gaurav Sen",
+          "language": "English",
+          "topic": "System Design & Interview Masterclass",
+          "searchQuery": "NeetCode System Design Playlist / Gaurav Sen System Design",
+          "bestFor": "Solving classic system design interview problems with back-of-the-envelope capacity estimations"
+        },
+        {
+          "creator": "Arpit Bhayani (Ex-Google, Ex-Unacademy)",
+          "language": "English",
+          "topic": "Deep System Architecture Case Studies (PostgreSQL, Kafka, Redis)",
+          "searchQuery": "Arpit Bhayani System Design Asynchronous Systems",
+          "bestFor": "How real-world production systems scale to millions of concurrent requests"
+        }
+      ]
+    },
+    {
+      "code": "CS402",
+      "name": "Interview Mastery: DSA, Live Problem Solving & STAR Communication",
+      "category": "Career Launch & Placement",
+      "importance": "Critical - Determines job offer conversion",
+      "coreConcepts": [
+        "Think-Aloud Live Coding Methodology: Clarifying ambiguities, stating assumptions, dry-running edge cases",
+        "Time & Space Tradeoffs: Identifying sub-optimal brute force and optimizing to O(N) or O(log N)",
+        "STAR Behavioral Method: Situation, Task, Action, Result for storytelling",
+        "Handling Failure, Conflict Resolution, and Project Deep-Dive Defense"
+      ],
+      "recommendedBooks": [
+        {
+          "title": "Cracking the Coding Interview (CTCI)",
+          "author": "Gayle Laakmann McDowell (Ex-Google, Ex-Microsoft, Ex-Apple)",
+          "edition": "6th Edition (189 Programming Questions and Solutions)",
+          "type": "Interview Classic Bible",
+          "recommendedChapters": [
+            "Chapter 1-5: Interview Process, Behavioral Questions, Big-O, Technical Questions",
+            "Chapter 6-11: Core Data Structures (Arrays, Strings, Linked Lists, Stacks, Trees, Graphs)",
+            "Chapter 14: System Design and Scalability"
+          ],
+          "whyRead": "The single most famous coding interview book in software engineering history."
+        }
+      ],
+      "recommendedCourses": [
+        {
+          "platform": "Coursera",
+          "title": "Mastering the Software Engineering Interview",
+          "offeredBy": "UC San Diego",
+          "duration": "4 Weeks",
+          "url": "https://www.coursera.org/learn/cs-tech-interview"
+        }
+      ],
+      "youtubePlaylists": [
+        {
+          "creator": "NeetCode",
+          "language": "English",
+          "topic": "NeetCode 150 LeetCode Problem Walkthroughs",
+          "searchQuery": "NeetCode 150 Playlist",
+          "bestFor": "Optimal Python solutions with clear visualization of two pointers, sliding window, trees, and graphs"
+        },
+        {
+          "creator": "Dan Croitor / CareerVidz",
+          "language": "English",
+          "topic": "Behavioral & Amazon Leadership Principles Mock Interviews",
+          "searchQuery": "Dan Croitor Behavioral Interview Questions",
+          "bestFor": "Structuring STAR responses and answering culture-fit behavioral questions"
+        }
+      ]
+    }
+  ],
+  "recommendedProjects": [
+    {
+      "id": "final-proj-1",
+      "title": "High-Throughput Distributed Rate Limiter & API Gateway with Redis Cluster",
+      "domain": "Systems & Distributed Architecture",
+      "difficulty": "High",
+      "estimatedDuration": "6-8 Weeks",
+      "techStack": ["Go / Rust / Node.js", "Redis Cluster", "Docker", "Prometheus & Grafana", "k6 Load Testing"],
+      "problemStatement": "Protect backend services from DDoS attacks, API abuse, and cascading failures under heavy traffic spikes.",
+      "keyFeatures": [
+        "Token Bucket and Sliding Window Log rate-limiting algorithms implemented via Lua scripts in Redis to prevent race conditions.",
+        "Benchmarked with k6 load testing to sustain 25,000+ requests per second with <10ms P99 latency.",
+        "Dynamic IP & API key tiering (Free: 60 req/min, Premium: 1,000 req/min).",
+        "Prometheus exporter emitting live request rates, throttle ratios, and Grafana dashboard visualization."
+      ],
+      "learningOutcomes": ["Lua scripting in Redis for atomic operations", "API Gateway reverse proxy architecture", "Load testing and performance benchmarking"]
+    },
+    {
+      "id": "final-proj-2",
+      "title": "Enterprise RAG (Retrieval-Augmented Generation) Knowledge Base & Search Engine",
+      "domain": "Generative AI & LLMs",
+      "difficulty": "High",
+      "estimatedDuration": "6-8 Weeks",
+      "techStack": ["Python", "LangChain / LlamaIndex", "Vector Database (Pinecone / Qdrant / Chroma)", "FastAPI", "React.js", "OpenAI / Google Gemini API"],
+      "problemStatement": "Companies have thousands of internal PDF documents, codebases, and compliance guidelines that generic LLMs cannot query without hallucinations.",
+      "keyFeatures": [
+        "Document ingestion pipeline chunking PDFs, Markdown, and source code with recursive text splitters and semantic overlap.",
+        "Embedding generation stored in Vector DB with Cosine Similarity and HNSW indexing.",
+        "Hybrid Search (BM25 Keyword Search + Vector Dense Retrieval) with Cross-Encoder Reranking for high-precision retrieval.",
+        "Strict citation generation: outputs exact page number and source document alongside every answer."
+      ],
+      "learningOutcomes": ["RAG pipeline architecture", "Vector databases & HNSW indexing", "Hybrid search and semantic reranking"]
+    },
+    {
+      "id": "final-proj-3",
+      "title": "Fault-Tolerant Distributed Key-Value Store with Raft Consensus",
+      "domain": "Distributed Systems & Infrastructure",
+      "difficulty": "High (Tier-1 Capstone)",
+      "estimatedDuration": "8-10 Weeks",
+      "techStack": ["Go / C++ / Rust", "gRPC / Protocol Buffers", "Raft Consensus Algorithm", "LevelDB / RocksDB engine"],
+      "problemStatement": "Distributed storage nodes must remain consistent and accept writes even when individual servers crash or network partitions occur.",
+      "keyFeatures": [
+        "Full Raft protocol implementation: Leader Election, Heartbeats, Log Replication, and Safety Invariants.",
+        "Persistent Write-Ahead Log (WAL) to disk preventing data loss on sudden node power outages.",
+        "Linearizable read/write operations verified using the Jepsen distributed testing framework.",
+        "Automatic cluster recovery and leader re-election in <300ms when the active leader fails."
+      ],
+      "learningOutcomes": ["Raft consensus algorithm internals", "Distributed fault tolerance", "RPC networking with gRPC"]
+    },
+    {
+      "id": "final-proj-4",
+      "title": "Scalable Video Transcoding & Adaptive Bitrate Streaming Pipeline",
+      "domain": "Cloud & Media Engineering",
+      "difficulty": "High",
+      "estimatedDuration": "6-8 Weeks",
+      "techStack": ["Node.js / Go", "FFmpeg", "AWS S3", "RabbitMQ / SQS Worker Pool", "HLS Streaming", "React Video Player"],
+      "problemStatement": "Users upload raw 4K/1080p MP4 videos that buffer continuously on mobile networks without adaptive resolution switching.",
+      "keyFeatures": [
+        "Asynchronous worker pool (RabbitMQ) picking up raw video upload events.",
+        "FFmpeg transcoding pipeline generating HLS (HTTP Live Streaming) adaptive bitrate chunks (1080p, 720p, 480p, 360p).",
+        "Encrypted `.m3u8` playlist generation and segment distribution via CDN.",
+        "Custom video player with automatic network bandwidth detection and seamless quality switching."
+      ],
+      "learningOutcomes": ["FFmpeg media processing", "Asynchronous worker queue architecture", "HLS streaming protocol"]
+    },
+    {
+      "id": "final-proj-5",
+      "title": "Decentralized Escrow & Multi-Signature Smart Contract Payment Protocol",
+      "domain": "Blockchain & Cryptography",
+      "difficulty": "High",
+      "estimatedDuration": "6-8 Weeks",
+      "techStack": ["Solidity", "Ethereum / Polygon", "Hardhat", "Ethers.js", "React.js", "OpenZeppelin"],
+      "problemStatement": "Freelancers and clients need a trustless, automated payment escrow that releases funds only upon verifiable milestone completion without third-party commission fees.",
+      "keyFeatures": [
+        "Multi-signature (2-of-3) escrow smart contract holding funds securely until milestone delivery is signed off.",
+        "Automated arbitrator dispute resolution mechanism with timelocks.",
+        "ReentrancyGuard and complete OpenZeppelin security auditing preventing flash loan exploits.",
+        "Gas optimization reducing contract execution fees by 35% through struct packing."
+      ],
+      "learningOutcomes": ["Solidity smart contract development", "Cryptographic signature verification", "Smart contract security & gas optimization"]
+    }
+  ],
+  "placementHiringPipeline": {
+    "round1": {
+      "name": "Online Assessment (OA)",
+      "duration": "60-90 Mins",
+      "content": "2-3 DSA Coding Questions (Medium-Hard) + 15 Core CS MCQs (DBMS, OS, CN).",
+      "passRule": "100% test cases passed with optimal time/space complexity."
+    },
+    "round2": {
+      "name": "Technical Round 1 (Live Problem Solving)",
+      "duration": "45-60 Mins",
+      "content": "Live coding on CoderPad/Google Docs. Evaluator checks think-aloud explanation, dry-running, and edge case handling."
+    },
+    "round3": {
+      "name": "Technical Round 2 (Resume Projects & Core CS)",
+      "duration": "45-60 Mins",
+      "content": "Deep architectural defense of your listed projects. Questions on Redis caching, DB schema, SQL joins, and concurrency."
+    },
+    "round4": {
+      "name": "Managerial & HR Culture Fit Round",
+      "duration": "30-45 Mins",
+      "content": "STAR behavioral questions, conflict resolution, career goals, and company alignment."
+    }
+  },
+  "monthlySprintRoadmap": [
+    {
+      "month": "Month 1 (Placement Season)",
+      "focus": "Daily Problem Solving & Company Specific Sheets",
+      "tasks": [
+        "Solve 4 LeetCode problems daily (focus on Blind 75 and Striver SDE Sheet).",
+        "Revise DBMS SQL queries, OS Paging math, and CN TCP 3-way handshake.",
+        "Conduct 2 live mock interviews weekly with peers."
+      ]
+    },
+    {
+      "month": "Month 2 (Placement Season)",
+      "focus": "Live Interviews & Project Defense",
+      "tasks": [
+        "Defend listed projects: be prepared to draw system architecture diagrams on a whiteboard.",
+        "Practice STAR behavioral questions for HR rounds.",
+        "Attend on-campus interview drives and apply to off-campus referrals."
+      ]
+    },
+    {
+      "month": "Month 3 (Capstone Engineering)",
+      "focus": "Major Project Architecture & Prototype",
+      "tasks": [
+        "Finalize Major Capstone Project problem statement with faculty guide.",
+        "Design database schema, API contracts, and high-level architecture diagram.",
+        "Build MVP core engine (e.g. Distributed Rate Limiter / Raft KV Store / Enterprise RAG)."
+      ]
+    },
+    {
+      "month": "Month 4 (Graduation & Launch)",
+      "focus": "Final Project Deployment, Report & Career Onboarding",
+      "tasks": [
+        "Complete project documentation, test suite, and live cloud deployment.",
+        "Prepare final project PPT presentation and defend in final university viva.",
+        "Complete onboarding prerequisites for your full-time Software Engineer job role."
+      ]
+    }
+  ]
+}
