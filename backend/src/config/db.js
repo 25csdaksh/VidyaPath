@@ -9,24 +9,34 @@ try {
   // Ignore if custom DNS cannot be set
 }
 
-const connectDatabase = async () => {
+const connectDatabase = async (retries = 3, delayMs = 3000) => {
   const options = {
-    autoIndex: true,
+    autoIndex: !env.IS_PRODUCTION,
     dbName: 'cse_career_portal',
-    serverSelectionTimeoutMS: 8000,
+    serverSelectionTimeoutMS: 20000,
+    connectTimeoutMS: 20000,
     socketTimeoutMS: 45000,
   };
 
-  try {
-    const connection = await mongoose.connect(env.MONGODB_URI, options);
-    console.log(`[DATABASE] MongoDB Connected: ${connection.connection.host}/${connection.connection.name}`);
-  } catch (error) {
-    console.error(`[DATABASE] Initial MongoDB Connection Error: ${error.message}`);
-    if (env.IS_PRODUCTION) {
-      console.error('[DATABASE] Exiting process due to database connection failure in production.');
-      process.exit(1);
-    } else {
-      console.warn('[DATABASE] Running in development mode. Server will remain running; ensure MongoDB is started locally.');
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      console.log(`[DATABASE] Attempting MongoDB connection (attempt ${attempt}/${retries})...`);
+      const connection = await mongoose.connect(env.MONGODB_URI, options);
+      console.log(`[DATABASE] MongoDB Connected: ${connection.connection.host}/${connection.connection.name}`);
+      return connection;
+    } catch (error) {
+      console.error(`[DATABASE] MongoDB Connection Attempt ${attempt} Failed: ${error.message}`);
+      if (attempt < retries) {
+        console.log(`[DATABASE] Retrying in ${delayMs / 1000}s...`);
+        await new Promise((res) => setTimeout(res, delayMs));
+      } else {
+        if (env.IS_PRODUCTION) {
+          console.error('[DATABASE] All connection attempts failed. Check MongoDB Atlas Network Access IP Whitelist (allow 0.0.0.0/0).');
+          process.exit(1);
+        } else {
+          console.warn('[DATABASE] Running in development mode. Server will remain running; ensure MongoDB is started locally.');
+        }
+      }
     }
   }
 };
