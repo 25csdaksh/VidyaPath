@@ -28,7 +28,7 @@ app.use(
         !origin ||
         allowedOrigins.indexOf(origin) !== -1 ||
         env.IS_DEVELOPMENT ||
-        (typeof origin === 'string' && (origin.endsWith('.vercel.app') || origin.endsWith('.onrender.com')))
+        (typeof origin === 'string' && (origin.endsWith('.vercel.app') || origin.endsWith('.onrender.com') || origin.endsWith('.netlify.app')))
       ) {
         return callback(null, true);
       }
