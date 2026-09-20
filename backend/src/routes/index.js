@@ -20,6 +20,7 @@ const dashboardRoutes = require('./dashboardRoutes');
 const notificationRoutes = require('./notificationRoutes');
 const aiRoutes = require('./aiRoutes');
 const adminRoutes = require('./adminRoutes');
+const advisorRoutes = require('./advisorRoutes');
 
 const router = express.Router();
 
@@ -44,5 +45,6 @@ router.use('/dashboard', dashboardRoutes);
 router.use('/notifications', notificationRoutes);
 router.use('/ai', aiRoutes);
 router.use('/admin', adminRoutes);
+router.use('/advisor', advisorRoutes);
 
 module.exports = router;

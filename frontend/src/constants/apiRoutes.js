@@ -122,6 +122,12 @@ export const API_ROUTES = {
     QUICK_ACTION: (actionType) => `/ai/quick-action/${actionType}`,
   },
 
+  // AI Study Advisor & Curriculum Recommendation
+  ADVISOR: {
+    CURRICULUM: (year) => `/advisor/curriculum/${year}`,
+    STUDY_PLAN: '/advisor/study-plan',
+  },
+
   // Admin Control Center
   ADMIN: {
     STATS: '/admin/stats',

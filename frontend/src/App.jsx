@@ -37,6 +37,7 @@ import LoginPage from './pages/LoginPage'; // 21. Login
 import RegisterPage from './pages/RegisterPage'; // 22. Register
 import AdminDashboardPage from './pages/AdminDashboardPage'; // 23. Admin Dashboard
 import AiAssistantPage from './pages/AiAssistantPage'; // AI Career Assistant
+import AIAdvisorPage from './pages/AIAdvisorPage'; // AI Academic Advisor & Study Plan Generator
 
 import FoundationDemoPage from './pages/FoundationDemoPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -92,6 +93,9 @@ export function App() {
 
                   {/* 14. Resume Guide */}
                   <Route path="/resume-guide" element={<ResumeGuidePage />} />
+
+                  {/* AI Study Advisor & Curriculum Generator */}
+                  <Route path="/advisor" element={<AIAdvisorPage />} />
 
                   {/* 15. Resume Builder (Protected) */}
                   <Route

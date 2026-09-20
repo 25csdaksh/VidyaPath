@@ -23,6 +23,7 @@ const UserProgress = require('./UserProgress');
 const AIConversation = require('./AIConversation');
 const ChatConversation = require('./ChatConversation');
 const AuditLog = require('./AuditLog');
+const CurriculumKnowledge = require('./CurriculumKnowledge');
 
 module.exports = {
   User,
@@ -50,4 +51,5 @@ module.exports = {
   AIConversation,
   ChatConversation,
   AuditLog,
+  CurriculumKnowledge,
 };

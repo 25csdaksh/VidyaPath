@@ -27,6 +27,7 @@ export const Sidebar = ({ isOpen }) => {
 
   const navItems = [
     { label: 'Dashboard', path: '/dashboard', icon: LayoutDashboard, requiresAuth: true },
+    { label: 'AI Study Advisor', path: '/advisor', icon: Sparkles },
     { label: 'AI Assistant', path: '/ai-assistant', icon: Bot, requiresAuth: true },
     { label: 'About CSE', path: '/about-cse', icon: Compass },
     { label: '4-Year Roadmap', path: '/roadmap', icon: Map },
