@@ -4,11 +4,24 @@
   "description": "Production-Ready CSE Career Portal for Computer Science Engineering students",
   "private": true,
   "scripts": {
+    "dev": "npm --prefix frontend run dev",
     "build": "npm --prefix frontend install && npm --prefix frontend run build",
     "server": "npm start --prefix backend",
     "server:dev": "npm run dev --prefix backend",
     "client": "npm run dev --prefix frontend",
     "client:build": "npm run build --prefix frontend"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "lucide-react": "^1.16.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0",
+    "vite": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
   },
   "keywords": [
     "cse",
