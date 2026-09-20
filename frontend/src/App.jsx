@@ -12,8 +12,8 @@ import MainLayout from './layouts/MainLayout';
 import AuthLayout from './layouts/AuthLayout';
 import ProtectedRoute from './layouts/ProtectedRoute';
 
-// 23 Ordered Pages
-import HomePage from './pages/HomePage'; // 1. Home / Portal Overview
+// Pages
+import LandingPage from './pages/LandingPage'; // Public Theme & Landing Showcase Page
 import AboutCsePage from './pages/AboutCsePage'; // 2. About CSE
 import RoadmapPage from './pages/RoadmapPage'; // 3. Career Roadmap
 import ProjectsPage from './pages/ProjectsPage'; // 4. Project Hub
@@ -50,7 +50,16 @@ export function App() {
           <UserProvider>
             <BrowserRouter>
               <Routes>
-                {/* All Main Portal Routes are Protected: Requires Login / Sign Up */}
+                {/* 1. Public Landing / Theme Showcase Page */}
+                <Route path="/" element={<LandingPage />} />
+
+                {/* 2. Public Authentication Gateway (Login & Register) */}
+                <Route element={<AuthLayout />}>
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/register" element={<RegisterPage />} />
+                </Route>
+
+                {/* 3. Protected Internal Portal (Requires Login / Sign Up) */}
                 <Route
                   element={
                     <ProtectedRoute>
@@ -58,55 +67,52 @@ export function App() {
                     </ProtectedRoute>
                   }
                 >
-                  {/* Root redirects to /dashboard */}
-                  <Route path="/" element={<Navigate to="/dashboard" replace />} />
-
-                  {/* 1. Student Dashboard */}
+                  {/* Student Dashboard */}
                   <Route path="/dashboard" element={<DashboardPage />} />
 
-                  {/* 2. About CSE */}
+                  {/* About CSE */}
                   <Route path="/about-cse" element={<AboutCsePage />} />
 
-                  {/* 3. Career Roadmap */}
+                  {/* Career Roadmap */}
                   <Route path="/roadmap" element={<RoadmapPage />} />
 
-                  {/* 4. AI Study Advisor & Curriculum Generator */}
+                  {/* AI Study Advisor & Curriculum Generator */}
                   <Route path="/advisor" element={<AIAdvisorPage />} />
 
-                  {/* 5. Project Hub */}
+                  {/* Project Hub */}
                   <Route path="/projects" element={<ProjectsPage />} />
                   <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
 
-                  {/* 6. Learning Resources & Academics */}
+                  {/* Learning Resources & Academics */}
                   <Route path="/resources" element={<ResourcesPage />} />
                   <Route path="/books" element={<BooksPage />} />
                   <Route path="/courses" element={<CoursesPage />} />
                   <Route path="/youtube" element={<YouTubePage />} />
 
-                  {/* 7. Hackathons Hub */}
+                  {/* Hackathons Hub */}
                   <Route path="/hackathons" element={<HackathonsPage />} />
                   <Route path="/hackathons/:id" element={<HackathonDetailsPage />} />
 
-                  {/* 8. Placement Hub & Interview Practice */}
+                  {/* Placement Hub & Interview Practice */}
                   <Route path="/placement-hub" element={<PlacementHubPage />} />
                   <Route path="/interviews" element={<InterviewPracticePage />} />
 
-                  {/* 9. Resume Guide & Live Builder */}
+                  {/* Resume Guide & Live Builder */}
                   <Route path="/resume-guide" element={<ResumeGuidePage />} />
                   <Route path="/resumes" element={<ResumeBuilderPage />} />
 
-                  {/* 10. Announcements & Global Search */}
+                  {/* Announcements & Global Search */}
                   <Route path="/announcements" element={<AnnouncementsPage />} />
                   <Route path="/search" element={<GlobalSearchPage />} />
 
-                  {/* 11. Bookmarks & Student Profile */}
+                  {/* Bookmarks & Student Profile */}
                   <Route path="/bookmarks" element={<BookmarksPage />} />
                   <Route path="/profile" element={<ProfilePage />} />
 
-                  {/* 12. AI Career Assistant */}
+                  {/* AI Career Assistant */}
                   <Route path="/ai-assistant" element={<AiAssistantPage />} />
 
-                  {/* 13. Admin Dashboard (Admin Role Only) */}
+                  {/* Admin Dashboard (Admin Role Only) */}
                   <Route
                     path="/admin"
                     element={
@@ -121,12 +127,6 @@ export function App() {
 
                   {/* 404 Catch-All */}
                   <Route path="*" element={<NotFoundPage />} />
-                </Route>
-
-                {/* Authentication Gateway (Login & Register) */}
-                <Route element={<AuthLayout />}>
-                  <Route path="/login" element={<LoginPage />} />
-                  <Route path="/register" element={<RegisterPage />} />
                 </Route>
               </Routes>
             </BrowserRouter>
