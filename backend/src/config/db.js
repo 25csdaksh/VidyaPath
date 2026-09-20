@@ -12,7 +12,8 @@ try {
 const connectDatabase = async () => {
   const options = {
     autoIndex: true,
-    serverSelectionTimeoutMS: 5000,
+    dbName: 'cse_career_portal',
+    serverSelectionTimeoutMS: 8000,
     socketTimeoutMS: 45000,
   };
 
