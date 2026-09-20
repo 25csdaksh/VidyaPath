@@ -4,8 +4,8 @@
   "description": "Production-Ready CSE Career Portal for Computer Science Engineering students",
   "private": true,
   "scripts": {
-    "dev": "npm --prefix frontend run dev",
-    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "dev": "vite",
+    "build": "vite build",
     "server": "npm start --prefix backend",
     "server:dev": "npm run dev --prefix backend",
     "client": "npm run dev --prefix frontend",
