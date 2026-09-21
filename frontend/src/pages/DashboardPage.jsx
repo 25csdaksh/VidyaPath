@@ -159,7 +159,7 @@ export const DashboardPage = () => {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {/* Pillar 10: Career Goal & Target Vision Card */}
-          <Card style={{ padding: '1.75rem', background: 'var(--aegean-50)', border: '1px solid var(--border-color)' }}>
+          <Card className="career-target-card" style={{ padding: '1.75rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1.25rem' }}>
               <div style={{ flex: 1, minWidth: '280px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
