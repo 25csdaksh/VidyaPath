@@ -520,22 +520,22 @@ export const RoadmapPage = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td><strong style={{ color: '#6d28d9' }}>1st Year (FY)</strong></td>
+                    <td><strong style={{ color: 'var(--primary-800)' }}>1st Year (FY)</strong></td>
                     <td>Programming + engineering fundamentals</td>
                     <td>C/C++, Python basics, HTML, CSS, JavaScript, Git</td>
                   </tr>
                   <tr>
-                    <td><strong style={{ color: '#6d28d9' }}>2nd Year (SY)</strong></td>
+                    <td><strong style={{ color: 'var(--primary-800)' }}>2nd Year (SY)</strong></td>
                     <td>Core CSE subjects</td>
                     <td>C/C++, Java, SQL, Linux, Git</td>
                   </tr>
                   <tr>
-                    <td><strong style={{ color: '#6d28d9' }}>3rd Year (TY)</strong></td>
+                    <td><strong style={{ color: 'var(--primary-800)' }}>3rd Year (TY)</strong></td>
                     <td>Advanced CSE + specialization</td>
                     <td>Python, Java/JS/TS, SQL, cloud/security tools</td>
                   </tr>
                   <tr>
-                    <td><strong style={{ color: '#6d28d9' }}>4th Year (Final)</strong></td>
+                    <td><strong style={{ color: 'var(--primary-800)' }}>4th Year (Final)</strong></td>
                     <td>Industry + specialization + project</td>
                     <td>Depends on specialization; Git, cloud, APIs, frameworks</td>
                   </tr>
@@ -568,18 +568,18 @@ export const RoadmapPage = () => {
               SECTION 2: FIRST YEAR (FY) – BUILD THE FOUNDATION
               ==================================================== */}
           {(guideYearFilter === 'ALL' || guideYearFilter === 'FY') && (
-            <div className="topic-section-card" style={{ borderLeft: '5px solid #7c3aed' }}>
+            <div className="topic-section-card" style={{ borderLeft: '5px solid var(--primary-600)' }}>
               <div className="topic-section-header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div className="topic-badge-icon"><Terminal size={20} /></div>
                   <div>
-                    <Badge variant="primary" style={{ background: '#7c3aed', color: '#ffffff', marginBottom: '2px' }}>Section 2</Badge>
+                    <Badge variant="primary" style={{ marginBottom: '2px' }}>Section 2</Badge>
                     <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-primary)' }}>
                       2. First Year (FY) – Build the Foundation
                     </h2>
                   </div>
                 </div>
-                <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>Semesters 1 & 2</Badge>
+                <Badge variant="neutral">Semesters 1 & 2</Badge>
               </div>
 
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
@@ -587,15 +587,15 @@ export const RoadmapPage = () => {
               </p>
 
               {/* 2.1 Programming Fundamentals */}
-              <div style={{ background: '#faf5ff', border: '1px solid #e9d5ff', borderRadius: 'var(--radius-md)', padding: '1.25rem', marginBottom: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.5rem' }}>
+              <div style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem', marginBottom: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
                   2.1 Programming Fundamentals
                 </h3>
-                <p style={{ color: '#3b3553', fontSize: '0.9rem', lineHeight: 1.55, marginBottom: '0.75rem' }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.55, marginBottom: '0.75rem' }}>
                   Commonly taught using C or C++. Topics include variables, data types, operators, conditions, loops, functions, arrays, strings, pointers/references, structures and basic problem solving. If C++ is used, students may also see classes and basic object-oriented programming.
                 </p>
-                <div style={{ background: 'var(--bg-secondary)', border: '1px solid #d8b4fe', borderRadius: 'var(--radius-sm)', padding: '1rem' }}>
-                  <strong style={{ fontSize: '0.85rem', color: '#6d28d9', display: 'block', marginBottom: '0.5rem' }}>
+                <div style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-sm)', padding: '1rem' }}>
+                  <strong style={{ fontSize: '0.85rem', color: 'var(--primary-800)', display: 'block', marginBottom: '0.5rem' }}>
                     What you should be able to do by the end of FY:
                   </strong>
                   <ul style={{ paddingLeft: '1.25rem', fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
@@ -628,22 +628,22 @@ export const RoadmapPage = () => {
                     </thead>
                     <tbody>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>HTML</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>HTML</strong></td>
                         <td>Structure of a web page</td>
                         <td>Headings, forms, tables, links, semantic sections</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>CSS</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>CSS</strong></td>
                         <td>Design and layout</td>
                         <td>Colors, spacing, Flexbox, Grid, responsive design</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>JavaScript</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>JavaScript</strong></td>
                         <td>Logic and interaction</td>
                         <td>Events, DOM, form validation, simple dynamic pages</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Git/GitHub</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Git/GitHub</strong></td>
                         <td>Version control</td>
                         <td>Repositories, commits, branches, collaboration</td>
                       </tr>
@@ -660,7 +660,7 @@ export const RoadmapPage = () => {
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.55, marginBottom: '0.5rem' }}>
                   Engineering mathematics may include calculus, matrices/linear algebra, differential equations, probability and statistics. Discrete mathematics may appear in FY or later depending on the university.
                 </p>
-                <div style={{ fontSize: '0.85rem', color: '#6d28d9', fontWeight: 600 }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--primary-800)', fontWeight: 600 }}>
                   💡 Why it matters: Mathematics supports algorithms, graphics, AI/ML, data science, cryptography and performance analysis.
                 </div>
               </div>
@@ -687,9 +687,9 @@ export const RoadmapPage = () => {
               </div>
 
               {/* 2.6 FY Projects You Can Build */}
-              <div style={{ background: '#faf5ff', border: '1px solid #d8b4fe', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
-                <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Laptop size={18} /> 2.6 FY Projects You Can Build
+              <div style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
+                <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Laptop size={18} color="var(--primary-800)" /> 2.6 FY Projects You Can Build
                 </h4>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.65rem' }}>
                   {[
@@ -700,8 +700,8 @@ export const RoadmapPage = () => {
                     'College timetable website',
                     'Simple C/C++ console management system',
                   ].map((p, idx) => (
-                    <div key={idx} style={{ background: 'var(--bg-secondary)', border: '1px solid #e9d5ff', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                      <CheckCircle2 size={14} style={{ color: '#7c3aed' }} /> {p}
+                    <div key={idx} style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <CheckCircle2 size={14} color="var(--primary-800)" /> {p}
                     </div>
                   ))}
                 </div>
@@ -713,18 +713,18 @@ export const RoadmapPage = () => {
               SECTION 3: SECOND YEAR (SY) – CORE COMPUTER SCIENCE
               ==================================================== */}
           {(guideYearFilter === 'ALL' || guideYearFilter === 'SY') && (
-            <div className="topic-section-card" style={{ borderLeft: '5px solid #9333ea' }}>
+            <div className="topic-section-card" style={{ borderLeft: '5px solid var(--primary-600)' }}>
               <div className="topic-section-header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div className="topic-badge-icon"><Cpu size={20} /></div>
                   <div>
-                    <Badge variant="primary" style={{ background: '#9333ea', color: '#ffffff', marginBottom: '2px' }}>Section 3</Badge>
+                    <Badge variant="primary" style={{ marginBottom: '2px' }}>Section 3</Badge>
                     <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-primary)' }}>
                       3. Second Year (SY) – Core Computer Science
                     </h2>
                   </div>
                 </div>
-                <Badge variant="neutral" style={{ background: '#f4effa', color: '#9333ea' }}>Semesters 3 & 4</Badge>
+                <Badge variant="neutral">Semesters 3 & 4</Badge>
               </div>
 
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
@@ -732,11 +732,11 @@ export const RoadmapPage = () => {
               </p>
 
               {/* 3.1 Data Structures and Algorithms (DSA) */}
-              <div style={{ background: '#faf5ff', border: '1px solid #e9d5ff', borderRadius: 'var(--radius-md)', padding: '1.25rem', marginBottom: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.4rem' }}>
+              <div style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem', marginBottom: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                   3.1 Data Structures and Algorithms (DSA)
                 </h3>
-                <p style={{ color: '#3b3553', fontSize: '0.9rem', lineHeight: 1.55, marginBottom: '0.75rem' }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.55, marginBottom: '0.75rem' }}>
                   DSA teaches efficient ways to store and process data and how to analyze solutions. Typical languages: C++, Java or C. DSA is particularly useful for technical interviews and competitive programming.
                 </p>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -752,7 +752,7 @@ export const RoadmapPage = () => {
                     'Recursion',
                     'Time and space complexity',
                   ].map((topic, idx) => (
-                    <Badge key={idx} variant="neutral" style={{ background: 'var(--bg-secondary)', color: '#6d28d9', borderColor: '#d8b4fe', padding: '0.35rem 0.65rem' }}>
+                    <Badge key={idx} variant="neutral" style={{ background: 'var(--bg-secondary)', color: 'var(--primary-800)', border: '1px solid var(--border-color)', padding: '0.35rem 0.65rem' }}>
                       {topic}
                     </Badge>
                   ))}
@@ -768,7 +768,7 @@ export const RoadmapPage = () => {
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', lineHeight: 1.5, marginBottom: '0.6rem' }}>
                     OOP organizes programs around objects and classes. Core ideas include classes, objects, constructors, encapsulation, inheritance, polymorphism, abstraction, interfaces and exception handling.
                   </p>
-                  <div style={{ fontSize: '0.8rem', color: '#6d28d9', fontWeight: 600 }}>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--primary-800)', fontWeight: 600 }}>
                     Java is a common teaching language, although C++ is also widely used. The goal is software design, not merely memorizing syntax.
                   </div>
                 </div>
@@ -780,7 +780,7 @@ export const RoadmapPage = () => {
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', lineHeight: 1.5, marginBottom: '0.6rem' }}>
                     DBMS teaches how applications store, retrieve and organize data. Topics commonly include relational databases, tables, primary/foreign keys, normalization, SQL queries, joins, indexes and transactions.
                   </p>
-                  <div style={{ fontSize: '0.8rem', color: '#6d28d9', fontWeight: 600 }}>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--primary-800)', fontWeight: 600 }}>
                     Typical language/tool: SQL with systems such as MySQL or PostgreSQL.
                   </div>
                 </div>
@@ -817,9 +817,9 @@ export const RoadmapPage = () => {
               </div>
 
               {/* 3.7 SY Projects */}
-              <div style={{ background: '#faf5ff', border: '1px solid #d8b4fe', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
-                <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Laptop size={18} /> 3.7 SY Projects You Can Build
+              <div style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
+                <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Laptop size={18} color="var(--primary-800)" /> 3.7 SY Projects You Can Build
                 </h4>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.65rem' }}>
                   {[
@@ -830,8 +830,8 @@ export const RoadmapPage = () => {
                     'Network monitoring mini-project',
                     'DSA visualizer',
                   ].map((p, idx) => (
-                    <div key={idx} style={{ background: 'var(--bg-secondary)', border: '1px solid #e9d5ff', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                      <CheckCircle2 size={14} style={{ color: '#9333ea' }} /> {p}
+                    <div key={idx} style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <CheckCircle2 size={14} color="var(--primary-800)" /> {p}
                     </div>
                   ))}
                 </div>
@@ -843,18 +843,18 @@ export const RoadmapPage = () => {
               SECTION 4: THIRD YEAR (TY) – ADVANCED CSE & SPECIALIZATION
               ==================================================== */}
           {(guideYearFilter === 'ALL' || guideYearFilter === 'TY') && (
-            <div className="topic-section-card" style={{ borderLeft: '5px solid #a855f7' }}>
+            <div className="topic-section-card" style={{ borderLeft: '5px solid var(--primary-600)' }}>
               <div className="topic-section-header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div className="topic-badge-icon"><Layers size={20} /></div>
                   <div>
-                    <Badge variant="primary" style={{ background: '#a855f7', color: '#ffffff', marginBottom: '2px' }}>Section 4</Badge>
+                    <Badge variant="primary" style={{ marginBottom: '2px' }}>Section 4</Badge>
                     <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-primary)' }}>
                       4. Third Year (TY) – Advanced CSE and Specialization
                     </h2>
                   </div>
                 </div>
-                <Badge variant="neutral" style={{ background: '#f4effa', color: '#a855f7' }}>Semesters 5 & 6</Badge>
+                <Badge variant="neutral">Semesters 5 & 6</Badge>
               </div>
 
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
@@ -863,14 +863,14 @@ export const RoadmapPage = () => {
 
               {/* 4.1 AI & ML + 4.2 Software Engineering */}
               <div className="cards-grid-2" style={{ marginBottom: '1.5rem' }}>
-                <div style={{ background: '#faf5ff', border: '1px solid #e9d5ff', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
-                  <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.4rem' }}>
+                <div style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
+                  <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                     4.1 Artificial Intelligence and Machine Learning
                   </h4>
-                  <p style={{ color: '#3b3553', fontSize: '0.875rem', lineHeight: 1.5, marginBottom: '0.5rem' }}>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', lineHeight: 1.5, marginBottom: '0.5rem' }}>
                     AI builds intelligent behavior; ML learns patterns from data. Topics: supervised/unsupervised learning, classification, regression, clustering, model evaluation, feature engineering.
                   </p>
-                  <div style={{ fontSize: '0.8rem', color: '#6d28d9', fontWeight: 600 }}>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--primary-800)', fontWeight: 600 }}>
                     Typical language: Python. Common ecosystem: NumPy, pandas, scikit-learn and related tools.
                   </div>
                 </div>
@@ -904,23 +904,23 @@ export const RoadmapPage = () => {
                     </thead>
                     <tbody>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Frontend</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Frontend</strong></td>
                         <td>JavaScript, TypeScript, React, Angular or Vue</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Backend</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Backend</strong></td>
                         <td>Node.js/Express, Java/Spring, Python/Django/FastAPI or similar</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Database</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Database</strong></td>
                         <td>PostgreSQL, MySQL, MongoDB or similar</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>API</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>API</strong></td>
                         <td>REST, JSON, authentication</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Development</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Development</strong></td>
                         <td>Git, GitHub, testing, deployment</td>
                       </tr>
                     </tbody>
@@ -959,9 +959,9 @@ export const RoadmapPage = () => {
               </div>
 
               {/* 4.7 TY Projects */}
-              <div style={{ background: '#faf5ff', border: '1px solid #d8b4fe', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
-                <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Laptop size={18} /> 4.7 TY Projects You Can Build
+              <div style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
+                <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Laptop size={18} color="var(--primary-800)" /> 4.7 TY Projects You Can Build
                 </h4>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.65rem' }}>
                   {[
@@ -972,8 +972,8 @@ export const RoadmapPage = () => {
                     'Recommendation system',
                     'Cloud-deployed SaaS application',
                   ].map((p, idx) => (
-                    <div key={idx} style={{ background: 'var(--bg-secondary)', border: '1px solid #e9d5ff', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                      <CheckCircle2 size={14} style={{ color: '#a855f7' }} /> {p}
+                    <div key={idx} style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <CheckCircle2 size={14} color="var(--primary-800)" /> {p}
                     </div>
                   ))}
                 </div>
@@ -985,18 +985,18 @@ export const RoadmapPage = () => {
               SECTION 5: FOURTH YEAR – INDUSTRY, SPECIALIZATION & MAJOR PROJECT
               ==================================================== */}
           {(guideYearFilter === 'ALL' || guideYearFilter === 'FINAL') && (
-            <div className="topic-section-card" style={{ borderLeft: '5px solid #6d28d9' }}>
+            <div className="topic-section-card" style={{ borderLeft: '5px solid var(--primary-600)' }}>
               <div className="topic-section-header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div className="topic-badge-icon"><GraduationCap size={20} /></div>
                   <div>
-                    <Badge variant="primary" style={{ background: '#6d28d9', color: '#ffffff', marginBottom: '2px' }}>Section 5</Badge>
+                    <Badge variant="primary" style={{ marginBottom: '2px' }}>Section 5</Badge>
                     <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-primary)' }}>
                       5. Fourth Year – Industry, Specialization and Major Project
                     </h2>
                   </div>
                 </div>
-                <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>Semesters 7 & 8</Badge>
+                <Badge variant="neutral">Semesters 7 & 8</Badge>
               </div>
 
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
@@ -1004,11 +1004,11 @@ export const RoadmapPage = () => {
               </p>
 
               {/* 5.1 Major Project Lifecycle */}
-              <div style={{ background: '#faf5ff', border: '1px solid #e9d5ff', borderRadius: 'var(--radius-md)', padding: '1.25rem', marginBottom: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.4rem' }}>
+              <div style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem', marginBottom: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                   5.1 Major Project Lifecycle
                 </h3>
-                <p style={{ color: '#3b3553', fontSize: '0.9rem', lineHeight: 1.55, marginBottom: '0.75rem' }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.55, marginBottom: '0.75rem' }}>
                   A strong final-year project should solve a clear problem and demonstrate software engineering skills.
                 </p>
 
@@ -1048,7 +1048,7 @@ export const RoadmapPage = () => {
                     'Interview preparation',
                   ].map((skill, idx) => (
                     <div key={idx} style={{ padding: '0.5rem 0.75rem', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                      <CheckCircle2 size={14} style={{ color: '#6d28d9' }} /> {skill}
+                      <CheckCircle2 size={14} color="var(--primary-800)" /> {skill}
                     </div>
                   ))}
                 </div>
@@ -1073,27 +1073,27 @@ export const RoadmapPage = () => {
                     </thead>
                     <tbody>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Coding</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Coding</strong></td>
                         <td>DSA, problem solving, debugging</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Core CS</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Core CS</strong></td>
                         <td>OOP, DBMS, OS, Computer Networks</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Projects</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Projects</strong></td>
                         <td>Architecture, features, decisions, challenges</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Aptitude</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Aptitude</strong></td>
                         <td>Quantitative, logical and verbal reasoning</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Interview</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Interview</strong></td>
                         <td>Technical questions + project discussion + communication</td>
                       </tr>
                       <tr>
-                        <td><strong style={{ color: '#6d28d9' }}>Portfolio</strong></td>
+                        <td><strong style={{ color: 'var(--primary-800)' }}>Portfolio</strong></td>
                         <td>Resume, GitHub, deployed projects, LinkedIn</td>
                       </tr>
                     </tbody>
@@ -1104,18 +1104,18 @@ export const RoadmapPage = () => {
           )}
 
           {/* ====================================================
-              SECTION 10: FINAL TAKEAWAY (Verbatim from prompt)
+              SECTION 10: FINAL TAKEAWAY
               ==================================================== */}
-          <div className="topic-section-card" style={{ background: '#faf5ff', border: '1px solid #d8b4fe' }}>
+          <div className="topic-section-card" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-              <div className="topic-badge-icon" style={{ background: '#7c3aed', color: '#ffffff' }}><Sparkle size={20} /></div>
+              <div className="topic-badge-icon" style={{ background: 'var(--primary-600)', color: '#ffffff' }}><Sparkle size={20} /></div>
               <div>
-                <Badge variant="primary" style={{ background: '#7c3aed', color: '#ffffff', marginBottom: '2px' }}>Section 10</Badge>
-                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#4c1d95' }}>10. Final Takeaway</h3>
+                <Badge variant="primary" style={{ marginBottom: '2px' }}>Section 10</Badge>
+                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--text-primary)' }}>10. Final Takeaway</h3>
               </div>
             </div>
 
-            <p style={{ fontSize: '0.95rem', color: '#581c87', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
               Think of CSE as a progression: <strong>FY teaches you how to think and code</strong>; <strong>SY teaches the core concepts of computer science</strong>; <strong>TY lets you explore advanced technologies and choose a direction</strong>; and the <strong>final year focuses on applying those skills through projects, internships and career preparation</strong>. You do not need to master every language. Build strong fundamentals, then choose technologies according to your interests and goals.
             </p>
           </div>
@@ -1143,12 +1143,6 @@ export const RoadmapPage = () => {
                   key={s.sem}
                   className={`semester-pill ${selectedSem === s.sem ? 'active' : ''}`}
                   onClick={() => handleSemesterChange(s.sem)}
-                  style={{
-                    backgroundColor: selectedSem === s.sem ? '#6d28d9' : 'var(--bg-secondary)',
-                    color: selectedSem === s.sem ? '#ffffff' : 'var(--text-secondary)',
-                    borderColor: selectedSem === s.sem ? '#6d28d9' : 'var(--border-color)',
-                    boxShadow: selectedSem === s.sem ? '0 4px 14px rgba(109, 40, 217, 0.3)' : 'none',
-                  }}
                 >
                   <span>{s.label}</span>
                 </button>
@@ -1182,17 +1176,17 @@ export const RoadmapPage = () => {
                 style={{
                   padding: '2rem',
                   background: 'var(--bg-secondary)',
-                  borderLeft: '5px solid #7c3aed',
-                  boxShadow: '0 4px 15px rgba(107, 33, 168, 0.05)',
+                  borderLeft: '5px solid var(--primary-600)',
+                  boxShadow: 'var(--shadow-sm)',
                 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1.5rem' }}>
                   <div style={{ flex: 1, minWidth: '280px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                      <Badge variant="primary" style={{ background: '#7c3aed', color: '#ffffff' }}>
+                      <Badge variant="primary">
                         {roadmapData.year} Year
                       </Badge>
-                      <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>
+                      <Badge variant="neutral">
                         Semester {selectedSem} Focus
                       </Badge>
                     </div>
@@ -1208,20 +1202,20 @@ export const RoadmapPage = () => {
                   <div
                     style={{
                       minWidth: '240px',
-                      background: '#faf5ff',
+                      background: 'var(--bg-tertiary)',
                       padding: '1.25rem',
                       borderRadius: 'var(--radius-lg)',
-                      border: '1px solid #d8b4fe',
+                      border: '1px solid var(--border-color)',
                     }}
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                      <span style={{ fontSize: '0.875rem', fontWeight: 700, color: '#581c87' }}>Your Milestone Progress</span>
-                      <span style={{ fontSize: '0.95rem', fontWeight: 800, color: '#7c3aed' }}>
+                      <span style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text-primary)' }}>Your Milestone Progress</span>
+                      <span style={{ fontSize: '0.95rem', fontWeight: 800, color: 'var(--primary-800)' }}>
                         {progressPercentage}%
                       </span>
                     </div>
                     <ProgressBar progress={progressPercentage} size="md" variant="primary" />
-                    <div style={{ fontSize: '0.75rem', color: '#6b21a8', marginTop: '0.5rem', textAlign: 'center', fontWeight: 600 }}>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.5rem', textAlign: 'center', fontWeight: 600 }}>
                       {completedItemIds.length} of {items.length} milestones completed
                     </div>
                   </div>
@@ -1231,7 +1225,7 @@ export const RoadmapPage = () => {
                   <div style={{ marginTop: '1.25rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
                     <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-muted)' }}>Target Career Paths:</span>
                     {roadmapData.careerPaths.map((cp) => (
-                      <Badge key={cp} variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>
+                      <Badge key={cp} variant="neutral">
                         {cp}
                       </Badge>
                     ))}
@@ -1249,7 +1243,7 @@ export const RoadmapPage = () => {
                     {roadmapData.subjects.map((sub, idx) => (
                       <Card key={idx} style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                          <Badge variant={sub.isCore ? 'primary' : 'neutral'} style={{ background: sub.isCore ? '#f3e8ff' : 'var(--bg-tertiary)', color: sub.isCore ? '#6d28d9' : 'var(--text-secondary)' }}>
+                          <Badge variant={sub.isCore ? 'primary' : 'neutral'}>
                             {sub.isCore ? 'Core Subject' : 'Elective'}
                           </Badge>
                           {sub.credits && <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>{sub.credits} Credits</span>}
@@ -1298,14 +1292,14 @@ export const RoadmapPage = () => {
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.5rem' }}>
                             <div>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                                <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>
+                                <Badge variant="neutral">
                                   Milestone {index + 1}
                                 </Badge>
-                                <Badge variant="info" style={{ background: '#f3e8ff', color: '#7c3aed' }}>
+                                <Badge variant="info">
                                   {item.category}
                                 </Badge>
                               </div>
-                              <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: isChecked ? '#6d28d9' : 'var(--text-primary)' }}>
+                              <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: isChecked ? 'var(--primary-800)' : 'var(--text-primary)' }}>
                                 {item.topicName}
                               </h4>
                             </div>
@@ -1316,7 +1310,7 @@ export const RoadmapPage = () => {
                               icon={isExpanded ? ChevronUp : ChevronDown}
                               iconPosition="right"
                               onClick={() => toggleExpand(item._id)}
-                              style={{ color: '#6d28d9' }}
+                              style={{ color: 'var(--primary-800)' }}
                             >
                               {isExpanded ? 'Collapse' : 'Deep Dive'}
                             </Button>
@@ -1331,11 +1325,11 @@ export const RoadmapPage = () => {
                           {isExpanded && (
                             <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px dashed var(--border-color)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                               {item.learnGuide && (
-                                <div style={{ background: '#f4effa', padding: '1rem', borderRadius: 'var(--radius-md)' }}>
-                                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#4c1d95', marginBottom: '0.25rem' }}>
+                                <div style={{ background: 'var(--bg-tertiary)', padding: '1rem', borderRadius: 'var(--radius-md)' }}>
+                                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
                                     📚 Learning Roadmap:
                                   </div>
-                                  <p style={{ fontSize: '0.875rem', color: '#3b3553', whiteSpace: 'pre-line', lineHeight: 1.5 }}>
+                                  <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', whiteSpace: 'pre-line', lineHeight: 1.5 }}>
                                     {item.learnGuide}
                                   </p>
                                 </div>
@@ -1351,7 +1345,7 @@ export const RoadmapPage = () => {
                                       <li key={idx}>
                                         {task.task}
                                         {task.resourceLink && (
-                                          <a href={task.resourceLink} target="_blank" rel="noopener noreferrer" style={{ marginLeft: '0.5rem', color: '#7c3aed', fontWeight: 600 }}>
+                                          <a href={task.resourceLink} target="_blank" rel="noopener noreferrer" style={{ marginLeft: '0.5rem', color: 'var(--primary-800)', fontWeight: 600 }}>
                                             [Open Resource]
                                           </a>
                                         )}
@@ -1380,8 +1374,8 @@ export const RoadmapPage = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div className="page-header-content">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-              <Badge variant="primary" style={{ background: '#7c3aed', color: '#ffffff' }}>Section 6</Badge>
-              <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>Core Matrix</Badge>
+              <Badge variant="primary">Section 6</Badge>
+              <Badge variant="neutral">Core Matrix</Badge>
             </div>
             <h2>6. Programming Languages – When and Why?</h2>
             <p>
@@ -1413,12 +1407,12 @@ export const RoadmapPage = () => {
                 ].map((row, idx) => (
                   <tr key={idx}>
                     <td>
-                      <strong style={{ color: '#6d28d9', fontSize: '1rem' }}>{row.lang}</strong>
+                      <strong style={{ color: 'var(--primary-800)', fontSize: '1rem' }}>{row.lang}</strong>
                       <span style={{ display: 'block', fontSize: '0.75rem', color: 'var(--text-muted)' }}>({row.tag})</span>
                     </td>
                     <td>{row.where}</td>
                     <td>
-                      <Badge variant="neutral" style={{ background: '#f3e8ff', color: '#6d28d9', borderColor: '#d8b4fe' }}>
+                      <Badge variant="neutral">
                         {row.priority}
                       </Badge>
                     </td>
@@ -1428,11 +1422,11 @@ export const RoadmapPage = () => {
             </table>
           </div>
 
-          <div className="topic-section-card" style={{ background: '#faf5ff', border: '1px solid #d8b4fe' }}>
-            <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.35rem' }}>
+          <div className="topic-section-card" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}>
+            <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
               Strategic Recommendation
             </h4>
-            <p style={{ fontSize: '0.9rem', color: '#581c87', lineHeight: 1.6 }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
               You do not need to master every single language in this table. Build rock-solid problem-solving fundamentals in <strong>C++ or Java</strong>, gain practical building fluency in <strong>JavaScript/TypeScript or Python</strong>, and master <strong>SQL</strong> for relational databases.
             </p>
           </div>
@@ -1446,8 +1440,8 @@ export const RoadmapPage = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div className="page-header-content">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-              <Badge variant="primary" style={{ background: '#7c3aed', color: '#ffffff' }}>Section 7</Badge>
-              <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>Progression Matrix</Badge>
+              <Badge variant="primary">Section 7</Badge>
+              <Badge variant="neutral">Progression Matrix</Badge>
             </div>
             <h2>7. Four-Year Skill Roadmap</h2>
             <p>
@@ -1468,25 +1462,25 @@ export const RoadmapPage = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td><strong style={{ color: '#6d28d9', fontSize: '1.05rem' }}>FY</strong></td>
+                  <td><strong style={{ color: 'var(--primary-800)', fontSize: '1.05rem' }}>FY</strong></td>
                   <td>C/C++, HTML/CSS/JS basics, Git</td>
                   <td>Small projects</td>
                   <td>Explore career paths</td>
                 </tr>
                 <tr>
-                  <td><strong style={{ color: '#6d28d9', fontSize: '1.05rem' }}>SY</strong></td>
+                  <td><strong style={{ color: 'var(--primary-800)', fontSize: '1.05rem' }}>SY</strong></td>
                   <td>DSA, Java/C++, SQL, OS, CN</td>
                   <td>Database/full-stack/DSA projects</td>
                   <td>Start coding practice</td>
                 </tr>
                 <tr>
-                  <td><strong style={{ color: '#6d28d9', fontSize: '1.05rem' }}>TY</strong></td>
+                  <td><strong style={{ color: 'var(--primary-800)', fontSize: '1.05rem' }}>TY</strong></td>
                   <td>AI/ML, cloud, security, advanced development</td>
                   <td>2–3 strong projects</td>
                   <td>Internship + hackathons</td>
                 </tr>
                 <tr>
-                  <td><strong style={{ color: '#6d28d9', fontSize: '1.05rem' }}>Final</strong></td>
+                  <td><strong style={{ color: 'var(--primary-800)', fontSize: '1.05rem' }}>Final</strong></td>
                   <td>Specialization + system/project skills</td>
                   <td>Major project + deployment</td>
                   <td>Resume + interviews + placement</td>
@@ -1506,10 +1500,10 @@ export const RoadmapPage = () => {
               const Icon = st.icon;
               return (
                 <Card key={idx} style={{ padding: '1.25rem', textAlign: 'center', background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#f3e8ff', color: '#6d28d9', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 0.75rem' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--bg-tertiary)', color: 'var(--primary-800)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 0.75rem' }}>
                     <Icon size={22} />
                   </div>
-                  <Badge variant="neutral" style={{ background: '#faf5ff', color: '#6d28d9', marginBottom: '0.35rem' }}>{st.badge}</Badge>
+                  <Badge variant="neutral" style={{ marginBottom: '0.35rem' }}>{st.badge}</Badge>
                   <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)' }}>{st.year}</h4>
                   <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>{st.focus}</p>
                 </Card>
@@ -1589,9 +1583,9 @@ export const RoadmapPage = () => {
                   className={`readiness-check-item ${isChecked ? 'checked' : ''}`}
                   onClick={() => toggleReadinessItem(c.id)}
                   style={{
-                    backgroundColor: isChecked ? '#faf5ff' : 'var(--bg-secondary)',
-                    borderColor: isChecked ? '#c084fc' : 'var(--border-color)',
-                    boxShadow: isChecked ? '0 2px 8px rgba(124, 58, 237, 0.1)' : 'var(--shadow-xs)',
+                    backgroundColor: isChecked ? 'var(--bg-tertiary)' : 'var(--bg-secondary)',
+                    borderColor: isChecked ? 'var(--primary-600)' : 'var(--border-color)',
+                    boxShadow: isChecked ? 'var(--shadow-sm)' : 'var(--shadow-xs)',
                   }}
                 >
                   <div
@@ -1599,14 +1593,14 @@ export const RoadmapPage = () => {
                       width: '24px',
                       height: '24px',
                       borderRadius: 'var(--radius-sm)',
-                      border: isChecked ? '2px solid #7c3aed' : '2px solid var(--border-color)',
-                      background: isChecked ? '#7c3aed' : 'transparent',
+                      border: isChecked ? '2px solid var(--primary-600)' : '2px solid var(--border-color)',
+                      background: isChecked ? 'var(--primary-600)' : 'transparent',
                       color: '#ffffff',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       flexShrink: 0,
-                      boxShadow: isChecked ? '0 0 8px rgba(124, 58, 237, 0.4)' : 'none',
+                      boxShadow: isChecked ? '0 0 8px rgba(37, 99, 235, 0.4)' : 'none',
                     }}
                   >
                     {isChecked && <Check size={16} />}
@@ -1614,10 +1608,10 @@ export const RoadmapPage = () => {
 
                   <div style={{ flex: 1 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.2rem' }}>
-                      <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#7c3aed' }}>
+                      <span style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--primary-600)' }}>
                         •
                       </span>
-                      <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: isChecked ? '#6d28d9' : 'var(--text-primary)' }}>
+                      <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: isChecked ? 'var(--primary-800)' : 'var(--text-primary)' }}>
                         {c.title}
                       </h4>
                     </div>
@@ -1639,8 +1633,8 @@ export const RoadmapPage = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div className="page-header-content">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-              <Badge variant="primary" style={{ background: '#7c3aed', color: '#ffffff' }}>Specializations</Badge>
-              <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>6 Career Tracks</Badge>
+              <Badge variant="primary">Specializations</Badge>
+              <Badge variant="neutral">6 Career Tracks</Badge>
             </div>
             <h2>CSE Career Path Selector & Specialization Guides</h2>
             <p>
@@ -1728,17 +1722,17 @@ export const RoadmapPage = () => {
                         style={{
                           padding: '0.75rem',
                           borderRadius: 'var(--radius-md)',
-                          background: '#f3e8ff',
-                          color: '#6d28d9',
+                          background: 'var(--bg-tertiary)',
+                          color: 'var(--primary-800)',
                         }}
                       >
                         <Icon size={24} />
                       </div>
                       <div style={{ textAlign: 'right' }}>
-                        <Badge variant="success" style={{ background: '#dcfce7', color: '#15803d', marginBottom: '2px' }}>
+                        <Badge variant="success" style={{ marginBottom: '2px' }}>
                           Demand: {ct.demand}
                         </Badge>
-                        <div style={{ fontSize: '0.72rem', color: '#6d28d9', fontWeight: 700 }}>Est. {ct.salary}</div>
+                        <div style={{ fontSize: '0.72rem', color: 'var(--primary-800)', fontWeight: 700 }}>Est. {ct.salary}</div>
                       </div>
                     </div>
 
@@ -1758,7 +1752,7 @@ export const RoadmapPage = () => {
                           <Badge
                             key={tech}
                             variant="neutral"
-                            style={{ fontSize: '0.75rem', background: '#f4effa', color: '#4c1d95', borderColor: '#e5ddef' }}
+                            style={{ fontSize: '0.75rem' }}
                           >
                             {tech}
                           </Badge>
@@ -1768,14 +1762,14 @@ export const RoadmapPage = () => {
 
                     <div
                       style={{
-                        background: '#faf5ff',
-                        border: '1px solid #e9d5ff',
+                        background: 'var(--bg-tertiary)',
+                        border: '1px solid var(--border-color)',
                         padding: '0.85rem',
                         borderRadius: 'var(--radius-md)',
                         marginBottom: '1rem',
                       }}
                     >
-                      <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#6d28d9', marginBottom: '0.25rem' }}>
+                      <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--primary-800)', marginBottom: '0.25rem' }}>
                         4-YEAR PATHWAY:
                       </div>
                       <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
@@ -1811,7 +1805,7 @@ export const RoadmapPage = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        style={{ width: '100%', borderColor: '#7c3aed', color: '#6d28d9' }}
+                        style={{ width: '100%' }}
                         icon={ArrowRight}
                         iconPosition="right"
                       >
@@ -1833,8 +1827,8 @@ export const RoadmapPage = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div className="page-header-content">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-              <Badge variant="primary" style={{ background: '#7c3aed', color: '#ffffff' }}>Section 9</Badge>
-              <Badge variant="neutral" style={{ background: '#f4effa', color: '#6d28d9' }}>Platform Architecture</Badge>
+              <Badge variant="primary">Section 9</Badge>
+              <Badge variant="neutral">Platform Architecture</Badge>
             </div>
             <h2>9. Recommended Portal Structure Based on This Roadmap</h2>
             <p>
@@ -1862,15 +1856,15 @@ export const RoadmapPage = () => {
               return (
                 <Card key={idx} style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '1rem', background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}>
                   <div>
-                    <div style={{ width: '38px', height: '38px', borderRadius: 'var(--radius-md)', background: '#f3e8ff', color: '#6d28d9', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.75rem' }}>
+                    <div style={{ width: '38px', height: '38px', borderRadius: 'var(--radius-md)', background: 'var(--bg-tertiary)', color: 'var(--primary-800)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.75rem' }}>
                       <Icon size={20} />
                     </div>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#7c3aed', marginBottom: '0.2rem' }}>Feature 0{idx + 1}</div>
+                    <div style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--primary-800)', marginBottom: '0.2rem' }}>Feature 0{idx + 1}</div>
                     <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-primary)' }}>{mod.title}</h4>
                   </div>
 
                   <Link to={mod.link}>
-                    <Button variant="outline" size="sm" style={{ width: '100%', borderColor: '#7c3aed', color: '#6d28d9' }} icon={ArrowRight} iconPosition="right">
+                    <Button variant="outline" size="sm" style={{ width: '100%' }} icon={ArrowRight} iconPosition="right">
                       Open Module
                     </Button>
                   </Link>
@@ -1880,11 +1874,11 @@ export const RoadmapPage = () => {
           </div>
 
           {/* Section 10 Callout */}
-          <div className="topic-section-card" style={{ background: '#faf5ff', border: '1px solid #d8b4fe' }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#4c1d95', marginBottom: '0.5rem' }}>
+          <div className="topic-section-card" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
               10. Final Takeaway
             </h3>
-            <p style={{ fontSize: '0.925rem', color: '#581c87', lineHeight: 1.65 }}>
+            <p style={{ fontSize: '0.925rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>
               Think of CSE as a progression: <strong>FY teaches you how to think and code</strong>; <strong>SY teaches the core concepts of computer science</strong>; <strong>TY lets you explore advanced technologies and choose a direction</strong>; and the <strong>final year focuses on applying those skills through projects, internships and career preparation</strong>. You do not need to master every language. Build strong fundamentals, then choose technologies according to your interests and goals.
             </p>
           </div>

@@ -316,17 +316,17 @@ export const IndustryProjectsMasterGuide = () => {
             >
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-                  <Badge variant="primary" style={{ background: '#6441a5', color: '#ffffff' }}>
+                  <Badge variant="primary">
                     Standard Industry Tech Stack
                   </Badge>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#4c1d95' }}>
+                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--primary-800)' }}>
                     {activeDomainObj.name}
                   </span>
                 </div>
-                <div style={{ fontSize: '0.9rem', color: '#581c87', fontWeight: 600 }}>
+                <div style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 600 }}>
                   🛠️ {activeDomainObj.industryStack}
                 </div>
-                <div style={{ fontSize: '0.825rem', color: '#6b21a8', marginTop: '0.3rem' }}>
+                <div style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', marginTop: '0.3rem' }}>
                   {activeDomainObj.description}
                 </div>
               </div>
@@ -436,24 +436,24 @@ export const IndustryProjectsMasterGuide = () => {
 
                 const diffBorder =
                   project.difficulty === 'LOW'
-                    ? '#10b981'
+                    ? 'var(--color-success)'
                     : project.difficulty === 'MEDIUM'
-                    ? '#f59e0b'
-                    : '#ef4444';
+                    ? 'var(--color-warning)'
+                    : 'var(--color-danger)';
 
                 const diffBg =
                   project.difficulty === 'LOW'
-                    ? '#ecfdf5'
+                    ? 'var(--color-success-bg)'
                     : project.difficulty === 'MEDIUM'
-                    ? '#fffbeb'
-                    : '#fef2f2';
+                    ? 'var(--color-warning-bg)'
+                    : 'var(--color-danger-bg)';
 
                 const diffColor =
                   project.difficulty === 'LOW'
-                    ? '#047857'
+                    ? 'var(--color-success)'
                     : project.difficulty === 'MEDIUM'
-                    ? '#b45309'
-                    : '#b91c1c';
+                    ? 'var(--color-warning)'
+                    : 'var(--color-danger)';
 
                 return (
                   <Card
@@ -474,7 +474,7 @@ export const IndustryProjectsMasterGuide = () => {
                     {/* Header: Domain, Difficulty, Year Fit, Bookmark */}
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
                       <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Badge variant="primary" style={{ background: '#f3e8ff', color: '#6d28d9', fontSize: '0.75rem' }}>
+                        <Badge variant="primary" style={{ background: 'var(--bg-tertiary)', color: 'var(--primary-800)', border: '1px solid var(--border-color)', fontSize: '0.75rem' }}>
                           {project.domainName}
                         </Badge>
                         <Badge
@@ -501,7 +501,7 @@ export const IndustryProjectsMasterGuide = () => {
                           background: 'none',
                           border: 'none',
                           cursor: 'pointer',
-                          color: isSaved ? '#6441a5' : 'var(--text-muted)',
+                          color: isSaved ? 'var(--primary-800)' : 'var(--text-muted)',
                           padding: '4px',
                         }}
                         title={isSaved ? 'Remove Bookmark' : 'Bookmark Project'}
@@ -527,7 +527,7 @@ export const IndustryProjectsMasterGuide = () => {
                     <div
                       style={{
                         background: 'var(--bg-tertiary)',
-                        borderLeft: '3px solid #6441a5',
+                        borderLeft: '3px solid var(--primary-800)',
                         padding: '0.65rem 0.85rem',
                         borderRadius: '0 6px 6px 0',
                         fontSize: '0.85rem',
@@ -546,7 +546,7 @@ export const IndustryProjectsMasterGuide = () => {
                       <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-muted)', display: 'block', marginBottom: '0.3rem' }}>
                         Suggested Technology:
                       </span>
-                      <div style={{ fontSize: '0.85rem', color: '#6441a5', fontWeight: 600, background: 'var(--bg-primary)', padding: '0.45rem 0.65rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)' }}>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--primary-800)', fontWeight: 600, background: 'var(--bg-primary)', padding: '0.45rem 0.65rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)' }}>
                         🛠️ {project.techStack}
                       </div>
                     </div>
@@ -568,11 +568,11 @@ export const IndustryProjectsMasterGuide = () => {
                           gap: '0.65rem',
                         }}
                       >
-                        <div style={{ background: '#faf5ff', border: '1px solid #d8b4fe', borderRadius: 'var(--radius-md)', padding: '0.75rem' }}>
-                          <strong style={{ fontSize: '0.8rem', color: '#4c1d95', display: 'block', marginBottom: '0.2rem' }}>
+                        <div style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.75rem' }}>
+                          <strong style={{ fontSize: '0.8rem', color: 'var(--primary-800)', display: 'block', marginBottom: '0.2rem' }}>
                             📐 Suggested Implementation Scope:
                           </strong>
-                          <p style={{ fontSize: '0.825rem', color: '#3b3553', lineHeight: 1.5, margin: 0 }}>
+                          <p style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: 1.5, margin: 0 }}>
                             {project.scope}
                           </p>
                         </div>
@@ -617,7 +617,7 @@ export const IndustryProjectsMasterGuide = () => {
                         style={{
                           background: 'none',
                           border: 'none',
-                          color: '#6441a5',
+                          color: 'var(--primary-800)',
                           fontSize: '0.825rem',
                           fontWeight: 700,
                           cursor: 'pointer',
@@ -675,7 +675,7 @@ export const IndustryProjectsMasterGuide = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div className="page-header-content">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-              <Badge variant="primary" style={{ background: '#6441a5', color: '#ffffff' }}>Engineering Standards</Badge>
+              <Badge variant="primary">Engineering Standards</Badge>
               <Badge variant="neutral">Tier-1 Expectations</Badge>
             </div>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)', margin: '0 0 0.35rem 0' }}>
@@ -755,14 +755,14 @@ export const IndustryProjectsMasterGuide = () => {
           </div>
 
           {/* Technology Selection Rules Box */}
-          <div className="topic-section-card" style={{ borderLeft: '5px solid #6441a5' }}>
+          <div className="topic-section-card" style={{ borderLeft: '5px solid var(--primary-800)' }}>
             <div className="topic-section-header">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <div className="topic-badge-icon" style={{ background: '#6441a5', color: '#ffffff' }}>
+                <div className="topic-badge-icon" style={{ background: 'var(--primary-600)', color: '#ffffff' }}>
                   <Code size={20} />
                 </div>
                 <div>
-                  <Badge variant="primary" style={{ background: '#6441a5', color: '#ffffff', marginBottom: '2px' }}>
+                  <Badge variant="primary" style={{ marginBottom: '2px' }}>
                     Industry Golden Rule
                   </Badge>
                   <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--text-primary)' }}>
@@ -795,7 +795,7 @@ export const IndustryProjectsMasterGuide = () => {
                     { lang: 'Go / Rust', fit: 'High-throughput microservices, API gateways, low-latency concurrent tools', stack: 'Go Goroutines, Gin, Tokio, Actix, Docker' },
                   ].map((row, idx) => (
                     <tr key={idx}>
-                      <td><strong style={{ color: '#6441a5', fontSize: '0.95rem' }}>{row.lang}</strong></td>
+                      <td><strong style={{ color: 'var(--primary-800)', fontSize: '0.95rem' }}>{row.lang}</strong></td>
                       <td style={{ fontSize: '0.875rem', color: 'var(--text-primary)' }}>{row.fit}</td>
                       <td style={{ fontSize: '0.825rem', color: 'var(--text-muted)' }}>{row.stack}</td>
                     </tr>
@@ -814,7 +814,7 @@ export const IndustryProjectsMasterGuide = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div className="page-header-content">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-              <Badge variant="primary" style={{ background: '#6441a5', color: '#ffffff' }}>Career Strategy</Badge>
+              <Badge variant="primary">Career Strategy</Badge>
               <Badge variant="neutral">FY → SY → TY → Final</Badge>
             </div>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)', margin: '0 0 0.35rem 0' }}>
@@ -851,7 +851,7 @@ export const IndustryProjectsMasterGuide = () => {
                 <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                   {rule.year}
                 </h4>
-                <p style={{ fontSize: '0.85rem', color: '#6441a5', fontWeight: 600, margin: 0 }}>
+                <p style={{ fontSize: '0.85rem', color: 'var(--primary-800)', fontWeight: 600, margin: 0 }}>
                   {rule.recommendation}
                 </p>
                 <p style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: 1.5, margin: 0, marginTop: 'auto' }}>
@@ -865,15 +865,15 @@ export const IndustryProjectsMasterGuide = () => {
           <Card
             style={{
               padding: '2rem',
-              background: 'linear-gradient(135deg, #1c1a4e 0%, #2a0845 60%, #6441a5 100%)',
+              background: 'linear-gradient(135deg, #0b1a37 0%, #172554 60%, #1e3a8a 100%)',
               color: '#ffffff',
               borderRadius: 'var(--radius-lg)',
-              border: '1px solid rgba(216, 180, 254, 0.3)',
-              boxShadow: '0 12px 28px rgba(100, 65, 165, 0.25)',
+              border: '1px solid rgba(255, 255, 255, 0.15)',
+              boxShadow: 'var(--shadow-lg)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <Award size={20} style={{ color: '#d8b4fe' }} />
+              <Award size={20} style={{ color: 'var(--aegean-200)' }} />
               <Badge variant="neutral" style={{ background: 'rgba(255,255,255,0.2)', color: '#ffffff' }}>
                 Portfolio Blueprint
               </Badge>
@@ -881,7 +881,7 @@ export const IndustryProjectsMasterGuide = () => {
             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.5rem' }}>
               {PORTFOLIO_FORMULA.title}
             </h3>
-            <p style={{ color: '#e9d5ff', fontSize: '0.925rem', lineHeight: 1.55, maxWidth: '750px', marginBottom: '1.5rem' }}>
+            <p style={{ color: 'var(--aegean-100)', fontSize: '0.925rem', lineHeight: 1.55, maxWidth: '750px', marginBottom: '1.5rem' }}>
               Do not clutter your resume with 15 superficial todo apps. Recruiters and technical interviewers look for balanced progression, deep technical ownership, and live deployment.
             </p>
 
@@ -905,13 +905,13 @@ export const IndustryProjectsMasterGuide = () => {
                     backdropFilter: 'blur(8px)',
                   }}
                 >
-                  <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#d8b4fe' }}>
+                  <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#60a5fa' }}>
                     {item.count}
                   </div>
                   <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#ffffff', margin: '0.2rem 0' }}>
                     {item.title}
                   </div>
-                  <div style={{ fontSize: '0.8rem', color: '#e9d5ff', lineHeight: 1.4 }}>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--aegean-100)', lineHeight: 1.4 }}>
                     {item.desc}
                   </div>
                 </div>
@@ -920,12 +920,12 @@ export const IndustryProjectsMasterGuide = () => {
 
             {/* Core Proof Artifacts Checklist */}
             <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 'var(--radius-md)', padding: '1.25rem', border: '1px solid rgba(255,255,255,0.15)' }}>
-              <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#d8b4fe', marginBottom: '0.65rem' }}>
+              <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#93c5fd', marginBottom: '0.65rem' }}>
                 📦 Required Proof Deliverables for Every Major Project:
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.5rem' }}>
                 {PORTFOLIO_FORMULA.deliverables.map((del, idx) => (
-                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.85rem', color: '#f3e8ff' }}>
+                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.85rem', color: '#f8fafc' }}>
                     <CheckCircle2 size={16} style={{ color: '#38bdf8', flexShrink: 0 }} /> {del}
                   </div>
                 ))}
@@ -940,7 +940,7 @@ export const IndustryProjectsMasterGuide = () => {
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
               <div style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
-                <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#6441a5', marginBottom: '0.35rem' }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--primary-800)', marginBottom: '0.35rem' }}>
                   1. How to Structure Project Bullets
                 </h4>
                 <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
@@ -949,7 +949,7 @@ export const IndustryProjectsMasterGuide = () => {
               </div>
 
               <div style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '1.25rem' }}>
-                <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#6441a5', marginBottom: '0.35rem' }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--primary-800)', marginBottom: '0.35rem' }}>
                   2. Honest Metrics & Vocabulary
                 </h4>
                 <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>

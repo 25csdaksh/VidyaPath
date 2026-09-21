@@ -102,8 +102,8 @@ export const DashboardPage = () => {
             <Badge variant="primary"><Sparkles size={14} /> Student Dashboard</Badge>
             <Badge variant="neutral">{user?.role === 'admin' ? 'Administrator' : 'CSE Undergrad'}</Badge>
             {metrics?.activitySummary?.currentStreak > 0 && (
-              <Badge variant="warning" style={{ background: '#fef3c7', color: '#92400e', borderColor: '#fde68a' }}>
-                <Flame size={13} style={{ marginRight: '4px', fill: '#f59e0b', color: '#d97706' }} />
+              <Badge variant="warning">
+                <Flame size={13} style={{ marginRight: '4px' }} />
                 {metrics.activitySummary.currentStreak} Day Streak
               </Badge>
             )}
@@ -248,7 +248,7 @@ export const DashboardPage = () => {
             </div>
 
             <div className="stat-metric-card">
-              <div className="stat-metric-icon" style={{ background: '#fef3c7', color: '#d97706' }}>
+              <div className="stat-metric-icon" style={{ background: 'var(--color-warning-bg)', color: 'var(--color-warning)' }}>
                 <Flame size={24} />
               </div>
               <div>

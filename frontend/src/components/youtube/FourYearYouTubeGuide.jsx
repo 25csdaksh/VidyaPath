@@ -1291,9 +1291,9 @@ export const FourYearYouTubeGuide = () => {
                                     style={{
                                       fontSize: '0.8rem',
                                       fontWeight: 600,
-                                      background: '#fef3c7',
-                                      color: '#92400e',
-                                      border: '1px solid #fde68a',
+                                      background: 'var(--color-warning-bg)',
+                                      color: 'var(--color-warning)',
+                                      border: '1px solid var(--color-warning)',
                                       padding: '0.25rem 0.6rem',
                                       borderRadius: '6px',
                                       textDecoration: 'none',

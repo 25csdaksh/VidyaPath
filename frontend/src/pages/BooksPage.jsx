@@ -944,38 +944,38 @@ export const BooksPage = () => {
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
-              <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px', padding: '1.25rem' }}>
-                <div style={{ fontSize: '1rem', fontWeight: 800, color: '#166534', marginBottom: '0.35rem' }}>
+              <div style={{ background: 'var(--color-success-bg)', border: '1px solid var(--color-success)', borderRadius: '12px', padding: '1.25rem' }}>
+                <div style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--color-success)', marginBottom: '0.35rem' }}>
                   🟢 Beginner
                 </div>
-                <p style={{ margin: 0, fontSize: '0.875rem', color: '#14532d', lineHeight: 1.5 }}>
+                <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
                   First exposure; assumes little or no prior computer science or programming knowledge. (e.g. K&R, Python Crash Course).
                 </p>
               </div>
 
-              <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '12px', padding: '1.25rem' }}>
-                <div style={{ fontSize: '1rem', fontWeight: 800, color: '#1e40af', marginBottom: '0.35rem' }}>
+              <div style={{ background: 'var(--color-info-bg)', border: '1px solid var(--color-info)', borderRadius: '12px', padding: '1.25rem' }}>
+                <div style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--color-info)', marginBottom: '0.35rem' }}>
                   🔵 Intermediate
                 </div>
-                <p style={{ margin: 0, fontSize: '0.875rem', color: '#1e3a8a', lineHeight: 1.5 }}>
+                <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
                   Student already knows programming fundamentals and core CS basics. (e.g. Tanenbaum OS, Kurose Networking, Hands-On ML).
                 </p>
               </div>
 
-              <div style={{ background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: '12px', padding: '1.25rem' }}>
-                <div style={{ fontSize: '1rem', fontWeight: 800, color: '#9a3412', marginBottom: '0.35rem' }}>
+              <div style={{ background: 'var(--color-warning-bg)', border: '1px solid var(--color-warning)', borderRadius: '12px', padding: '1.25rem' }}>
+                <div style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--color-warning)', marginBottom: '0.35rem' }}>
                   🟠 Advanced
                 </div>
-                <p style={{ margin: 0, fontSize: '0.875rem', color: '#7c2d12', lineHeight: 1.5 }}>
+                <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
                   University upper-level or professional engineering material. (e.g. CLRS, Kleppmann DDIA, Dragon Book Compilers).
                 </p>
               </div>
 
-              <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px', padding: '1.25rem' }}>
-                <div style={{ fontSize: '1rem', fontWeight: 800, color: '#991b1b', marginBottom: '0.35rem' }}>
+              <div style={{ background: 'var(--color-danger-bg)', border: '1px solid var(--color-danger)', borderRadius: '12px', padding: '1.25rem' }}>
+                <div style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--color-danger)', marginBottom: '0.35rem' }}>
                   🔴 Research
                 </div>
-                <p style={{ margin: 0, fontSize: '0.875rem', color: '#7f1d1d', lineHeight: 1.5 }}>
+                <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
                   Mathematically or technically intensive; suitable after strong theoretical foundations. (e.g. Bishop PRML, Goodfellow Deep Learning).
                 </p>
               </div>

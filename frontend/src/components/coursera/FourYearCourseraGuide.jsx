@@ -1144,8 +1144,8 @@ export const FourYearCourseraGuide = () => {
           {/* Important Verification Note */}
           <div
             style={{
-              background: '#f0f9ff',
-              border: '1px solid #bae6fd',
+              background: 'var(--color-info-bg)',
+              border: '1px solid var(--color-info)',
               borderRadius: 'var(--radius-lg)',
               padding: '1.5rem',
               display: 'flex',
@@ -1153,12 +1153,12 @@ export const FourYearCourseraGuide = () => {
               gap: '1rem',
             }}
           >
-            <Info size={22} style={{ color: '#0284c7', flexShrink: 0, marginTop: '2px' }} />
+            <Info size={22} style={{ color: 'var(--color-info)', flexShrink: 0, marginTop: '2px' }} />
             <div>
-              <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#0369a1', margin: '0 0 0.35rem 0' }}>
+              <h4 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--color-info)', margin: '0 0 0.35rem 0' }}>
                 Important Verification Note
               </h4>
-              <p style={{ fontSize: '0.875rem', color: '#0c4a6e', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                 Coursera periodically updates course names, merges series, or modifies URLs for certificates and Professional Certificates. Therefore, this guide provides direct Coursera URLs alongside a 1-click fallback Coursera Search query for all 35 courses. Before enrolling, confirm the current course title, instructor, syllabus, and whether financial aid or shareable certificate verification is supported.
               </p>
             </div>
