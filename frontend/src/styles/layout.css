@@ -4,6 +4,8 @@
   min-height: 100vh;
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  position: relative;
+  width: 100%;
 }
 
 .main-content-wrapper {
@@ -11,18 +13,22 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
   transition: margin-left var(--transition-normal);
 }
 
-/* Sidebar Styles */
+/* Sidebar Styles - Fixed Non-Scrolling Left Bar */
 .app-sidebar {
   width: var(--sidebar-width);
   background: var(--bg-secondary);
   border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  bottom: 0;
   height: 100vh;
   z-index: 40;
   transition: width var(--transition-normal), transform var(--transition-normal);
@@ -36,6 +42,7 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-secondary);
+  flex-shrink: 0;
 }
 
 .sidebar-logo {
@@ -56,6 +63,16 @@
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+}
+
+/* Custom Scrollbar for Sidebar Nav */
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 9999px;
 }
 
 .nav-link {
@@ -88,6 +105,7 @@
   padding: 1rem 0.75rem;
   border-top: 1px solid var(--border-color);
   background: var(--bg-secondary);
+  flex-shrink: 0;
 }
 
 /* Navbar Styles */
@@ -175,6 +193,11 @@
 
 /* Responsive Media Queries */
 @media (max-width: 900px) {
+  .main-content-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
   .sidebar-backdrop {
     display: block;
     position: fixed;
