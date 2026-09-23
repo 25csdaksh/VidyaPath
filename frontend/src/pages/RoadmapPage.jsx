@@ -272,19 +272,19 @@ export const RoadmapPage = () => {
         </div>
       </div>
 
-      {/* Top Main Navigation Tabs (Lavender & Egg-White Themed) */}
-      <div className="roadmap-view-tabs" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', boxShadow: 'var(--shadow-sm)' }}>
+      {/* Top Main Navigation Tabs */}
+      <div className="roadmap-view-tabs">
         {[
-          { id: 'guide', label: '📖 Complete 4-Year Master Guide', icon: BookOpen },
-          { id: 'personal', label: '🎯 Personal Career Roadmap (21 Secs)', icon: Compass },
-          { id: 'coursera', label: '📜 4-Year Coursera Guide', icon: GraduationCap },
-          { id: 'youtube', label: '📺 4-Year YouTube Video Guide', icon: Video },
-          { id: 'semesters', label: '📅 Semester 1-8 Live DB Tracker', icon: Map },
-          { id: 'languages', label: '💻 Languages: When & Why? (Sec 6)', icon: Code },
-          { id: 'skillmatrix', label: '📊 4-Year Skill Matrix (Sec 7)', icon: Workflow },
-          { id: 'readiness', label: '🎓 Graduation Readiness (Sec 8)', icon: Award },
-          { id: 'careers', label: '🚀 Career Paths & Specializations', icon: Target },
-          { id: 'portalstructure', label: '🏛️ Portal Architecture (Sec 9)', icon: Layers },
+          { id: 'guide', label: 'Complete 4-Year Master Guide', icon: BookOpen },
+          { id: 'personal', label: 'Personal Career Roadmap (21 Secs)', icon: Compass },
+          { id: 'coursera', label: '4-Year Coursera Guide', icon: GraduationCap },
+          { id: 'youtube', label: '4-Year YouTube Video Guide', icon: Video },
+          { id: 'semesters', label: 'Semester 1-8 Live DB Tracker', icon: Map },
+          { id: 'languages', label: 'Languages: When & Why? (Sec 6)', icon: Code },
+          { id: 'skillmatrix', label: '4-Year Skill Matrix (Sec 7)', icon: Workflow },
+          { id: 'readiness', label: 'Graduation Readiness (Sec 8)', icon: Award },
+          { id: 'careers', label: 'Career Paths & Specializations', icon: Target },
+          { id: 'portalstructure', label: 'Portal Architecture (Sec 9)', icon: Layers },
         ].map((tab) => {
           const Icon = tab.icon;
           const isActive = activeView === tab.id;

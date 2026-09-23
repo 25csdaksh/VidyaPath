@@ -198,18 +198,11 @@ export const IndustryProjectsMasterGuide = () => {
       </div>
 
       {/* 2. Top Navigation Sub-Tabs */}
-      <div
-        className="roadmap-view-tabs"
-        style={{
-          background: 'var(--bg-secondary)',
-          border: '1px solid var(--border-color)',
-          boxShadow: 'var(--shadow-sm)',
-        }}
-      >
+      <div className="roadmap-view-tabs">
         {[
-          { id: 'bank', label: `🚀 Project Bank (${filteredProjects.length}/60)`, icon: Code },
-          { id: 'difficulty', label: '🏗️ Architecture & Difficulty Guide', icon: Layers },
-          { id: 'roadmap', label: '🎯 4-Year Career Progression & Portfolio Formula', icon: Compass },
+          { id: 'bank', label: `Project Bank (${filteredProjects.length}/60)`, icon: Code },
+          { id: 'difficulty', label: 'Architecture & Difficulty Guide', icon: Layers },
+          { id: 'roadmap', label: '4-Year Career Progression & Portfolio Formula', icon: Compass },
         ].map((tab) => {
           const Icon = tab.icon;
           const isActive = activeSubTab === tab.id;
@@ -218,11 +211,6 @@ export const IndustryProjectsMasterGuide = () => {
               key={tab.id}
               className={`roadmap-view-tab ${isActive ? 'active' : ''}`}
               onClick={() => setActiveSubTab(tab.id)}
-              style={{
-                background: isActive ? '#6441a5' : 'transparent',
-                color: isActive ? '#ffffff' : 'var(--text-secondary)',
-                borderColor: isActive ? '#6441a5' : 'transparent',
-              }}
             >
               <Icon size={16} />
               <span>{tab.label}</span>

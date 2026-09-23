@@ -203,20 +203,13 @@ export const FourYearCourseraGuide = () => {
       </div>
 
       {/* 2. Top Navigation Sub-Tabs */}
-      <div
-        className="roadmap-view-tabs"
-        style={{
-          background: 'var(--bg-secondary)',
-          border: '1px solid var(--border-color)',
-          boxShadow: 'var(--shadow-sm)',
-        }}
-      >
+      <div className="roadmap-view-tabs">
         {[
-          { id: 'courses', label: `📚 Course Catalog (${filteredCourses.length}/35)`, icon: BookOpen },
-          { id: 'priority', label: '📊 Track Priority Matrix', icon: Layers },
-          { id: 'shortlist', label: '🏆 Resume Shortlist (Top 7)', icon: Award },
-          { id: 'paths', label: '🧭 Role-Based Paths (5 Tracks)', icon: Compass },
-          { id: 'strategy', label: '📋 How to Use & Resume Guide', icon: FileText },
+          { id: 'courses', label: `Course Catalog (${filteredCourses.length}/35)`, icon: BookOpen },
+          { id: 'priority', label: 'Track Priority Matrix', icon: Layers },
+          { id: 'shortlist', label: 'Resume Shortlist (Top 7)', icon: Award },
+          { id: 'paths', label: 'Role-Based Paths (5 Tracks)', icon: Compass },
+          { id: 'strategy', label: 'How to Use & Resume Guide', icon: FileText },
         ].map((tab) => {
           const Icon = tab.icon;
           const isActive = guideSubTab === tab.id;
@@ -225,11 +218,6 @@ export const FourYearCourseraGuide = () => {
               key={tab.id}
               className={`roadmap-view-tab ${isActive ? 'active' : ''}`}
               onClick={() => setGuideSubTab(tab.id)}
-              style={{
-                background: isActive ? 'var(--navy-800)' : 'transparent',
-                color: isActive ? '#ffffff' : 'var(--text-secondary)',
-                borderColor: isActive ? 'var(--navy-800)' : 'transparent',
-              }}
             >
               <Icon size={16} />
               <span>{tab.label}</span>
