@@ -11,7 +11,7 @@ export const HACKATHON_PLAYBOOK_OVERVIEW = {
       title: "Problem Over Features",
       desc: "The goal is not to build every possible feature. The goal is to identify the most critical user pain point and prove a credible, working solution.",
       icon: "Target",
-      color: "var(--navy-800, #0e2f76)"
+      color: "var(--navy-800, #312e81)"
     },
     {
       title: "End-to-End Golden Path",

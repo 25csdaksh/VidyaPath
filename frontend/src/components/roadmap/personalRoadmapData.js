@@ -202,7 +202,7 @@ export const TY_SPECIALIZATION_PATHS = [
   {
     id: 'fullstack',
     name: 'Full-Stack / Software Engineering',
-    color: 'var(--navy-800, #0e2f76)',
+    color: 'var(--navy-800, #312e81)',
     learningOrder: 'JavaScript/TypeScript → React/Next.js → Node.js/Express or Spring Boot → PostgreSQL/Redis → REST/GraphQL → Docker → CI/CD → AWS',
     projects: '2 Medium full-stack portals + 1 High-concurrency SaaS platform (with Redis caching, WebSockets, and Docker).',
     targetRoles: 'Software Development Engineer (SDE-1), Full-Stack Developer, Backend Engineer',
@@ -210,7 +210,7 @@ export const TY_SPECIALIZATION_PATHS = [
   {
     id: 'aiml',
     name: 'AI / Machine Learning',
-    color: 'var(--navy-800, #0e2f76)',
+    color: 'var(--navy-800, #312e81)',
     learningOrder: 'Python → NumPy & Pandas → Linear Algebra & Statistics → Scikit-Learn → PyTorch/TensorFlow → FastAPI → Docker → MLOps / Model Deployment',
     projects: '1 Exploratory Data Analysis & Analytics dashboard + 1 ML predictive model + 1 Deployed deep learning / LLM prototype.',
     targetRoles: 'AI/ML Engineer, Data Scientist, Applied Machine Learning Associate',
@@ -218,7 +218,7 @@ export const TY_SPECIALIZATION_PATHS = [
   {
     id: 'cyber',
     name: 'Cybersecurity & Defensive Engineering',
-    color: 'var(--navy-800, #0e2f76)',
+    color: 'var(--navy-800, #312e81)',
     learningOrder: 'Computer Networks (TCP/IP) → Linux Administration → Cryptography & Hashing → OWASP Top 10 → Web Security & Burp Suite → SIEM/Logs → Defensive Tooling',
     projects: '1 Security analytics/threat dashboard + 1 Network vulnerability scanner / authorized security audit tool.',
     targetRoles: 'Security Engineer, SOC Analyst, Application Security Associate',
@@ -226,7 +226,7 @@ export const TY_SPECIALIZATION_PATHS = [
   {
     id: 'data',
     name: 'Data Science & Analytics',
-    color: 'var(--navy-800, #0e2f76)',
+    color: 'var(--navy-800, #312e81)',
     learningOrder: 'Python → Advanced SQL & Window Functions → Statistics & Probability → Pandas & Data Wrangling → Power BI / Tableau → Machine Learning → BigQuery / Spark',
     projects: '2 Comprehensive data analytics case studies + 1 End-to-end forecasting / machine learning analytics pipeline.',
     targetRoles: 'Data Analyst, Business Intelligence Engineer, Junior Data Engineer',
@@ -234,7 +234,7 @@ export const TY_SPECIALIZATION_PATHS = [
   {
     id: 'cloud',
     name: 'Cloud & DevOps Engineering',
-    color: 'var(--navy-800, #0e2f76)',
+    color: 'var(--navy-800, #312e81)',
     learningOrder: 'Linux System Administration → Git & GitHub Actions → Docker Containerization → Kubernetes Orchestration → AWS/Azure Fundamentals → Terraform (IaC) → Prometheus & Grafana',
     projects: '1 Automated CI/CD pipeline + 1 Multi-container cloud deployment + 1 Infrastructure-as-Code observability platform.',
     targetRoles: 'DevOps Engineer, Cloud Solutions Associate, Site Reliability Engineer (SRE)',

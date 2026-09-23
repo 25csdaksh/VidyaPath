@@ -609,7 +609,7 @@ ${templateValues.coreFeatures || ''}
                       width: '40px',
                       height: '40px',
                       borderRadius: '8px',
-                      background: 'linear-gradient(135deg, #0e2f76, #2463e2)',
+                      background: 'var(--primary-gradient)',
                       color: '#fff',
                       display: 'flex',
                       alignItems: 'center',
