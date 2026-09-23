@@ -81,7 +81,7 @@
   color: var(--navy-800);
   border: 1px solid var(--aegean-300);
   font-weight: 700;
-  box-shadow: 0 1px 3px rgba(14, 47, 118, 0.08);
+  box-shadow: var(--shadow-sm);
 }
 
 .sidebar-footer {
@@ -152,8 +152,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at top right, rgba(170, 192, 225, 0.3), transparent 45%),
-              radial-gradient(circle at bottom left, rgba(14, 47, 118, 0.08), transparent 45%),
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), transparent 45%),
+              radial-gradient(circle at bottom left, rgba(15, 23, 42, 0.04), transparent 45%),
               var(--bg-primary);
   padding: 2rem 1rem;
 }

@@ -74,7 +74,7 @@
   background: var(--navy-800);
   color: #ffffff;
   border-color: var(--navy-800);
-  box-shadow: 0 2px 10px rgba(14, 47, 118, 0.28);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Roadmap Detailed Table & Topic Styling */
@@ -201,7 +201,7 @@
 
 /* Hero Banner */
 .hero-banner {
-  background: linear-gradient(135deg, #092055 0%, #0e2f76 45%, #184da6 80%, #2566d9 100%);
+  background: var(--navy-hero-gradient);
   color: #ffffff;
   border-radius: var(--radius-xl);
   padding: 3.5rem 2.5rem;
@@ -209,7 +209,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-lg), var(--shadow-glow-navy);
-  border: 1px solid rgba(170, 192, 225, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero-banner::after {
@@ -219,7 +219,7 @@
   right: -20%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(170, 192, 225, 0.25), transparent 70%);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18), transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -234,13 +234,12 @@
 }
 
 .hero-title span {
-  color: #aac0e1;
-  text-shadow: 0 0 20px rgba(170, 192, 225, 0.4);
+  color: var(--navy-300);
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
-  color: #e7f0fc;
+  color: var(--navy-100);
   max-width: 650px;
   line-height: 1.6;
   margin-bottom: 1.75rem;
@@ -340,7 +339,7 @@
   background: var(--navy-800);
   color: #ffffff;
   border-color: var(--navy-800);
-  box-shadow: 0 4px 14px rgba(14, 47, 118, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .roadmap-timeline {
@@ -389,7 +388,7 @@
   background: var(--navy-800);
   border-color: var(--navy-800);
   color: #ffffff;
-  box-shadow: 0 0 10px rgba(14, 47, 118, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 /* 4-Year CSE Comprehensive Hub Styles */
@@ -429,7 +428,7 @@
 .roadmap-view-tab.active {
   background: var(--navy-800);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(14, 47, 118, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .year-hero-cards {
@@ -462,7 +461,7 @@
 .year-hero-card.active {
   border-color: var(--navy-800);
   background: var(--aegean-50);
-  box-shadow: 0 4px 16px rgba(14, 47, 118, 0.18);
+  box-shadow: var(--shadow-sm);
 }
 
 .year-hero-card.active::before {
@@ -472,7 +471,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #0e2f76, #aac0e1);
+  background: var(--primary-gradient);
 }
 
 .lang-grid {
@@ -570,15 +569,15 @@
 }
 
 .code-snippet-box {
-  background: #091733;
-  color: #f5feff;
+  background: #0b0f19;
+  color: #f8fafc;
   padding: 1.25rem;
   border-radius: var(--radius-md);
   font-family: var(--font-mono);
   font-size: 0.875rem;
   overflow-x: auto;
   line-height: 1.6;
-  border: 1px solid rgba(170, 192, 225, 0.2);
+  border: 1px solid var(--border-color);
 }
 
 /* Interview Practice Question Card */
@@ -621,7 +620,7 @@
 
 .resume-preview-sheet {
   background: #ffffff;
-  color: #0a193d;
+  color: var(--text-primary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 2.5rem 2rem;
@@ -631,7 +630,7 @@
 }
 
 .resume-header-preview {
-  border-bottom: 2px solid #0e2f76;
+  border-bottom: 2px solid var(--navy-800);
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -649,7 +648,7 @@
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
-  color: #0e2f76;
+  color: var(--navy-800);
 }
 
 /* Responsive Breakpoints */
@@ -712,10 +711,10 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background-color: #071536;
+  background-color: #0b0f19;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(170, 192, 225, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.85rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -725,8 +724,8 @@
 
 .landing-hero {
   padding: 5rem 2rem 4.5rem 2rem;
-  background: radial-gradient(circle at 80% 20%, rgba(24, 77, 166, 0.45), transparent 55%), radial-gradient(circle at 10% 80%, rgba(9, 32, 85, 0.85), transparent 55%), #071536;
-  border-bottom: 1px solid rgba(170, 192, 225, 0.2);
+  background: radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.25), transparent 55%), radial-gradient(circle at 10% 80%, rgba(15, 23, 42, 0.85), transparent 55%), #0b0f19;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   color: #ffffff;
 }
@@ -735,13 +734,13 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.35);
   padding: 0.5rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #93C5FD;
+  color: #a5b4fc;
   margin-bottom: 1.75rem;
   backdrop-filter: blur(10px);
 }
@@ -835,13 +834,13 @@
   padding: 3.5rem 2.5rem;
   color: #ffffff;
   box-shadow: var(--shadow-lg), var(--shadow-glow-navy);
-  border: 1px solid rgba(170, 192, 225, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .landing-footer {
   margin-top: auto;
-  background-color: #071536;
-  border-top: 1px solid rgba(170, 192, 225, 0.2);
+  background-color: #0b0f19;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2.5rem 2rem;
   text-align: center;
   color: #ffffff;
@@ -949,8 +948,8 @@
 }
 
 [data-theme='dark'] .milestone-checkbox.checked {
-  background: #2563eb;
-  border-color: #3b82f6;
+  background: var(--navy-600);
+  border-color: var(--navy-500);
   color: #ffffff;
 }
 
@@ -961,17 +960,17 @@
 }
 
 [data-theme='dark'] .career-target-card {
-  background: #091733 !important;
-  border: 1px solid rgba(170, 192, 225, 0.2) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-md) !important;
 }
 
 [data-theme='dark'] .career-target-card h2 {
-  color: #f8fafc !important;
+  color: var(--text-primary) !important;
 }
 
 [data-theme='dark'] .career-target-card p {
-  color: #cbd5e1 !important;
+  color: var(--text-secondary) !important;
 }
 
 

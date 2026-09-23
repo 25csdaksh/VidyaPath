@@ -33,18 +33,18 @@
   pointer-events: none;
 }
 
-/* Primary Brand: Deep Navy Blue (#0E2F76) */
+/* Primary Brand: Refined Indigo / Navy */
 .btn-primary {
   background: var(--navy-800);
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(14, 47, 118, 0.25);
+  box-shadow: var(--shadow-sm);
   border: 1px solid var(--navy-900);
 }
 
 .btn-primary:hover:not(:disabled) {
   background: var(--navy-900);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(14, 47, 118, 0.35);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
@@ -252,7 +252,7 @@
 .form-select:focus,
 .form-textarea:focus {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(14, 47, 118, 0.12);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
 
 .form-input::placeholder,
@@ -289,7 +289,7 @@
 
 .search-input:focus {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(14, 47, 118, 0.12);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
 
 .search-icon-wrapper {
@@ -676,8 +676,8 @@
 .spinner {
   width: 24px;
   height: 24px;
-  border: 3px solid rgba(14, 47, 118, 0.2);
-  border-top-color: var(--navy-800);
+  border: 3px solid rgba(79, 70, 229, 0.15);
+  border-top-color: var(--navy-600);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -757,11 +757,11 @@
   align-items: center;
   gap: 0.65rem;
   padding: 0.75rem 1.25rem;
-  background: linear-gradient(135deg, #0e2f76 0%, #1a4da3 100%);
+  background: var(--primary-gradient);
   color: #ffffff;
-  border: 1px solid rgba(170, 192, 225, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 9999px;
-  box-shadow: 0 10px 25px -5px rgba(14, 47, 118, 0.4), 0 8px 10px -6px rgba(14, 47, 118, 0.3);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-navy);
   cursor: pointer;
   font-family: var(--font-sans);
   font-weight: 700;
@@ -771,8 +771,8 @@
 
 .ai-floating-trigger:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 30px -5px rgba(14, 47, 118, 0.5);
-  background: linear-gradient(135deg, #092055 0%, #0e2f76 100%);
+  box-shadow: var(--shadow-xl), var(--shadow-glow-navy);
+  background: var(--navy-hero-gradient);
 }
 
 .ai-floating-icon-wrap {
@@ -794,7 +794,7 @@
 .ai-drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 25, 61, 0.45);
+  background: rgba(15, 23, 42, 0.45);
   backdrop-filter: blur(4px);
   z-index: 1050;
   display: flex;
@@ -808,7 +808,7 @@
   height: 100%;
   background: var(--bg-secondary);
   border-left: 1px solid var(--border-color);
-  box-shadow: -10px 0 30px rgba(14, 47, 118, 0.15);
+  box-shadow: var(--shadow-xl);
   display: flex;
   flex-direction: column;
   animation: slideInRight 0.25s ease-out;
@@ -828,12 +828,12 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #0e2f76 0%, #2062d9 100%);
+  background: var(--primary-gradient);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(14, 47, 118, 0.25);
+  box-shadow: var(--shadow-sm);
 }
 
 .ai-mode-bar {
@@ -872,7 +872,7 @@
   background: var(--navy-800);
   color: #ffffff;
   border-color: var(--navy-800);
-  box-shadow: 0 1px 3px rgba(14, 47, 118, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .ai-context-ribbon {
@@ -963,7 +963,7 @@
   width: 28px;
   height: 28px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, #0e2f76 0%, #2062d9 100%);
+  background: var(--primary-gradient);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -1195,33 +1195,33 @@
 
 /* Dark Mode Extra Refinements for Interactive Components */
 [data-theme='dark'] .pagination-btn.active {
-  background: #2563eb;
+  background: var(--navy-600);
   color: #ffffff;
-  border-color: #3b82f6;
+  border-color: var(--navy-500);
 }
 
 [data-theme='dark'] .ai-mode-pill.active {
-  background: #2563eb;
+  background: var(--navy-600);
   color: #ffffff;
-  border-color: #3b82f6;
+  border-color: var(--navy-500);
 }
 
 [data-theme='dark'] .ai-message-bubble.user {
-  background: #2563eb;
+  background: var(--navy-600);
   color: #ffffff;
 }
 
 [data-theme='dark'] .ai-send-btn {
-  background: #2563eb;
+  background: var(--navy-600);
   color: #ffffff;
 }
 
 [data-theme='dark'] .ai-send-btn:hover:not(:disabled) {
-  background: #1d4ed8;
+  background: var(--navy-700);
 }
 
 [data-theme='dark'] .ai-action-btn:hover {
-  background: #2563eb;
+  background: var(--navy-600);
   color: #ffffff;
-  border-color: #2563eb;
+  border-color: var(--navy-600);
 }
