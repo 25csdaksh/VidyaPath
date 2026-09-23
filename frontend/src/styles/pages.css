@@ -215,7 +215,10 @@
 .hero-banner::before {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 48%;
   background-image: url('/cse-hero-bg.jpg');
   background-size: cover;
   background-position: center right;
@@ -223,6 +226,8 @@
   opacity: 0.55;
   pointer-events: none;
   z-index: 1;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 20%, black 50%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 20%, black 50%);
 }
 
 .hero-banner::after {
@@ -692,6 +697,12 @@
 @media (max-width: 768px) {
   .hero-banner {
     padding: 2.5rem 1.25rem;
+  }
+  .hero-banner::before {
+    width: 100%;
+    opacity: 0.18;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .hero-title {
     font-size: 1.85rem;
