@@ -201,7 +201,7 @@
 
 /* Hero Banner */
 .hero-banner {
-  background: var(--navy-hero-gradient);
+  background: #091e42 url('/cse-hero-bg.png') center center / cover no-repeat;
   color: #ffffff;
   border-radius: var(--radius-xl);
   padding: 3.5rem 2.5rem;
@@ -210,37 +210,6 @@
   overflow: hidden;
   box-shadow: var(--shadow-lg), var(--shadow-glow-navy);
   border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.hero-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 48%;
-  background-image: url('/cse-hero-bg.jpg');
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-  opacity: 0.55;
-  pointer-events: none;
-  z-index: 1;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 20%, black 50%);
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 20%, black 50%);
-}
-
-.hero-banner::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.25), transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1;
 }
 
 .hero-banner > * {
@@ -697,12 +666,6 @@
 @media (max-width: 768px) {
   .hero-banner {
     padding: 2.5rem 1.25rem;
-  }
-  .hero-banner::before {
-    width: 100%;
-    opacity: 0.18;
-    -webkit-mask-image: none;
-    mask-image: none;
   }
   .hero-title {
     font-size: 1.85rem;
