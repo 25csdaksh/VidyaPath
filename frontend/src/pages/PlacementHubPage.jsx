@@ -169,7 +169,7 @@ export const PlacementHubPage = () => {
         /* SDE Recruitment Pipeline & Stages */
         <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
           {/* Hero Banner */}
-          <section className="hero-banner" style={{ background: 'var(--navy-hero-gradient)' }}>
+          <section className="hero-banner">
             <div style={{ maxWidth: '820px', position: 'relative', zIndex: 2 }}>
               <Badge variant="primary" style={{ marginBottom: '1.25rem', background: 'rgba(255,255,255,0.15)', color: '#ffffff', borderColor: 'rgba(255,255,255,0.3)' }}>
                 <Award size={14} /> Career & Campus Recruitment

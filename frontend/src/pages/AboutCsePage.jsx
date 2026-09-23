@@ -85,7 +85,7 @@ export const AboutCsePage = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
       {/* Header Banner */}
-      <section className="hero-banner" style={{ background: 'var(--navy-hero-gradient)' }}>
+      <section className="hero-banner">
         <div style={{ maxWidth: '800px', position: 'relative', zIndex: 2 }}>
           <Badge variant="primary" style={{ marginBottom: '1.25rem', background: 'rgba(255,255,255,0.15)', color: '#ffffff', borderColor: 'rgba(255,255,255,0.3)' }}>
             <Compass size={14} /> Computer Science & Engineering Discipline
