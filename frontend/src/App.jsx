@@ -41,6 +41,7 @@ import AIAdvisorPage from './pages/AIAdvisorPage'; // AI Academic Advisor & Stud
 
 import FoundationDemoPage from './pages/FoundationDemoPage';
 import NotFoundPage from './pages/NotFoundPage';
+import ScrollToTop from './components/common/ScrollToTop';
 
 export function App() {
   return (
@@ -49,6 +50,7 @@ export function App() {
         <AuthProvider>
           <UserProvider>
             <BrowserRouter>
+              <ScrollToTop />
               <Routes>
                 {/* 1. Public Landing / Theme Showcase Page */}
                 <Route path="/" element={<LandingPage />} />
