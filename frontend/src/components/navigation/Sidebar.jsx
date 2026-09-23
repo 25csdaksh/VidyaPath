@@ -24,7 +24,7 @@ import {
 import { useAuth } from '../../context/AuthContext';
 import Logo from '../common/Logo';
 
-export const Sidebar = ({ isOpen, onClose }) => {
+export const Sidebar = ({ isOpen, isCollapsed, onClose }) => {
   const { isAuthenticated, user } = useAuth();
 
   const handleNavClick = () => {
@@ -59,31 +59,11 @@ export const Sidebar = ({ isOpen, onClose }) => {
   }
 
   return (
-    <aside className={`app-sidebar ${isOpen ? 'open' : ''}`}>
-      <div className="sidebar-header" style={{ padding: '0.85rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+    <aside className={`app-sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
+      <div className="sidebar-header" style={{ padding: '0.85rem 1.25rem', display: 'flex', alignItems: 'center' }}>
         <NavLink to="/" onClick={handleNavClick} className="sidebar-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
           <Logo size="sm" />
         </NavLink>
-        {onClose && (
-          <button
-            className="sidebar-close-mobile"
-            onClick={onClose}
-            aria-label="Close Sidebar"
-            style={{
-              background: 'none',
-              border: 'none',
-              color: 'var(--text-muted)',
-              cursor: 'pointer',
-              padding: '4px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: 'var(--radius-sm)',
-            }}
-          >
-            <X size={20} />
-          </button>
-        )}
       </div>
 
       <nav className="sidebar-nav">

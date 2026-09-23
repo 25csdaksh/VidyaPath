@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/navigation/Navbar';
 import Sidebar from '../components/navigation/Sidebar';
@@ -7,28 +7,47 @@ import ErrorBoundary from '../components/feedback/ErrorBoundary';
 import AiAssistantDrawer from '../components/ai/AiAssistantDrawer';
 
 export const MainLayout = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [desktopCollapsed, setDesktopCollapsed] = useState(false);
 
   const toggleSidebar = () => {
-    setSidebarOpen((prev) => !prev);
+    if (window.innerWidth <= 900) {
+      setMobileSidebarOpen((prev) => !prev);
+    } else {
+      setDesktopCollapsed((prev) => !prev);
+    }
   };
 
-  const closeSidebar = () => {
-    setSidebarOpen(false);
+  const closeMobileSidebar = () => {
+    setMobileSidebarOpen(false);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 900) {
+        setMobileSidebarOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <div className="app-container">
-      {sidebarOpen && (
+    <div className={`app-container ${desktopCollapsed ? 'sidebar-collapsed' : ''}`}>
+      {mobileSidebarOpen && (
         <div
           className="sidebar-backdrop"
-          onClick={closeSidebar}
+          onClick={closeMobileSidebar}
           aria-label="Close menu"
         />
       )}
-      <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
-      <div className="main-content-wrapper">
-        <Navbar onToggleSidebar={toggleSidebar} />
+      <Sidebar
+        isOpen={mobileSidebarOpen}
+        isCollapsed={desktopCollapsed}
+        onClose={closeMobileSidebar}
+      />
+      <div className={`main-content-wrapper ${desktopCollapsed ? 'collapsed' : ''}`}>
+        <Navbar onToggleSidebar={toggleSidebar} isSidebarCollapsed={desktopCollapsed} />
         <main className="page-container">
           <ErrorBoundary>
             <Outlet />
@@ -42,3 +61,4 @@ export const MainLayout = () => {
 };
 
 export default MainLayout;
+

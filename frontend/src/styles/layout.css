@@ -15,7 +15,12 @@
   min-width: 0;
   margin-left: var(--sidebar-width);
   min-height: 100vh;
-  transition: margin-left var(--transition-normal);
+  transition: margin-left 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-content-wrapper.collapsed,
+.app-container.sidebar-collapsed .main-content-wrapper {
+  margin-left: 0;
 }
 
 /* Sidebar Styles - Fixed Non-Scrolling Left Bar */
@@ -31,7 +36,13 @@
   bottom: 0;
   height: 100vh;
   z-index: 40;
-  transition: width var(--transition-normal), transform var(--transition-normal);
+  transform: translateX(0);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.app-sidebar.collapsed,
+.app-container.sidebar-collapsed .app-sidebar {
+  transform: translateX(-100%);
 }
 
 .sidebar-header {
@@ -39,7 +50,7 @@
   padding: 0 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-secondary);
   flex-shrink: 0;
