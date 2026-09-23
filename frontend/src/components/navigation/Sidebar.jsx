@@ -19,7 +19,6 @@ import {
   Sparkles,
   ShieldAlert,
   Bot,
-  X,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import Logo from '../common/Logo';

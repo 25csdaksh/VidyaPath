@@ -62,10 +62,30 @@ export const Navbar = ({ onToggleSidebar }) => {
     <header className="app-navbar">
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1, maxWidth: '600px' }}>
         <button
-          className="btn btn-ghost btn-sm"
-          onClick={onToggleSidebar}
-          aria-label="Toggle navigation menu"
-          style={{ display: 'flex', alignItems: 'center', padding: '0.45rem', borderRadius: 'var(--radius-sm)' }}
+          type="button"
+          id="sidebar-toggle-btn"
+          className="btn btn-ghost btn-sm navbar-menu-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof onToggleSidebar === 'function') {
+              onToggleSidebar();
+            }
+          }}
+          aria-label="Toggle Navigation Sidebar"
+          title="Toggle Sidebar Menu"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0.45rem',
+            borderRadius: 'var(--radius-sm)',
+            cursor: 'pointer',
+            border: '1px solid var(--border-color)',
+            background: 'var(--bg-tertiary)',
+            color: 'var(--text-primary)',
+            transition: 'all var(--transition-fast)',
+          }}
         >
           <Menu size={20} />
         </button>
